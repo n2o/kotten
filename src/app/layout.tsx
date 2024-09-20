@@ -21,6 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
+      <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </head>
       <body className={roboto.variable}>
         <Providers>{children}</Providers>
       </body>
