@@ -1,4 +1,5 @@
 import { Providers } from "@/app/providers"
+import { ResponsiveAppBar } from "@/components/app-bar"
 import type { Metadata } from "next"
 import { Roboto } from "next/font/google"
 
@@ -25,7 +26,10 @@ export default function RootLayout({
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </head>
       <body className={roboto.variable}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <ResponsiveAppBar />
+          {children}
+        </Providers>
       </body>
     </html>
   )
