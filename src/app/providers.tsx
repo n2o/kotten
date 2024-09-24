@@ -1,12 +1,15 @@
 "use client"
-import { theme } from "@/app/theme"
-import { ThemeProvider } from "@emotion/react"
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter"
+import { appTheme } from "@/app/theme"
+import { CacheProvider } from "@chakra-ui/next-js"
+import { ChakraProvider } from "@chakra-ui/react"
+import { ParallaxProvider } from "react-scroll-parallax"
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <AppRouterCacheProvider>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </AppRouterCacheProvider>
+    <CacheProvider>
+      <ChakraProvider theme={appTheme}>
+        <ParallaxProvider>{children}</ParallaxProvider>
+      </ChakraProvider>
+    </CacheProvider>
   )
 }

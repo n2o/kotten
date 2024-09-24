@@ -1,9 +1,9 @@
-import Button from "@mui/material/Button"
+import { Start } from "@/components/start"
 
 export default function Page() {
   return (
     <main>
-      <Button variant="outlined">Hello world</Button>
+      <Start />
     </main>
   )
 }
