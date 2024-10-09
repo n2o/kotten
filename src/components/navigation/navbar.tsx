@@ -5,7 +5,7 @@ import { Box, Button, ButtonGroup, Container, HStack } from "@chakra-ui/react"
 
 export function Navbar() {
   return (
-    <Box as="section" minH="lg">
+    <Box as="section">
       <Box
         borderBottomWidth="1px"
         bg="bg.surface"
