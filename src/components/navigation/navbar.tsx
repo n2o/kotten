@@ -17,7 +17,7 @@ export function Navbar() {
             <HStack spacing="10">
               <HStack spacing="3">
                 <MobileDrawer />
-                <Logo />
+                <Logo height={"64px"} width={"64px"} />
               </HStack>
               <ButtonGroup
                 size="lg"
