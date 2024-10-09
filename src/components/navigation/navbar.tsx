@@ -1,5 +1,5 @@
 "use client"
-import { Logo } from "@/components/navigation/logo"
+import { Logo } from "@/components/logo"
 import { MobileDrawer } from "@/components/navigation/mobile-drawer"
 import { Box, Button, ButtonGroup, Container, HStack } from "@chakra-ui/react"
 
