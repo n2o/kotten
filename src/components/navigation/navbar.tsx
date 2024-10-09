@@ -1,6 +1,8 @@
 "use client"
 import { Logo } from "@/components/logo"
+import { links } from "@/components/navigation/links"
 import { MobileDrawer } from "@/components/navigation/mobile-drawer"
+import { Link } from "@chakra-ui/next-js"
 import { Box, Button, ButtonGroup, Container, HStack } from "@chakra-ui/react"
 
 export function Navbar() {
@@ -12,22 +14,25 @@ export function Navbar() {
         position="relative"
         zIndex="tooltip"
       >
-        <Container py="4">
+        <Container py="1">
           <HStack justify="space-between" spacing="8">
             <HStack spacing="10">
               <HStack spacing="3">
                 <MobileDrawer />
-                <Logo height={"64px"} width={"64px"} />
+                <Logo height="64px" width="64px" />
               </HStack>
               <ButtonGroup
                 size="lg"
                 variant="text"
                 colorScheme="gray"
                 spacing="8"
-                display={{ base: "none", lg: "flex" }}
+                display={{ base: "none", md: "flex" }}
               >
-                <Button>Dashboard</Button>
-                <Button>Analysis</Button>
+                {links.map((link) => (
+                  <Link href={link.href} key={link.href}>
+                    <Button>{link.label}</Button>
+                  </Link>
+                ))}
               </ButtonGroup>
             </HStack>
           </HStack>

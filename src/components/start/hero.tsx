@@ -1,5 +1,7 @@
+"use client"
 import kotten from "@/images/kotten2.webp"
-import { Box, Flex, Heading, Img, Text } from "@chakra-ui/react"
+import { Box, Flex, Heading, Text } from "@chakra-ui/react"
+import ChakraImage from "../chakra-image"
 
 export function Hero() {
   return (
@@ -18,12 +20,13 @@ export function Hero() {
             </Heading>
             <Text fontSize="2xl" mt="4" maxW="lg">
               Ein Stück Bergische Geschichte und bündische Heimat im Hammertal.
+              Unterstütze uns bei den Sanierungen und erhalte den Kotten für die
+              Zukunft.
             </Text>
           </Box>
         </Box>
       </Box>
       <Flex
-        id="image-wrapper"
         position="absolute"
         insetX="0"
         insetY="0"
@@ -33,11 +36,10 @@ export function Hero() {
         align="center"
       >
         <Box position="relative" w="full" h="full">
-          <Img
+          <ChakraImage
             src={kotten.src}
             alt="Bild des Kottens"
-            w="full"
-            h="full"
+            fill={"true"}
             objectFit="cover"
             objectPosition="top bottom"
             position="absolute"

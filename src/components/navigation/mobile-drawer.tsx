@@ -4,9 +4,11 @@ import {
   Drawer,
   DrawerBody,
   DrawerContent,
+  Link,
   Stack,
   useDisclosure,
 } from "@chakra-ui/react"
+import { links } from "./links"
 
 export function MobileDrawer() {
   const { isOpen, onToggle, onClose } = useDisclosure()
@@ -16,18 +18,19 @@ export function MobileDrawer() {
         isOpen={isOpen}
         onClick={onToggle}
         aria-label="Open menu"
-        display={{ base: "inline-flex", lg: "none" }}
+        display={{ base: "inline-flex", md: "none" }}
       />
       <Drawer placement="top" isOpen={isOpen} onClose={onClose}>
         <DrawerContent>
           <DrawerBody mt="72px" p="4">
             <Stack spacing="1">
-              <Button size="lg" variant="tertiary" justifyContent="start">
-                Dashboard
-              </Button>
-              <Button size="lg" variant="tertiary" justifyContent="start">
-                Analysis
-              </Button>
+              {links.map((link) => (
+                <Link href={link.href} key={link.href}>
+                  <Button variant={"tertiary"} size={"lg"} _hover={"none"}>
+                    {link.label}
+                  </Button>
+                </Link>
+              ))}
             </Stack>
           </DrawerBody>
         </DrawerContent>
