@@ -6,6 +6,7 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react"
+import Link from "next/link"
 
 export function Uebernahme(props: CardProps) {
   return (
@@ -55,22 +56,24 @@ export function Verein(props: CardProps) {
           das &quot;Projekt Schuppen&quot;) benötigt man Ideen, viele Leute,
           deren Zeit und natürlich auch ausreichend finanzielle Mittel. Wir
           können uns glücklich schätzen, dass wir mal mehr und mal weniger über
-          all' diese Dinge verfügen: so konnten wir nicht nur durch den
+          alle diese Dinge verfügen: so konnten wir nicht nur durch den
           unermüdlichen Einsatz aller Mitglieder des Diederichskotten e.V.,
-          sondern auch aufgrund der vielen fleißigen Helfer des Deutschen
-          Pfadfinderbundes in Remscheid viele kleine und auch große Projekte am
-          Haus und Gelände umsetzen. Dabei waren und sind wir immer mall wieder
-          auch auf die finanzielle und / oder materielle Hilfe von Freunden und
-          Förderern angewiesen. Da wir jedoch auch wissen, dass es für diese
-          immer schwieriger wird, uns ohne entsprechende Spendenbescheinigung zu
-          unterstützen, haben wir im November 2012 den Förderverein der
-          Pfadfinder im Hammertal e.V. Förderverein der Pfadfinder im Hammertal
-          e.V. gegründet und durch Bescheid des Finanzamtes Remscheid als
+          sondern auch aufgrund der vielen fleißigen Helfer des{" "}
+          <Link href="https://dpb-remscheid.de" target="_blank">
+            Deutschen Pfadfinderbundes in Remscheid
+          </Link>{" "}
+          viele kleine und auch große Projekte am Haus und Gelände umsetzen.
+          Dabei waren und sind wir immer mall wieder auch auf die finanzielle
+          und / oder materielle Hilfe von Freunden und Förderern angewiesen. Da
+          wir jedoch auch wissen, dass es für diese immer schwieriger wird, uns
+          ohne entsprechende Spendenbescheinigung zu unterstützen, haben wir im
+          November 2012 den &quot;Förderverein der Pfadfinder im Hammertal
+          e.V.&quot; gegründet und durch Bescheid des Finanzamtes Remscheid als
           gemeinnützig anerkennen lassen. Satzungsmäßiger Zweck des Vereins ist
           die Beschaffung von Mitteln zur Förderung der Erziehung durch den
-          Deutschen Pfadfinderbund e.V. insbesondere der Pfadfinder / innen im
-          Diederichskotten. So unterstützt dieser die Remscheider Pfadfinder /
-          innen und den Diederichskotten e.V. z.B. im Rahmen der
+          Deutschen Pfadfinderbund e.V. insbesondere der Pfadfinder:innen im
+          Diederichskotten. So unterstützt dieser die Remscheider
+          Pfadfinder:innen und den Diederichskotten e.V. z.B. im Rahmen der
           Industriedenkmalpflege finanziell, materiell und organisatorisch bei
           der Beschaffung von Materialien jeglicher Art für die Instandsetzung
           und Erhaltung unseres Gruppenheims. Zurzeit hat der Förderverein zwölf
