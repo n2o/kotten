@@ -1,5 +1,6 @@
 import { Providers } from "@/app/providers"
 import { Navbar } from "@/components/navigation/navbar"
+import { Box } from "@chakra-ui/react"
 import { Analytics } from "@vercel/analytics/react"
 import { GeistSans } from "geist/font/sans"
 import type { Metadata } from "next"
@@ -29,7 +30,11 @@ export default function RootLayout({
           <header>
             <Navbar />
           </header>
-          <main>{children}</main>
+          <main>
+            <Box bg="gray.100" pb={4}>
+              {children}
+            </Box>
+          </main>
         </Providers>
       </body>
     </html>
