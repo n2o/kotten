@@ -181,7 +181,7 @@ export function Wohnhaus(props: CardProps) {
         bewerkstelligen hoffen.
       </Text>
 
-      <SimpleGrid columns={4} gap={5}>
+      <SimpleGrid columns={{ base: 2, md: 4 }} gap={5}>
         {images.map((image, idx) => (
           <AspectRatio ratio={3 / 4} key={idx}>
             <ModalImage image={image.data} alt={image.alt} />
