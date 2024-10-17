@@ -1,41 +1,14 @@
-import { ModalImage } from "@/components/modal-image"
 import { Hero } from "@/components/start/hero"
-import aussenbereichKueche1 from "@/images/2024/aussenbereich-kueche01.webp"
-import aussenbereichKueche2 from "@/images/2024/aussenbereich-kueche02.webp"
-import dachbodenNeueBalken from "@/images/2024/dachboden-neue-balken.webp"
-import dachbodenSchlafbereich from "@/images/2024/dachboden-schlafbereich.webp"
-import kottenAussenSpanplatte from "@/images/2024/kotten-aussen-spanplatte.webp"
-import paypalQrCode from "@/images/paypal-code.svg"
-import { paypalDonationLink } from "@/lib"
 import {
-  AspectRatio,
-  Button,
   Card,
   CardBody,
   CardHeader,
   CardProps,
   Container,
   Heading,
-  SimpleGrid,
   Text,
-  VStack,
 } from "@chakra-ui/react"
-import Link from "next/link"
-import { FaPaypal } from "react-icons/fa6"
-import ChakraImage from "../chakra-image"
-import { ContentCard } from "../content-card"
 import { Wohnhaus } from "../content-cards"
-
-const images = [
-  { data: kottenAussenSpanplatte, alt: "Außenwand des Kottens" },
-  {
-    data: dachbodenSchlafbereich,
-    alt: "Blick in den alten Schlafbereich, wo nun ein neuer Boden benötigt wird",
-  },
-  { data: dachbodenNeueBalken, alt: "Neue Balken auf dem Dachboden" },
-  { data: aussenbereichKueche1, alt: "Außenwand der Küche" },
-  { data: aussenbereichKueche2, alt: "Außenwand der Küche" },
-]
 
 function Greeting(props: CardProps) {
   return (
