@@ -1,6 +1,8 @@
 import { ModalImage } from "@/components/modal-image"
 import { Hero } from "@/components/start/hero"
-import kottenAussenSpanplatte from "@/images/kotten-aussen-spanplatte.webp"
+import dachbodenNeueBalken from "@/images/2024/dachboden-neue-balken.webp"
+import dachbodenSchlafbereich from "@/images/2024/dachboden-schlafbereich.webp"
+import kottenAussenSpanplatte from "@/images/2024/kotten-aussen-spanplatte.webp"
 import {
   AspectRatio,
   Card,
@@ -9,6 +11,7 @@ import {
   CardProps,
   Container,
   Heading,
+  SimpleGrid,
   Text,
 } from "@chakra-ui/react"
 
@@ -45,15 +48,29 @@ function HelpWanted(props: CardProps) {
       <CardBody>
         <Text>
           Der Kotten ist ein altes Gebäude und benötigt ständige Pflege und
-          Instandhaltung. So ist es nun notwendig einige Balken auszutauschen, d
-          zu marode sind, um das Haus weiterhin sicher zu stützen.
+          Instandhaltung. So ist es nun notwendig einige Balken auszutauschen,
+          die zu marode sind, um das Haus weiterhin sicher zu stützen.
         </Text>
-        <AspectRatio ratio={3 / 4} maxW={200}>
-          <ModalImage
-            src={kottenAussenSpanplatte.src}
-            alt="Außenwand des Kottens"
-          />
-        </AspectRatio>
+        <SimpleGrid columns={3} gap={5}>
+          <AspectRatio ratio={3 / 4}>
+            <ModalImage
+              src={kottenAussenSpanplatte.src}
+              alt="Außenwand des Kottens"
+            />
+          </AspectRatio>
+          <AspectRatio ratio={3 / 4}>
+            <ModalImage
+              src={dachbodenSchlafbereich.src}
+              alt="Blick in den ehemaligen Schlafbereich, wo nun ein neuer Boden benötigt wird"
+            />
+          </AspectRatio>
+          <AspectRatio ratio={3 / 4}>
+            <ModalImage
+              src={dachbodenNeueBalken.src}
+              alt="Neue Balken auf dem Dachboden"
+            />
+          </AspectRatio>
+        </SimpleGrid>
       </CardBody>
     </Card>
   )
