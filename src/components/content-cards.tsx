@@ -99,7 +99,7 @@ export function Verwendung(props: CardProps) {
       <Text>
         Um Grundstück und Gebäude dafür in einem guten Zustand zu halten,
         engagieren sich die Mitglieder der Vereine einmal im Monat einen Tag
-        lang beim sogenannten "Arbeitssamstag".
+        lang beim sogenannten &quot;Arbeitssamstag&quot;.
       </Text>
     </ContentCard>
   )
