@@ -7,7 +7,12 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react"
+import { Metadata } from "next"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Datenschutz",
+}
 
 export default function Page() {
   return (

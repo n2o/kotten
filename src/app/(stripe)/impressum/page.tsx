@@ -1,6 +1,11 @@
 import { ContentCard } from "@/components/content-card"
 import { HeroSmallImage } from "@/components/start/hero"
 import { Container, Heading, Link, Text } from "@chakra-ui/react"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Impressum",
+}
 
 export default function Page() {
   return (

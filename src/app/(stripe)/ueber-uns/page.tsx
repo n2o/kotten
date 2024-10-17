@@ -7,6 +7,11 @@ import {
 } from "@/components/content-cards"
 import { HeroSmallImage } from "@/components/start/hero"
 import { Container, SimpleGrid } from "@chakra-ui/react"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Über uns",
+}
 
 export default function Page() {
   return (
