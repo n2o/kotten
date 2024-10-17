@@ -20,9 +20,7 @@ export default function Page() {
       <HeroSmallImage title="Datenschutz" />
       <Container>
         <ContentCard heading="Datenschutzerklärung" mt={5}>
-          <Heading fontSize="2xl" mt={8}>
-            1. Datenschutz auf einen Blick
-          </Heading>
+          <Heading fontSize="2xl">1. Datenschutz auf einen Blick</Heading>
           <Heading as="h3" fontSize="lg">
             Allgemeine Hinweise
           </Heading>
