@@ -68,7 +68,7 @@ export function Hero(props: BoxProps) {
             <Heading as="h1" size="3xl" fontWeight="thiner">
               Diederichskotten
             </Heading>
-            <Text fontSize="2xl" mt="4" maxW="lg">
+            <Text fontSize="2xl" mt="4" maxW="xl">
               Ein Stück Bergische Geschichte und bündische Heimat im Hammertal.
               Unterstütze uns bei den Sanierungen und erhalte den Kotten für die
               Zukunft.
@@ -77,7 +77,9 @@ export function Hero(props: BoxProps) {
               href="https://www.paypal.com/pools/c/98UJ4t1Cvi"
               target="_blank"
             >
-              <Button bgColor="white">Jetzt unterstützen</Button>
+              <Button bgColor="white" size="2xl">
+                Jetzt unterstützen
+              </Button>
             </Link>
           </Box>
         </Box>

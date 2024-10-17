@@ -1,6 +1,6 @@
 export const links = [
   { label: "Start", href: "/" },
-  { label: "Unterstützung", href: "/unterstuetzung" },
   { label: "Über uns", href: "/ueber-uns" },
-  { label: "Kontakt", href: "/kontakt" },
+  { label: "Impressum", href: "/impressum" },
+  { label: "Datenschutz", href: "/datenschutz" },
 ]
