@@ -5,8 +5,11 @@ import aussenbereichKueche2 from "@/images/2024/aussenbereich-kueche02.webp"
 import dachbodenNeueBalken from "@/images/2024/dachboden-neue-balken.webp"
 import dachbodenSchlafbereich from "@/images/2024/dachboden-schlafbereich.webp"
 import kottenAussenSpanplatte from "@/images/2024/kotten-aussen-spanplatte.webp"
+import paypalQrCode from "@/images/paypal-code.svg"
+import { paypalDonationLink } from "@/lib"
 import {
   AspectRatio,
+  Button,
   Card,
   CardBody,
   CardHeader,
@@ -15,7 +18,13 @@ import {
   Heading,
   SimpleGrid,
   Text,
+  VStack,
 } from "@chakra-ui/react"
+import Link from "next/link"
+import { FaPaypal } from "react-icons/fa6"
+import ChakraImage from "../chakra-image"
+import { ContentCard } from "../content-card"
+import { Wohnhaus } from "../content-cards"
 
 const images = [
   { data: kottenAussenSpanplatte, alt: "Außenwand des Kottens" },
@@ -50,39 +59,13 @@ function Greeting(props: CardProps) {
   )
 }
 
-function HelpWanted(props: CardProps) {
-  return (
-    <Card {...props}>
-      <CardHeader pb={0}>
-        <Heading fontSize="2xl" lineHeight="2rem">
-          Wir brauchen Unterstützung!
-        </Heading>
-      </CardHeader>
-      <CardBody>
-        <Text>
-          Der Kotten ist ein altes Gebäude und benötigt ständige Pflege und
-          Instandhaltung. So ist es nun notwendig einige Balken auszutauschen,
-          die zu marode sind, um das Haus weiterhin sicher zu stützen.
-        </Text>
-        <SimpleGrid columns={4} gap={5}>
-          {images.map((image, idx) => (
-            <AspectRatio ratio={3 / 4} key={idx}>
-              <ModalImage image={image.data} alt={image.alt} />
-            </AspectRatio>
-          ))}
-        </SimpleGrid>
-      </CardBody>
-    </Card>
-  )
-}
-
 export function Start() {
   return (
     <>
       <Hero />
       <Container>
         <Greeting mt={-32} />
-        <HelpWanted mt={4} />
+        <Wohnhaus mt={4} />
       </Container>
     </>
   )

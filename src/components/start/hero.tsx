@@ -1,7 +1,9 @@
 "use client"
 import kotten from "@/images/kotten2.webp"
+import { paypalDonationLink } from "@/lib"
 import { Box, BoxProps, Button, Flex, Heading, Text } from "@chakra-ui/react"
 import Link from "next/link"
+import { FaPaypal } from "react-icons/fa6"
 import ChakraImage from "../chakra-image"
 
 function HeroImage() {
@@ -73,11 +75,8 @@ export function Hero(props: BoxProps) {
               Unterstütze uns bei den Sanierungen und erhalte den Kotten für die
               Zukunft.
             </Text>
-            <Link
-              href="https://www.paypal.com/pools/c/98UJ4t1Cvi"
-              target="_blank"
-            >
-              <Button bgColor="white" size="2xl">
+            <Link href={paypalDonationLink} target="_blank">
+              <Button bgColor="white" size="2xl" leftIcon={<FaPaypal />}>
                 Jetzt unterstützen
               </Button>
             </Link>
