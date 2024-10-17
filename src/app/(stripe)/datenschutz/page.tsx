@@ -18,7 +18,7 @@ export default function Page() {
           <Heading fontSize="2xl" mt={8}>
             1. Datenschutz auf einen Blick
           </Heading>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h3" fontSize="lg">
             Allgemeine Hinweise
           </Heading>
           <Text>
@@ -30,7 +30,7 @@ export default function Page() {
             unserer unter diesem Text aufgef&uuml;hrten
             Datenschutzerkl&auml;rung.
           </Text>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h3" fontSize="lg">
             Datenerfassung auf dieser Website
           </Heading>
           <Heading as="h4" fontSize="md">
@@ -86,13 +86,13 @@ export default function Page() {
             Hierzu sowie zu weiteren Fragen zum Thema Datenschutz k&ouml;nnen
             Sie sich jederzeit an uns wenden.
           </Text>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h2" fontSize="xl">
             2. Hosting
           </Heading>
           <Text>
             Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
           </Text>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h3" fontSize="lg">
             Externes Hosting
           </Heading>
           <Text>
@@ -141,10 +141,10 @@ export default function Page() {
             Websitebesucher nur nach unseren Weisungen und unter Einhaltung der
             DSGVO verarbeitet.
           </Text>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h2" fontSize="xl">
             3. Allgemeine Hinweise und Pflicht&shy;informationen
           </Heading>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h3" fontSize="lg">
             Datenschutz
           </Heading>
           <Text>
@@ -168,7 +168,7 @@ export default function Page() {
             aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem
             Zugriff durch Dritte ist nicht m&ouml;glich.
           </Text>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h3" fontSize="lg">
             Hinweis zur verantwortlichen Stelle
           </Heading>
           <Text>
@@ -189,7 +189,7 @@ export default function Page() {
             und Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B.
             Namen, E-Mail-Adressen o. &Auml;.) entscheidet.
           </Text>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h3" fontSize="lg">
             Speicherdauer
           </Heading>
           <Text>
@@ -204,7 +204,7 @@ export default function Page() {
             handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall
             erfolgt die L&ouml;schung nach Fortfall dieser Gr&uuml;nde.
           </Text>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h3" fontSize="lg">
             Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung
             auf dieser Website
           </Heading>
@@ -232,7 +232,7 @@ export default function Page() {
             Rechtsgrundlagen wird in den folgenden Abs&auml;tzen dieser
             Datenschutzerkl&auml;rung informiert.
           </Text>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h3" fontSize="lg">
             Empfänger von personenbezogenen Daten
           </Heading>
           <Text>
@@ -251,7 +251,7 @@ export default function Page() {
             Auftragsverarbeitung weiter. Im Falle einer gemeinsamen Verarbeitung
             wird ein Vertrag &uuml;ber gemeinsame Verarbeitung geschlossen.
           </Text>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h3" fontSize="lg">
             Widerruf Ihrer Einwilligung zur Datenverarbeitung
           </Heading>
           <Text>
@@ -261,7 +261,7 @@ export default function Page() {
             Rechtm&auml;&szlig;igkeit der bis zum Widerruf erfolgten
             Datenverarbeitung bleibt vom Widerruf unber&uuml;hrt.
           </Text>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h3" fontSize="lg">
             Widerspruchsrecht gegen die Datenerhebung in besonderen F&auml;llen
             sowie gegen Direktwerbung (Art. 21 DSGVO)
           </Heading>
@@ -291,7 +291,7 @@ export default function Page() {
             ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER DIREKTWERBUNG VERWENDET
             (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).
           </Text>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h3" fontSize="lg">
             Beschwerde&shy;recht bei der zust&auml;ndigen
             Aufsichts&shy;beh&ouml;rde
           </Heading>
@@ -304,7 +304,7 @@ export default function Page() {
             unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher
             Rechtsbehelfe.
           </Text>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h3" fontSize="lg">
             Recht auf Daten&shy;&uuml;bertrag&shy;barkeit
           </Heading>
           <Text>
@@ -315,7 +315,7 @@ export default function Page() {
             &Uuml;bertragung der Daten an einen anderen Verantwortlichen
             verlangen, erfolgt dies nur, soweit es technisch machbar ist.
           </Text>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h3" fontSize="lg">
             Auskunft, Berichtigung und L&ouml;schung
           </Heading>
           <Text>
@@ -327,7 +327,7 @@ export default function Page() {
             zu weiteren Fragen zum Thema personenbezogene Daten k&ouml;nnen Sie
             sich jederzeit an uns wenden.
           </Text>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h3" fontSize="lg">
             Recht auf Einschr&auml;nkung der Verarbeitung
           </Heading>
           <Text>
@@ -376,7 +376,7 @@ export default function Page() {
             eines wichtigen &ouml;ffentlichen Interesses der Europ&auml;ischen
             Union oder eines Mitgliedstaats verarbeitet werden.
           </Text>
-          <Heading fontSize="lg" as="h3">
+          <Heading as="h3" fontSize="lg">
             SSL- bzw. TLS-Verschl&uuml;sselung
           </Heading>
           <Text>
