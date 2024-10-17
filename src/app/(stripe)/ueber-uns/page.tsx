@@ -13,7 +13,7 @@ export default function Page() {
     <>
       <HeroSmallImage title="Über uns" />
       <Container>
-        <SimpleGrid mt={4} columns={{ base: 1, md: 2 }} gap={4}>
+        <SimpleGrid mt={5} columns={{ base: 1, md: 2 }} gap={4}>
           <Uebernahme />
           <Verein />
           <Verwendung />
