@@ -1,5 +1,7 @@
 import { ModalImage } from "@/components/modal-image"
 import { Hero } from "@/components/start/hero"
+import aussenbereichKueche1 from "@/images/2024/aussenbereich-kueche01.webp"
+import aussenbereichKueche2 from "@/images/2024/aussenbereich-kueche02.webp"
 import dachbodenNeueBalken from "@/images/2024/dachboden-neue-balken.webp"
 import dachbodenSchlafbereich from "@/images/2024/dachboden-schlafbereich.webp"
 import kottenAussenSpanplatte from "@/images/2024/kotten-aussen-spanplatte.webp"
@@ -14,6 +16,17 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react"
+
+const images = [
+  { data: kottenAussenSpanplatte, alt: "Außenwand des Kottens" },
+  {
+    data: dachbodenSchlafbereich,
+    alt: "Blick in den alten Schlafbereich, wo nun ein neuer Boden benötigt wird",
+  },
+  { data: dachbodenNeueBalken, alt: "Neue Balken auf dem Dachboden" },
+  { data: aussenbereichKueche1, alt: "Außenwand der Küche" },
+  { data: aussenbereichKueche2, alt: "Außenwand der Küche" },
+]
 
 function Greeting(props: CardProps) {
   return (
@@ -51,25 +64,12 @@ function HelpWanted(props: CardProps) {
           Instandhaltung. So ist es nun notwendig einige Balken auszutauschen,
           die zu marode sind, um das Haus weiterhin sicher zu stützen.
         </Text>
-        <SimpleGrid columns={3} gap={5}>
-          <AspectRatio ratio={3 / 4}>
-            <ModalImage
-              src={kottenAussenSpanplatte.src}
-              alt="Außenwand des Kottens"
-            />
-          </AspectRatio>
-          <AspectRatio ratio={3 / 4}>
-            <ModalImage
-              src={dachbodenSchlafbereich.src}
-              alt="Blick in den ehemaligen Schlafbereich, wo nun ein neuer Boden benötigt wird"
-            />
-          </AspectRatio>
-          <AspectRatio ratio={3 / 4}>
-            <ModalImage
-              src={dachbodenNeueBalken.src}
-              alt="Neue Balken auf dem Dachboden"
-            />
-          </AspectRatio>
+        <SimpleGrid columns={4} gap={5}>
+          {images.map((image, idx) => (
+            <AspectRatio ratio={3 / 4} key={idx}>
+              <ModalImage image={image.data} alt={image.alt} />
+            </AspectRatio>
+          ))}
         </SimpleGrid>
       </CardBody>
     </Card>

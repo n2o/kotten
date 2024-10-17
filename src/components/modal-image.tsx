@@ -12,15 +12,17 @@ import {
   ModalOverlay,
   useDisclosure,
 } from "@chakra-ui/react"
+import { StaticImageData } from "next/image"
 import ChakraImage from "./chakra-image"
 
 export type ModalImageProps = {
-  src: string
+  image: StaticImageData
   alt: string
 }
 
-export function ModalImage({ src, alt }: ModalImageProps) {
+export function ModalImage({ image, alt }: ModalImageProps) {
   const { isOpen, onOpen, onClose } = useDisclosure()
+
   return (
     <>
       <Box
@@ -30,17 +32,17 @@ export function ModalImage({ src, alt }: ModalImageProps) {
         p="6"
         onClick={onOpen}
       >
-        <ChakraImage fill="true" src={src} alt={alt} />
+        <ChakraImage fill="true" src={image.src} alt={alt} />
       </Box>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose} size="xl">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>{alt}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <AspectRatio ratio={3 / 4} maxW="full">
-              <ChakraImage src={src} alt={alt} fill="true" />
+            <AspectRatio ratio={image.width / image.height}>
+              <ChakraImage src={image.src} alt={alt} fill="true" />
             </AspectRatio>
           </ModalBody>
 
