@@ -1,6 +1,7 @@
 "use client"
 import kotten from "@/images/kotten2.webp"
-import { Box, BoxProps, Flex, Heading, Text } from "@chakra-ui/react"
+import { Box, BoxProps, Button, Flex, Heading, Text } from "@chakra-ui/react"
+import Link from "next/link"
 import ChakraImage from "../chakra-image"
 
 function HeroImage() {
@@ -60,7 +61,7 @@ export function Hero(props: BoxProps) {
           maxW={{ base: "xl", md: "7xl" }}
           maxH="50vh"
           mx="auto"
-          px={{ base: "6", md: "8" }}
+          px={{ base: "4", md: "8" }}
           color="white"
         >
           <Box maxW="xl">
@@ -72,6 +73,12 @@ export function Hero(props: BoxProps) {
               Unterstütze uns bei den Sanierungen und erhalte den Kotten für die
               Zukunft.
             </Text>
+            <Link
+              href="https://www.paypal.com/pools/c/98UJ4t1Cvi"
+              target="_blank"
+            >
+              <Button bgColor="white">Jetzt unterstützen</Button>
+            </Link>
           </Box>
         </Box>
       </Box>

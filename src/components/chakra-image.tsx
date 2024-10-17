@@ -12,5 +12,5 @@ export type ChakraImageProps = {
 
 export default chakra(Image, {
   shouldForwardProp: (prop) =>
-    ["width", "height", "src", "alt", "fill"].includes(prop),
+    ["width", "height", "src", "alt", "fill", "onClick"].includes(prop),
 })

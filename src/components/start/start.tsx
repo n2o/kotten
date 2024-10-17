@@ -1,4 +1,4 @@
-import ChakraImage from "@/components/chakra-image"
+import { ModalImage } from "@/components/modal-image"
 import { Hero } from "@/components/start/hero"
 import kottenAussenSpanplatte from "@/images/kotten-aussen-spanplatte.webp"
 import {
@@ -44,15 +44,13 @@ function HelpWanted(props: CardProps) {
       </CardHeader>
       <CardBody>
         <Text>
-          Der Kotten ist ein altes Gebäude und benötigt ständig Pflege und
-          Instandhaltung. So ist es nun notwendig einige Balken auszutauschen,
-          da diese zu marode sind, um das Haus weiterhin sicher zu stützen.
+          Der Kotten ist ein altes Gebäude und benötigt ständige Pflege und
+          Instandhaltung. So ist es nun notwendig einige Balken auszutauschen, d
+          zu marode sind, um das Haus weiterhin sicher zu stützen.
         </Text>
-        <AspectRatio ratio={3 / 4} maxW={400}>
-          <ChakraImage
+        <AspectRatio ratio={3 / 4} maxW={200}>
+          <ModalImage
             src={kottenAussenSpanplatte.src}
-            fill={"true"}
-            rounded={"2xl"}
             alt="Außenwand des Kottens"
           />
         </AspectRatio>
