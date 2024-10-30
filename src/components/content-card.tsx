@@ -12,7 +12,7 @@ export function ContentCard({
   ...props
 }: CardProps & { heading: string }) {
   return (
-    <Card {...props}>
+    <Card {...props} bgColor="white">
       <CardHeader pb={0}>
         <Heading fontSize="2xl" lineHeight="2rem">
           {heading}
