@@ -1,8 +1,8 @@
+import { ContentCard } from "@/components/content-card"
+import { Wohnhaus } from "@/components/content-cards"
+import { OktoberBauphase } from "@/components/oktober-bauphase"
 import { Hero } from "@/components/start/hero"
 import { CardProps, Container, Text } from "@chakra-ui/react"
-import { ContentCard } from "../content-card"
-import { Wohnhaus } from "../content-cards"
-import { OktoberBauphase } from "../oktober-bauphase"
 
 function Greeting(props: CardProps) {
   return (

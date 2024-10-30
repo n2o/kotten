@@ -1,4 +1,5 @@
 "use client"
+import ChakraImage from "@/components/chakra-image"
 import {
   AspectRatio,
   Box,
@@ -11,7 +12,6 @@ import {
   useDisclosure,
 } from "@chakra-ui/react"
 import { StaticImageData } from "next/image"
-import ChakraImage from "./chakra-image"
 
 export type ModalImageProps = {
   image: StaticImageData

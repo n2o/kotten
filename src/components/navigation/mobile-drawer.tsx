@@ -1,3 +1,4 @@
+import { links } from "@/components/navigation/links"
 import { ToggleButton } from "@/components/navigation/toggle-button"
 import {
   Button,
@@ -8,7 +9,6 @@ import {
   Stack,
   useDisclosure,
 } from "@chakra-ui/react"
-import { links } from "./links"
 
 export function MobileDrawer() {
   const { isOpen, onToggle, onClose } = useDisclosure()
