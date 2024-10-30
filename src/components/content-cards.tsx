@@ -186,7 +186,9 @@ export function Wohnhaus(props: CardProps) {
         des Wohnhauses auszutauschen. Jetzt sind wir gerade dabei, die neuen
         Gefache in Eigenleistung auszumauern.
       </Text>
-      <Text>Doch jetzt ist die Kasse leer!</Text>
+      <Text fontWeight="bold" align="center" my={5}>
+        Doch jetzt ist die Kasse leer!
+      </Text>
 
       <SimpleGrid columns={{ base: 2, md: 4 }} gap={5}>
         {images.map((image, idx) => (
