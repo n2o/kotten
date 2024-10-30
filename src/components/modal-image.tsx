@@ -1,19 +1,17 @@
 "use client"
+import ChakraImage from "@/components/chakra-image"
 import {
   AspectRatio,
   Box,
-  Button,
   Modal,
   ModalBody,
   ModalCloseButton,
   ModalContent,
-  ModalFooter,
   ModalHeader,
   ModalOverlay,
   useDisclosure,
 } from "@chakra-ui/react"
 import { StaticImageData } from "next/image"
-import ChakraImage from "./chakra-image"
 
 export type ModalImageProps = {
   image: StaticImageData
@@ -35,7 +33,7 @@ export function ModalImage({ image, alt }: ModalImageProps) {
         <ChakraImage fill="true" src={image.src} alt={alt} />
       </Box>
 
-      <Modal isOpen={isOpen} onClose={onClose} size="xl">
+      <Modal isOpen={isOpen} onClose={onClose} size="4xl">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>{alt}</ModalHeader>
@@ -45,12 +43,6 @@ export function ModalImage({ image, alt }: ModalImageProps) {
               <ChakraImage src={image.src} alt={alt} fill="true" />
             </AspectRatio>
           </ModalBody>
-
-          <ModalFooter>
-            <Button variant="outline" onClick={onClose}>
-              Schließen
-            </Button>
-          </ModalFooter>
         </ModalContent>
       </Modal>
     </>

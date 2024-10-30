@@ -81,6 +81,7 @@ export function Hero(props: BoxProps) {
             <Button
               bgColor="white"
               size="2xl"
+              mt={5}
               leftIcon={<FaPaypal />}
               onClick={() => {
                 router.push(paypalDonationLink)

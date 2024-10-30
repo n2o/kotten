@@ -1,6 +1,6 @@
 import ChakraImage from "@/components/chakra-image"
 import { ContentCard } from "@/components/content-card"
-import { ModalImage } from "@/components/modal-image"
+import { Gallery, GalleryImage } from "@/components/gallery"
 import aussenbereichKueche1 from "@/images/2024/aussenbereich-kueche01.webp"
 import aussenbereichKueche2 from "@/images/2024/aussenbereich-kueche02.webp"
 import dachbodenNeueBalken from "@/images/2024/dachboden-neue-balken.webp"
@@ -9,15 +9,7 @@ import kottenAussenSpanplatte from "@/images/2024/kotten-aussen-spanplatte.webp"
 import heimatNrw from "@/images/heimat-nrw.svg"
 import paypalQrCode from "@/images/paypal-code.svg"
 import { paypalDonationLink } from "@/lib"
-import {
-  AspectRatio,
-  Button,
-  CardProps,
-  Flex,
-  SimpleGrid,
-  Text,
-  VStack,
-} from "@chakra-ui/react"
+import { Button, CardProps, Flex, Text, VStack } from "@chakra-ui/react"
 import Link from "next/link"
 import { FaPaypal } from "react-icons/fa6"
 
@@ -135,7 +127,7 @@ export function Grundstueck(props: CardProps) {
 }
 
 export function Wohnhaus(props: CardProps) {
-  const images = [
+  const images: GalleryImage[] = [
     { data: kottenAussenSpanplatte, alt: "Außenwand des Kottens" },
     {
       data: dachbodenSchlafbereich,
@@ -190,13 +182,7 @@ export function Wohnhaus(props: CardProps) {
         Doch jetzt ist die Kasse leer!
       </Text>
 
-      <SimpleGrid columns={{ base: 2, md: 4 }} gap={5}>
-        {images.map((image, idx) => (
-          <AspectRatio ratio={3 / 4} key={idx}>
-            <ModalImage image={image.data} alt={image.alt} />
-          </AspectRatio>
-        ))}
-      </SimpleGrid>
+      <Gallery images={images} ratio={3 / 4} />
       <Text mt={4}>
         Wie auf den Bildern zu erkennen ist, wurde im Jahr 2024 bereits viel
         erreicht und renoviert. Doch es gibt noch viel zu tun. Wir benötigen
@@ -223,7 +209,7 @@ export function Wohnhaus(props: CardProps) {
         <VStack spacing={5}>
           <ChakraImage
             src={paypalQrCode}
-            alt={"QR Code zur PayPal Kampagne"}
+            alt="QR Code zur PayPal Kampagne"
             width={200}
             height={200}
           />
