@@ -2,7 +2,7 @@
 import kotten from "@/images/kotten2.webp"
 import { paypalDonationLink } from "@/lib"
 import { Box, BoxProps, Button, Flex, Heading, Text } from "@chakra-ui/react"
-import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { FaPaypal } from "react-icons/fa6"
 import ChakraImage from "../chakra-image"
 
@@ -56,6 +56,8 @@ export function HeroSmallImage({ title, ...props }: HeroSmallImageProps) {
 }
 
 export function Hero(props: BoxProps) {
+  const router = useRouter()
+
   return (
     <Box bg="gray.800" as="section" minH="140px" position="relative">
       <HeroImage />
@@ -68,7 +70,7 @@ export function Hero(props: BoxProps) {
           color="white"
         >
           <Box maxW="xl">
-            <Heading as="h1" size="3xl" fontWeight="thiner">
+            <Heading as="h1" size="3xl" fontWeight="thinner">
               Diederichskotten
             </Heading>
             <Text fontSize="2xl" mt="4" maxW="xl">
@@ -76,11 +78,18 @@ export function Hero(props: BoxProps) {
               Unterstütze uns bei den Sanierungen und erhalte den Kotten für die
               Zukunft.
             </Text>
-            <Link href={paypalDonationLink} target="_blank">
-              <Button bgColor="white" size="2xl" leftIcon={<FaPaypal />}>
-                Jetzt unterstützen
-              </Button>
-            </Link>
+            {/* <Link href={paypalDonationLink} target="_blank"> */}
+            <Button
+              bgColor="white"
+              size="2xl"
+              leftIcon={<FaPaypal />}
+              onClick={() => {
+                router.push(paypalDonationLink)
+              }}
+            >
+              Jetzt unterstützen
+            </Button>
+            {/* </Link> */}
           </Box>
         </Box>
       </Box>
