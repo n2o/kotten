@@ -1,10 +1,10 @@
 "use client"
+import ChakraImage from "@/components/chakra-image"
 import kotten from "@/images/kotten2.webp"
 import { paypalDonationLink } from "@/lib"
 import { Box, BoxProps, Button, Flex, Heading, Text } from "@chakra-ui/react"
 import { useRouter } from "next/navigation"
 import { FaPaypal } from "react-icons/fa6"
-import ChakraImage from "../chakra-image"
 
 function HeroImage() {
   return (
