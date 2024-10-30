@@ -182,7 +182,7 @@ export function Wohnhaus(props: CardProps) {
         Doch jetzt ist die Kasse leer!
       </Text>
 
-      <Gallery images={images} />
+      <Gallery images={images} ratio={3 / 4} />
       <Text mt={4}>
         Wie auf den Bildern zu erkennen ist, wurde im Jahr 2024 bereits viel
         erreicht und renoviert. Doch es gibt noch viel zu tun. Wir benötigen

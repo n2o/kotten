@@ -2,6 +2,7 @@ import { Hero } from "@/components/start/hero"
 import { CardProps, Container, Text } from "@chakra-ui/react"
 import { ContentCard } from "../content-card"
 import { Wohnhaus } from "../content-cards"
+import { OktoberBauphase } from "../oktober-bauphase"
 
 function Greeting(props: CardProps) {
   return (
@@ -24,6 +25,7 @@ export function Start() {
       <Container>
         <Greeting bgColor="white" mt={-32} />
         <Wohnhaus mt={4} />
+        <OktoberBauphase />
       </Container>
     </>
   )
