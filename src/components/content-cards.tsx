@@ -6,12 +6,14 @@ import aussenbereichKueche2 from "@/images/2024/aussenbereich-kueche02.webp"
 import dachbodenNeueBalken from "@/images/2024/dachboden-neue-balken.webp"
 import dachbodenSchlafbereich from "@/images/2024/dachboden-schlafbereich.webp"
 import kottenAussenSpanplatte from "@/images/2024/kotten-aussen-spanplatte.webp"
+import heimatNrw from "@/images/heimat-nrw.svg"
 import paypalQrCode from "@/images/paypal-code.svg"
 import { paypalDonationLink } from "@/lib"
 import {
   AspectRatio,
   Button,
   CardProps,
+  Flex,
   SimpleGrid,
   Text,
   VStack,
@@ -165,10 +167,9 @@ export function Wohnhaus(props: CardProps) {
         um mit einem Sachverständigen den Schaden begutachten zu können.
       </Text>
       <Text>
-        Der Schaden ist immens. Nach erster Schätzung beläuft er sich auf
-        <strong>100.000&nbsp;€.</strong>
-        Da dies unser Budget bei weitem überschreitet, sind wir auf Hilfe
-        angewiesen.
+        Der Schaden ist immens. Nach erster Schätzung beläuft er sich auf{" "}
+        <strong>100.000&nbsp;€.</strong> Da dies unser Budget bei weitem
+        überschreitet, sind wir auf Hilfe angewiesen.
       </Text>
       <Text>
         In einem ersten Schritt haben wir uns an die Stadt Remscheid gewandt und
@@ -210,19 +211,28 @@ export function Wohnhaus(props: CardProps) {
         eine Mail an info@diederichskotten.de.
       </Text>
 
-      <VStack mt={5}>
-        <ChakraImage
-          src={paypalQrCode}
-          alt={"QR Code zur PayPal Kampagne"}
-          width={200}
-          height={200}
-        />
-        <Link href={paypalDonationLink} target="_blank">
-          <Button leftIcon={<FaPaypal />} colorScheme="cyan">
-            Jetzt unterstützen
-          </Button>
-        </Link>
-      </VStack>
+      <Flex
+        justify="center"
+        align="center"
+        mt={5}
+        gap={{ base: 12, xl: 48 }}
+        flexDirection={{ base: "column", md: "row" }}
+      >
+        <VStack spacing={5}>
+          <ChakraImage
+            src={paypalQrCode}
+            alt={"QR Code zur PayPal Kampagne"}
+            width={200}
+            height={200}
+          />
+          <Link href={paypalDonationLink} target="_blank">
+            <Button leftIcon={<FaPaypal />} colorScheme="cyan">
+              Jetzt unterstützen
+            </Button>
+          </Link>
+        </VStack>
+        <ChakraImage width={500} src={heimatNrw} alt={"Logo von Heimat NRW"} />
+      </Flex>
     </ContentCard>
   )
 }
