@@ -37,7 +37,7 @@ export function Start() {
     <>
       <Hero />
       <Container>
-        <Greeting mt={-32} />
+        <Greeting bgColor="white" mt={-32} />
         <Wohnhaus mt={4} />
       </Container>
     </>
