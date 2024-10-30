@@ -33,7 +33,7 @@ export function ModalImage({ image, alt }: ModalImageProps) {
         <ChakraImage fill="true" src={image.src} alt={alt} />
       </Box>
 
-      <Modal isOpen={isOpen} onClose={onClose} size="xl">
+      <Modal isOpen={isOpen} onClose={onClose} size="4xl">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>{alt}</ModalHeader>
