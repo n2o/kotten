@@ -70,7 +70,7 @@ export function Hero(props: BoxProps) {
           color="white"
         >
           <Box maxW="xl">
-            <Heading as="h1" size="3xl" fontWeight="thinner">
+            <Heading as="h1" size="3xl" fontWeight="light">
               Diederichskotten
             </Heading>
             <Text fontSize="2xl" mt="4" maxW="xl">
@@ -78,7 +78,6 @@ export function Hero(props: BoxProps) {
               Unterstütze uns bei den Sanierungen und erhalte den Kotten für die
               Zukunft.
             </Text>
-            {/* <Link href={paypalDonationLink} target="_blank"> */}
             <Button
               bgColor="white"
               size="2xl"
@@ -89,7 +88,6 @@ export function Hero(props: BoxProps) {
             >
               Jetzt unterstützen
             </Button>
-            {/* </Link> */}
           </Box>
         </Box>
       </Box>
