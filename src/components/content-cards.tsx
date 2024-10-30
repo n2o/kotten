@@ -6,12 +6,14 @@ import aussenbereichKueche2 from "@/images/2024/aussenbereich-kueche02.webp"
 import dachbodenNeueBalken from "@/images/2024/dachboden-neue-balken.webp"
 import dachbodenSchlafbereich from "@/images/2024/dachboden-schlafbereich.webp"
 import kottenAussenSpanplatte from "@/images/2024/kotten-aussen-spanplatte.webp"
+import heimatNrw from "@/images/heimat-nrw.svg"
 import paypalQrCode from "@/images/paypal-code.svg"
 import { paypalDonationLink } from "@/lib"
 import {
   AspectRatio,
   Button,
   CardProps,
+  Flex,
   SimpleGrid,
   Text,
   VStack,
@@ -165,20 +167,27 @@ export function Wohnhaus(props: CardProps) {
         um mit einem Sachverständigen den Schaden begutachten zu können.
       </Text>
       <Text>
-        Der Schaden ist immens. Nach erster Schätzung beläuft er sich auf über
-        38.000 €. Da dies unser Budget bei weitem überschreitet, sind wir auf
-        Hilfe angewiesen.
+        Der Schaden ist immens. Nach erster Schätzung beläuft er sich auf{" "}
+        <strong>100.000&nbsp;€.</strong> Da dies unser Budget bei weitem
+        überschreitet, sind wir auf Hilfe angewiesen.
       </Text>
       <Text>
         In einem ersten Schritt haben wir uns an die Stadt Remscheid gewandt und
-        einen Förderantrag gestellt, der uns vor wenigen Tagen in Höhe von
-        4.000€ zugesichert wurde. Zurzeit warten wir noch auf eine Rückmeldung
-        des Landes über die Möglichkeit zum Erhalt weiterer Fördermittel.
+        einen Förderantrag über 40.000&nbsp;€ beim Land NRW eingereicht. Der
+        Anteil der Stadt wurde uns vor wenigen Tagen in Höhe von 4.000&nbsp;€
+        zugesichert. Auch das Land hat uns über den Heimatfond mit 23.500&nbsp;€
+        unterstützt. Den verbleibenden Eigenanteil von 12.500&nbsp;€ konnten wir
+        dank einer Spende der Stadtsparkasse Remscheid in Höhe von 5.000&nbsp;€
+        aus eigenen Mitteln aufbringen.
       </Text>
       <Text>
-        Doch selbst bei einer positiven Rückmeldung wird zusätzlich ein
-        Eigenanteil von mehr als 10.000 € benötigt, den wir durch Spenden zu
-        bewerkstelligen hoffen.
+        Der erste Schritt ist getan: Im Sommer 2024 konnten wir die Zimmerei
+        Zultner aus Hückeswagen damit beauftragen, die Balken der ersten Hälfte
+        des Wohnhauses auszutauschen. Jetzt sind wir gerade dabei, die neuen
+        Gefache in Eigenleistung auszumauern.
+      </Text>
+      <Text fontWeight="bold" align="center" my={5}>
+        Doch jetzt ist die Kasse leer!
       </Text>
 
       <SimpleGrid columns={{ base: 2, md: 4 }} gap={5}>
@@ -189,26 +198,43 @@ export function Wohnhaus(props: CardProps) {
         ))}
       </SimpleGrid>
       <Text mt={4}>
-        Wie auf den Bildern zu erkennen ist, wird und wurde im Jahr 2024 eine
-        Menge erreicht und renoviert. Doch es gibt noch viel zu tun. Wir
-        benötigen <strong>finanzielle Unterstützung</strong>, damit wir uns
-        professionelle Hilfe holen können, um die notwendigen Arbeiten
-        durchzuführen.
+        Wie auf den Bildern zu erkennen ist, wurde im Jahr 2024 bereits viel
+        erreicht und renoviert. Doch es gibt noch viel zu tun. Wir benötigen
+        finanzielle Unterstützung, damit wir uns auch im nächsten Jahr weiterhin
+        professionelle Hilfe und Material leisten können, um die notwendigen
+        Arbeiten durchzuführen.
+      </Text>
+      <Text>
+        Wenn Sie uns unterstützen möchten, können Sie dies gerne über unsere
+        PayPal-Spendenaktion tun.
+      </Text>
+      <Text>
+        Sollten Sie eine Spendenbescheinigung benötigen, schreiben Sie uns gerne
+        eine Mail an info@diederichskotten.de.
       </Text>
 
-      <VStack mt={5}>
-        <ChakraImage
-          src={paypalQrCode}
-          alt={"QR Code zur PayPal Kampagne"}
-          width={200}
-          height={200}
-        />
-        <Link href={paypalDonationLink} target="_blank">
-          <Button leftIcon={<FaPaypal />} colorScheme="cyan">
-            Jetzt unterstützen
-          </Button>
-        </Link>
-      </VStack>
+      <Flex
+        justify="center"
+        align="center"
+        mt={5}
+        gap={{ base: 12, xl: 48 }}
+        flexDirection={{ base: "column", md: "row" }}
+      >
+        <VStack spacing={5}>
+          <ChakraImage
+            src={paypalQrCode}
+            alt={"QR Code zur PayPal Kampagne"}
+            width={200}
+            height={200}
+          />
+          <Link href={paypalDonationLink} target="_blank">
+            <Button leftIcon={<FaPaypal />} colorScheme="cyan">
+              Jetzt unterstützen
+            </Button>
+          </Link>
+        </VStack>
+        <ChakraImage width={500} src={heimatNrw} alt={"Logo von Heimat NRW"} />
+      </Flex>
     </ContentCard>
   )
 }
