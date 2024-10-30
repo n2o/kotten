@@ -2,12 +2,10 @@
 import {
   AspectRatio,
   Box,
-  Button,
   Modal,
   ModalBody,
   ModalCloseButton,
   ModalContent,
-  ModalFooter,
   ModalHeader,
   ModalOverlay,
   useDisclosure,
@@ -45,12 +43,6 @@ export function ModalImage({ image, alt }: ModalImageProps) {
               <ChakraImage src={image.src} alt={alt} fill="true" />
             </AspectRatio>
           </ModalBody>
-
-          <ModalFooter>
-            <Button variant="outline" onClick={onClose}>
-              Schließen
-            </Button>
-          </ModalFooter>
         </ModalContent>
       </Modal>
     </>
