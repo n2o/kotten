@@ -61,7 +61,12 @@ export function Hero(props: BoxProps) {
   return (
     <Box bg="gray.800" as="section" minH="140px" position="relative">
       <HeroImage />
-      <Box py="56" position="relative" {...props}>
+      <Box
+        pt={{ base: 24, md: 56 }}
+        pb={{ base: 40, md: 56 }}
+        position="relative"
+        {...props}
+      >
         <Box
           maxW={{ base: "xl", md: "7xl" }}
           maxH="50vh"
