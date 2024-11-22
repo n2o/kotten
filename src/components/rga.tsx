@@ -59,7 +59,6 @@ export function Articles() {
           <Card
             fontSize="sm"
             _hover={{
-              textDecoration: "underline",
               shadow: "lg",
               transition: "all 0.2s",
             }}
