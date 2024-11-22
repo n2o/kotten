@@ -1,6 +1,7 @@
 import { ContentCard } from "@/components/content-card"
 import { Wohnhaus } from "@/components/content-cards"
 import { OktoberBauphase } from "@/components/oktober-bauphase"
+import { Articles } from "@/components/rga"
 import { Hero } from "@/components/start/hero"
 import { CardProps, Container, Text } from "@chakra-ui/react"
 
@@ -14,6 +15,7 @@ function Greeting(props: CardProps) {
         als Ort für bündische Veranstaltungen zu nutzen und so den Gruppen des
         Deutschen Pfadfinderbundes in Remscheid eine Heimat bietet.
       </Text>
+      <Articles />
     </ContentCard>
   )
 }
