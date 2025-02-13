@@ -25,7 +25,7 @@ export function Start() {
     <>
       <Hero />
       <Container>
-        <Greeting bgColor="white" mt={-32} />
+        <Greeting bgColor="white" mt={-24} />
         <Wohnhaus mt={4} />
         <OktoberBauphase />
       </Container>
