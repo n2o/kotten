@@ -112,6 +112,8 @@ export function Hero(props: BoxProps) {
                     <Button
                       leftIcon={<FaPeopleGroup />}
                       colorScheme="green"
+                      color={"gray.900"}
+                      variant="outline"
                       size="xl"
                     >
                       Jetzt unterstützen: Jeder Euro zählt!
