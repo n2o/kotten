@@ -25,7 +25,7 @@ export function Start() {
     <>
       <Hero mb={1} />
       <Container>
-        <Greeting bgColor="white" mt={-24} />
+        <Greeting bgColor="white" mt={{ base: 0, md: -32 }} />
         <Post20250214 mt={4} />
         <Wohnhaus mt={4} />
         <OktoberBauphase />
