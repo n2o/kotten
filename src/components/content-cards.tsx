@@ -139,7 +139,11 @@ export function Wohnhaus(props: CardProps) {
   ]
 
   return (
-    <ContentCard heading="Wir benötigen Hilfe beim Wohnhaus!" {...props}>
+    <ContentCard
+      heading="Wir benötigen Hilfe beim Wohnhaus!"
+      date="18.10.2024"
+      {...props}
+    >
       <Text>
         Das Wohnhaus wird heute vor allem genutzt, um Gruppenstunden und Fahrten
         in unseren Pfadfindergruppen auszurichten. Es hat einen großen Hauptraum
