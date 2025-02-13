@@ -114,7 +114,7 @@ export function Hero(props: BoxProps) {
                       colorScheme="green"
                       size="xl"
                     >
-                      Jetzt unterstützen
+                      Jetzt unterstützen: Jeder Euro zählt!
                     </Button>
                   </Link>
                 </AlertDescription>
