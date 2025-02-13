@@ -19,6 +19,7 @@ const brand = {
 const colors = {
   ...proTheme.colors,
   brand,
+  primary: brand,
 }
 
 const components: Record<string, StyleConfig> = {
@@ -104,5 +105,5 @@ export const appTheme: ThemeConfig = extendTheme(
     initialColorMode: "light",
     useSystemColorMode: true,
   },
-  proTheme
+  proTheme,
 )

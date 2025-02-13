@@ -1,6 +1,7 @@
 "use client"
 import ChakraImage from "@/components/chakra-image"
 import kotten from "@/images/kotten2.webp"
+import { volksbankCrowdfundingLink20250214 } from "@/lib"
 import {
   Alert,
   AlertDescription,
@@ -101,12 +102,12 @@ export function Hero(props: BoxProps) {
                 <AlertTitle>Unterstützt uns beim Crowdfunding!</AlertTitle>
                 <AlertDescription>
                   <Text>
-                    Jugendarbeit braucht Raum!
-                    Unterstützt uns beim Crowdfunding und helft uns, den
-                    Diederichskotten zu erhalten und zu sanieren.
+                    Jugendarbeit braucht Raum! Unterstützt uns beim Crowdfunding
+                    und helft uns, den Diederichskotten zu erhalten und zu
+                    sanieren.
                   </Text>
                   <Link
-                    href="https://www.viele-schaffen-mehr.de/projekte/diederichskotten-helfen"
+                    href={volksbankCrowdfundingLink20250214}
                     target="_blank"
                   >
                     <Button

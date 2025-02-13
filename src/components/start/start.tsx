@@ -1,5 +1,5 @@
 import { ContentCard } from "@/components/content-card"
-import { Wohnhaus } from "@/components/content-cards"
+import { Post20250214, Wohnhaus } from "@/components/content-cards"
 import { OktoberBauphase } from "@/components/oktober-bauphase"
 import { Articles } from "@/components/rga"
 import { Hero } from "@/components/start/hero"
@@ -26,6 +26,7 @@ export function Start() {
       <Hero mb={1} />
       <Container>
         <Greeting bgColor="white" mt={-1} />
+        <Post20250214 mt={4} />
         <Wohnhaus mt={4} />
         <OktoberBauphase />
       </Container>

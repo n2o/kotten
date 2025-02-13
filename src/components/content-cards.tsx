@@ -6,12 +6,14 @@ import aussenbereichKueche2 from "@/images/2024/aussenbereich-kueche02.webp"
 import dachbodenNeueBalken from "@/images/2024/dachboden-neue-balken.webp"
 import dachbodenSchlafbereich from "@/images/2024/dachboden-schlafbereich.webp"
 import kottenAussenSpanplatte from "@/images/2024/kotten-aussen-spanplatte.webp"
+import front20250214 from "@/images/2025/2025-02-14_front.webp"
+import verputzteWand20250214 from "@/images/2025/2025-02-14_verputzte-wand.webp"
 import heimatNrw from "@/images/heimat-nrw.svg"
 import paypalQrCode from "@/images/paypal-code.svg"
-import { paypalDonationLink } from "@/lib"
-import { Button, CardProps, Flex, Text, VStack } from "@chakra-ui/react"
+import { paypalDonationLink, volksbankCrowdfundingLink20250214 } from "@/lib"
+import { Box, Button, CardProps, Flex, Text, VStack } from "@chakra-ui/react"
 import Link from "next/link"
-import { FaPaypal } from "react-icons/fa6"
+import { FaPaypal, FaPeopleGroup } from "react-icons/fa6"
 
 export function Uebernahme(props: CardProps) {
   return (
@@ -126,6 +128,78 @@ export function Grundstueck(props: CardProps) {
   )
 }
 
+export function Post20250214(props: CardProps) {
+  const images: GalleryImage[] = [
+    { data: front20250214, alt: "Fassade des Kottens" },
+    { data: verputzteWand20250214, alt: "Verputzte Wand" },
+  ]
+
+  return (
+    <ContentCard
+      heading="Crowdfunding und unser Plan für 2025"
+      date="14.02.2025"
+      {...props}
+    >
+      <Text>
+        Letztes Jahr konnten wir dank der zahlreichen Spenden und Fördergelder
+        die Sanierung unseres Kottens starten. Im November ist es uns dank
+        vieler tatkräftiger Helfer noch gelungen, die neuen Balken wieder mit
+        Mauerwerk zu füllen.
+        <br />
+        Doch auch dieses Jahr haben wir viel vor.
+        <br />
+        Die Frontseite des Hauses muss von außen verputzt werden und die
+        Elektroinstallation im Wohnraum wird komplett erneuert. Wir benötigen
+        neue denkmalgerechte Fenster und die gesamte obere Etage muss saniert
+        werden. Außerdem muss in Zusammenarbeit mit der Firma Zultner und der
+        Denkmalbehörde Remscheid beschlossen werden, wie mit der Rückseite des
+        Hauses weiter vorgegangen wird.
+      </Text>
+      <Text>Alles in allem erwarten wir Kosten von ca. 50.000 €</Text>
+      <Text>
+        Um all diese Projekte auch finanziell stemmen zu können und den
+        Eigenanteil für eine weitere Förderung durch das Land NRW aufbringen zu
+        können, haben wir die Winterpause genutzt und uns bei der{" "}
+        <Link target="_blank" href={volksbankCrowdfundingLink20250214}>
+          Volksbank im Bergischen Land auf ein Crowdfunding beworben
+        </Link>
+        .
+      </Text>
+      <Text>
+        Wir haben ein Spendenziel von 5.000 € festgelegt. Es gilt das „Alles
+        oder nichts“-Prinzip: Wenn die Summe nicht erreicht wird, bekommen die
+        Spender ihr Geld zurück. Natürlich benötigen wir mehr als 5.000 €, aber
+        über die Plattform ist es möglich, auch über das Ziel hinaus zu spenden.
+        <br />
+        Die Volksbank hat uns freundlicherweise mit einem Startbonus von 1.000 €
+        unterstützt. Aktuell fehlen also noch 4.000 €, um das Spendenziel zu
+        erreichen.
+        <br />
+        Die Volksbank legt für jeden Spender (nicht für jede einzelne Spende) 5
+        € zusätzlich dazu. Damit das zählt, muss jeder Spender über einen
+        eigenen Account spenden.
+        <br />
+        Wir sind auf jede Unterstützung angewiesen, um den Kotten als unser
+        Gruppenheim und Kulturdenkmal zu erhalten.
+      </Text>
+
+      <Box my={3}>
+        <Link href={volksbankCrowdfundingLink20250214} target="_blank">
+          <Button
+            leftIcon={<FaPeopleGroup />}
+            colorScheme="primary"
+            color="white"
+          >
+            Zum Crowdfunding
+          </Button>
+        </Link>
+      </Box>
+
+      <Gallery images={images} ratio={4 / 3} />
+    </ContentCard>
+  )
+}
+
 export function Wohnhaus(props: CardProps) {
   const images: GalleryImage[] = [
     { data: kottenAussenSpanplatte, alt: "Außenwand des Kottens" },
@@ -218,7 +292,7 @@ export function Wohnhaus(props: CardProps) {
             height={200}
           />
           <Link href={paypalDonationLink} target="_blank">
-            <Button leftIcon={<FaPaypal />} colorScheme="cyan">
+            <Button leftIcon={<FaPaypal />} colorScheme="primary" color="white">
               Jetzt unterstützen
             </Button>
           </Link>
