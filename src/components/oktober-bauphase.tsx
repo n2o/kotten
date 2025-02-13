@@ -36,7 +36,7 @@ const images: GalleryImage[] = [
 export function OktoberBauphase(props: CardProps) {
   return (
     <>
-      <ContentCard heading="Arbeitssamstag vom 26.10.2024" mt={4} {...props}>
+      <ContentCard heading="Arbeitssamstag im Oktober 2024" mt={4} {...props}>
         <Text>
           An diesem Tag wurden die ersten Arbeiten an den Gefachen durchgeführt.
           Wir konnten zusammen mit Interessierten und Mitgliedern des Vereins
