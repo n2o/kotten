@@ -4,8 +4,8 @@ export default withSentryConfig(module.exports, {
   // For all available options, see:
   // https://github.com/getsentry/sentry-webpack-plugin#options
 
-  org: "schnaq",
-  project: "kotten",
+  org: "private-xmh",
+  project: "diederichskottende",
 
   // Only print logs for uploading source maps in CI
   silent: !process.env.CI,
