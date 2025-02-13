@@ -101,7 +101,7 @@ export function Hero(props: BoxProps) {
                 <AlertTitle>Unterstützt uns beim Crowdfunding!</AlertTitle>
                 <AlertDescription>
                   <Text>
-                    Jugendarbeit braucht Raum: Helft dem Diederichskotten!
+                    Jugendarbeit braucht Raum!
                     Unterstützt uns beim Crowdfunding und helft uns, den
                     Diederichskotten zu erhalten und zu sanieren.
                   </Text>

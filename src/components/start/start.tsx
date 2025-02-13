@@ -23,9 +23,9 @@ function Greeting(props: CardProps) {
 export function Start() {
   return (
     <>
-      <Hero />
+      <Hero mb={1} />
       <Container>
-        <Greeting bgColor="white" mt={-32} />
+        <Greeting bgColor="white" mt={-1} />
         <Wohnhaus mt={4} />
         <OktoberBauphase />
       </Container>
