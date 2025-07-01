@@ -8,10 +8,30 @@ import dachbodenSchlafbereich from "@/images/2024/dachboden-schlafbereich.webp"
 import kottenAussenSpanplatte from "@/images/2024/kotten-aussen-spanplatte.webp"
 import front20250214 from "@/images/2025/2025-02-14_front.webp"
 import verputzteWand20250214 from "@/images/2025/2025-02-14_verputzte-wand.webp"
+import anderes01 from "@/images/2025/2025-07-01_baufortschritt/anderes01.webp"
+import anderes02 from "@/images/2025/2025-07-01_baufortschritt/anderes02.webp"
+import aussen01 from "@/images/2025/2025-07-01_baufortschritt/aussen01.webp"
+import aussen02 from "@/images/2025/2025-07-01_baufortschritt/aussen02.webp"
+import aussen03 from "@/images/2025/2025-07-01_baufortschritt/aussen03.webp"
+import aussen04 from "@/images/2025/2025-07-01_baufortschritt/aussen04.webp"
+import innen01 from "@/images/2025/2025-07-01_baufortschritt/innen01.webp"
+import innen02 from "@/images/2025/2025-07-01_baufortschritt/innen02.webp"
+import innen03 from "@/images/2025/2025-07-01_baufortschritt/innen03.webp"
+import innen04 from "@/images/2025/2025-07-01_baufortschritt/innen04.webp"
+
 import heimatNrw from "@/images/heimat-nrw.svg"
 import paypalQrCode from "@/images/paypal-code.svg"
 import { paypalDonationLink, volksbankCrowdfundingLink20250214 } from "@/lib"
-import { Box, Button, CardProps, Flex, Text, VStack } from "@chakra-ui/react"
+import {
+  Box,
+  Button,
+  CardProps,
+  Divider,
+  Flex,
+  Heading,
+  Text,
+  VStack,
+} from "@chakra-ui/react"
 import Link from "next/link"
 import { FaPaypal, FaPeopleGroup } from "react-icons/fa6"
 
@@ -123,6 +143,112 @@ export function Grundstueck(props: CardProps) {
       <Text>
         Auf der linken Seite des Hauptgebäudes findet man eine große Wiese, die
         vor allem für Pfadfinderlager und Gruppenstunden genutzt wird
+      </Text>
+    </ContentCard>
+  )
+}
+
+export function Post20250701(props: CardProps) {
+  const aussenImages: GalleryImage[] = [
+    {
+      data: aussen01,
+      alt: "Die erste Putzschicht wird auf die Lehmsteine angebracht",
+    },
+    {
+      data: aussen02,
+      alt: "Weitere Putzschichten werden auf die Lehmsteine angebracht",
+    },
+    {
+      data: aussen03,
+      alt: "Weitere Putzschichten werden auf die Lehmsteine angebracht",
+    },
+    {
+      data: aussen04,
+      alt: "Weitere Putzschichten werden auf die Lehmsteine angebracht",
+    },
+  ]
+
+  const innenImages: GalleryImage[] = [
+    {
+      data: innen01,
+      alt: "Strohmatten werden über die Wände gelegt.",
+    },
+    {
+      data: innen02,
+      alt: "Lehmputz wird mit Druck auf die Wände gespritzt.",
+    },
+    {
+      data: innen03,
+      alt: "Neuer Lehmputz wird angerührt.",
+    },
+    {
+      data: innen04,
+      alt: "Erste Wand ist vollständig mit Lehm verputzt.",
+    },
+  ]
+
+  const andereImages: GalleryImage[] = [
+    {
+      data: anderes01,
+      alt: "Schutt wird in den Hänger verladen.",
+    },
+    {
+      data: anderes02,
+      alt: "Das Grundstück wird aufgeräumt.",
+    },
+  ]
+
+  return (
+    <ContentCard
+      heading="Baufortschritt erste Jahreshälfte 2025"
+      date="01.07.2025"
+      {...props}
+    >
+      <Text>
+        In diesem Jahr haben wir an einigen Arbeitswochenenden wieder viel an
+        unserem Kotten geschafft. Im Innenraum wurde fleißig angefangen die
+        Wände mit Strohmatten und Lehm zu versehen, außen wurde angefangen zu
+        verputzen und im Häuschen wurden die Wände gestrichen und alles geputzt.
+      </Text>
+
+      <Heading as="h3" size="xs">
+        Außen verputzen
+      </Heading>
+      <Text>
+        Nachdem die Lehmsteine in die Fassade gebracht wurden, konnte die erste
+        Putzschicht angebracht werden.
+      </Text>
+      <Gallery images={aussenImages} />
+
+      <Heading as="h3" size="xs">
+        Innenraum
+      </Heading>
+      <Text>
+        Im Innenraum wurde fleißig angefangen die Wände mit Strohmatten und Lehm
+        zu versehen.
+      </Text>
+      <Gallery images={innenImages} />
+
+      <Heading as="h3" size="xs">
+        Weitere Arbeiten
+      </Heading>
+      <Text>
+        Neben den Arbeiten an dem Gefache, müssen auch noch das Grundstück
+        aufgeräumt werden sowie der Schutt weggebracht werden.
+      </Text>
+      <Gallery images={andereImages} />
+
+      <Divider my={6} mx="auto" w="50%" />
+
+      <Text>
+        Die Arbeiten gehen langsam, aber stetig voran. Was hier auf den Bildern
+        zu sehen ist, ist nur der Anfang. Es bleibt noch viel zu tun, wir
+        brauchen noch viel Unterstützung, müssen noch einige Balken tausche,
+        weitere Gefache neu ausmauern und verputzen, und so weiter.
+      </Text>
+      <Text>
+        Wir freuen uns auf eure Unterstützung und hoffen, dass ihr mit uns
+        gemeinsam den Kotten für die Zukunft saniert.
       </Text>
     </ContentCard>
   )

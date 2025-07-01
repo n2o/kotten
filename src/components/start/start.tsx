@@ -1,10 +1,14 @@
 import { ContentCard } from "@/components/content-card"
-import { Post20250214, Wohnhaus } from "@/components/content-cards"
+import {
+  Post20250214,
+  Post20250701,
+  Wohnhaus,
+} from "@/components/content-cards"
 import { Logo } from "@/components/logo"
 import { OktoberBauphase } from "@/components/oktober-bauphase"
 import { Articles } from "@/components/rga"
 import { Hero } from "@/components/start/hero"
-import { CardProps, Container, HStack, Text } from "@chakra-ui/react"
+import { CardProps, Container, HStack, Text, VStack } from "@chakra-ui/react"
 
 function Greeting(props: CardProps) {
   return (
@@ -30,10 +34,13 @@ export function Start() {
     <>
       <Hero mb={1} />
       <Container>
-        <Greeting bgColor="white" mt={{ base: 0, md: -32 }} />
-        <Post20250214 mt={4} />
-        <Wohnhaus mt={4} />
-        <OktoberBauphase />
+        <VStack spacing={8}>
+          <Greeting bgColor="white" mt={{ base: 0, md: -32 }} />
+          <Post20250701 />
+          <Post20250214 />
+          <Wohnhaus />
+          <OktoberBauphase />
+        </VStack>
       </Container>
     </>
   )
