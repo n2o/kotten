@@ -1,21 +1,10 @@
 "use client"
 import ChakraImage from "@/components/chakra-image"
 import kotten from "@/images/kotten2.webp"
-import { volksbankCrowdfundingLink20250214 } from "@/lib"
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-  Box,
-  BoxProps,
-  Button,
-  Flex,
-  Heading,
-  Text,
-  VStack,
-} from "@chakra-ui/react"
-import Link from "next/link"
-import { FaPeopleGroup } from "react-icons/fa6"
+import { paypalDonationLink } from "@/lib"
+import { Box, BoxProps, Button, Flex, Heading, Text } from "@chakra-ui/react"
+import { useRouter } from "next/navigation"
+import { FaPaypal } from "react-icons/fa6"
 
 function HeroImage() {
   return (
@@ -67,6 +56,8 @@ export function HeroSmallImage({ title, ...props }: HeroSmallImageProps) {
 }
 
 export function Hero(props: BoxProps) {
+  const router = useRouter()
+
   return (
     <Box bg="gray.800" as="section" minH="140px" position="relative">
       <HeroImage />
@@ -92,38 +83,7 @@ export function Hero(props: BoxProps) {
               Unterstütze uns bei den Sanierungen und erhalte den Kotten für die
               Zukunft.
             </Text>
-            <Alert
-              status="success"
-              color={"gray.800"}
-              mt={5}
-              variant="left-accent"
-            >
-              <VStack align="left">
-                <AlertTitle>Unterstützt uns beim Crowdfunding!</AlertTitle>
-                <AlertDescription>
-                  <Text>
-                    Jugendarbeit braucht Raum! Unterstützt uns beim Crowdfunding
-                    und helft uns, den Diederichskotten zu erhalten und zu
-                    sanieren.
-                  </Text>
-                  <Link
-                    href={volksbankCrowdfundingLink20250214}
-                    target="_blank"
-                  >
-                    <Button
-                      leftIcon={<FaPeopleGroup />}
-                      colorScheme="green"
-                      color={"gray.900"}
-                      variant="outline"
-                      size="xl"
-                    >
-                      Jetzt unterstützen: Jeder Euro zählt!
-                    </Button>
-                  </Link>
-                </AlertDescription>
-              </VStack>
-            </Alert>
-            {/* <Button
+            <Button
               bgColor="white"
               size="2xl"
               mt={5}
@@ -133,7 +93,7 @@ export function Hero(props: BoxProps) {
               }}
             >
               Jetzt unterstützen
-            </Button> */}
+            </Button>
           </Box>
         </Box>
       </Box>
