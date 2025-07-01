@@ -1,5 +1,5 @@
 import ChakraImage, { ChakraImageProps } from "@/components/chakra-image"
-import logo from "@/images/logo.webp"
+import logo from "@/images/logo.svg"
 
 export function Logo(props: ChakraImageProps) {
   return (
