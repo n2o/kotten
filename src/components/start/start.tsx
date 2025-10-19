@@ -38,8 +38,8 @@ export function Start() {
           <Greeting bgColor="white" mt={{ base: 0, md: -32 }} />
           <Post20250701 />
           <Post20250214 />
-          <Wohnhaus />
           <OktoberBauphase />
+          <Wohnhaus />
         </VStack>
       </Container>
     </>
