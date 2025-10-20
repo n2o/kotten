@@ -1,4 +1,4 @@
-import { Providers } from "@/app/providers"
+import { Provider } from "@/components/ui/provider"
 import { Navbar } from "@/components/navigation/navbar"
 import openGraphKotten from "@/images/opengraph.jpg"
 import { Box } from "@chakra-ui/react"
@@ -46,13 +46,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="de" className={GeistSans.className}>
+    <html lang="de" className={GeistSans.className} suppressHydrationWarning>
       <head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </head>
       <body>
         <Analytics />
-        <Providers>
+        <Provider>
           <header>
             <Navbar />
           </header>
@@ -61,7 +61,7 @@ export default function RootLayout({
               {children}
             </Box>
           </main>
-        </Providers>
+        </Provider>
       </body>
     </html>
   )

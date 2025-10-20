@@ -1,17 +1,20 @@
+"use client"
 import { links } from "@/components/navigation/links"
 import { ToggleButton } from "@/components/navigation/toggle-button"
 import {
   Button,
   Drawer,
-  DrawerBody,
-  DrawerContent,
   Link,
   Stack,
-  useDisclosure,
 } from "@chakra-ui/react"
+import NextLink from "next/link"
+import { useState } from "react"
 
 export function MobileDrawer() {
-  const { isOpen, onToggle, onClose } = useDisclosure()
+  const [isOpen, setIsOpen] = useState(false)
+  const onToggle = () => setIsOpen(!isOpen)
+  const onClose = () => setIsOpen(false)
+
   return (
     <>
       <ToggleButton
@@ -20,21 +23,26 @@ export function MobileDrawer() {
         aria-label="Open menu"
         display={{ base: "inline-flex", md: "none" }}
       />
-      <Drawer placement="top" isOpen={isOpen} onClose={onClose}>
-        <DrawerContent>
-          <DrawerBody mt="72px" p="4">
-            <Stack spacing="1">
-              {links.map((link) => (
-                <Link href={link.href} key={link.href}>
-                  <Button variant={"tertiary"} size={"lg"} _hover={"none"}>
-                    {link.label}
-                  </Button>
-                </Link>
-              ))}
-            </Stack>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
+      <Drawer.Root placement="top" open={isOpen} onOpenChange={(e) => setIsOpen(e.open)}>
+        <Drawer.Backdrop />
+        <Drawer.Positioner>
+          <Drawer.Content mt="72px">
+            <Drawer.Body p="4">
+              <Stack gap="1">
+                {links.map((link) => (
+                  <Link asChild key={link.href} onClick={onClose}>
+                    <NextLink href={link.href}>
+                      <Button variant="ghost" size="lg">
+                        {link.label}
+                      </Button>
+                    </NextLink>
+                  </Link>
+                ))}
+              </Stack>
+            </Drawer.Body>
+          </Drawer.Content>
+        </Drawer.Positioner>
+      </Drawer.Root>
     </>
   )
 }

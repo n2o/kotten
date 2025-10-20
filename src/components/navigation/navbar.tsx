@@ -2,8 +2,8 @@
 import { Logo } from "@/components/logo"
 import { links } from "@/components/navigation/links"
 import { MobileDrawer } from "@/components/navigation/mobile-drawer"
-import { Link } from "@chakra-ui/next-js"
-import { Box, Button, ButtonGroup, Container, HStack } from "@chakra-ui/react"
+import { Box, Button, Container, HStack, Link } from "@chakra-ui/react"
+import NextLink from "next/link"
 
 export function Navbar() {
   return (
@@ -15,27 +15,30 @@ export function Navbar() {
         zIndex="tooltip"
       >
         <Container py="1">
-          <HStack justify="space-between" spacing="8">
-            <HStack spacing="10">
-              <HStack spacing="3">
+          <HStack justify="space-between" gap="8">
+            <HStack gap="10">
+              <HStack gap="3">
                 <MobileDrawer />
-                <Link href="/">
-                  <Logo height="64px" width="64px" />
+                <Link asChild>
+                  <NextLink href="/">
+                    <Logo height="64px" width="64px" />
+                  </NextLink>
                 </Link>
               </HStack>
-              <ButtonGroup
-                size="lg"
-                variant="text"
-                colorScheme="gray"
-                spacing="8"
+              <HStack
+                gap="8"
                 display={{ base: "none", md: "flex" }}
               >
                 {links.map((link) => (
-                  <Link href={link.href} key={link.href}>
-                    <Button>{link.label}</Button>
+                  <Link asChild key={link.href}>
+                    <NextLink href={link.href}>
+                      <Button size="lg" variant="ghost">
+                        {link.label}
+                      </Button>
+                    </NextLink>
                   </Link>
                 ))}
-              </ButtonGroup>
+              </HStack>
             </HStack>
           </HStack>
         </Container>

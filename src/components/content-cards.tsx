@@ -25,17 +25,17 @@ import { paypalDonationLink, volksbankCrowdfundingLink20250214 } from "@/lib"
 import {
   Box,
   Button,
-  CardProps,
-  Divider,
   Flex,
   Heading,
+  Separator,
   Text,
   VStack,
 } from "@chakra-ui/react"
+import { HTMLChakraProps } from "@chakra-ui/react"
 import Link from "next/link"
 import { FaPaypal, FaPeopleGroup } from "react-icons/fa6"
 
-export function Uebernahme(props: CardProps) {
+export function Uebernahme(props: HTMLChakraProps<"div">) {
   return (
     <ContentCard heading="Übernahme des Kottens durch uns" {...props}>
       <Text>
@@ -63,7 +63,7 @@ export function Uebernahme(props: CardProps) {
   )
 }
 
-export function Verein(props: CardProps) {
+export function Verein(props: HTMLChakraProps<"div">) {
   return (
     <ContentCard
       {...props}
@@ -101,7 +101,7 @@ export function Verein(props: CardProps) {
   )
 }
 
-export function Verwendung(props: CardProps) {
+export function Verwendung(props: HTMLChakraProps<"div">) {
   return (
     <ContentCard heading="Wozu wird der Kotten heute genutzt?" {...props}>
       <Text>
@@ -121,7 +121,7 @@ export function Verwendung(props: CardProps) {
   )
 }
 
-export function Grundstueck(props: CardProps) {
+export function Grundstueck(props: HTMLChakraProps<"div">) {
   return (
     <ContentCard heading="Das Grundstück" {...props}>
       <Text>
@@ -148,7 +148,7 @@ export function Grundstueck(props: CardProps) {
   )
 }
 
-export function Post20250701(props: CardProps) {
+export function Post20250701(props: HTMLChakraProps<"div">) {
   const aussenImages: GalleryImage[] = [
     {
       data: aussen01,
@@ -238,7 +238,7 @@ export function Post20250701(props: CardProps) {
       </Text>
       <Gallery images={andereImages} />
 
-      <Divider my={6} mx="auto" w="50%" />
+      <Separator my={6} mx="auto" w="50%" />
 
       <Text>
         Die Arbeiten gehen langsam, aber stetig voran. Was hier auf den Bildern
@@ -254,7 +254,7 @@ export function Post20250701(props: CardProps) {
   )
 }
 
-export function Post20250214(props: CardProps) {
+export function Post20250214(props: HTMLChakraProps<"div">) {
   const images: GalleryImage[] = [
     { data: front20250214, alt: "Fassade des Kottens" },
     { data: verputzteWand20250214, alt: "Verputzte Wand" },
@@ -312,10 +312,10 @@ export function Post20250214(props: CardProps) {
       <Box my={3}>
         <Link href={volksbankCrowdfundingLink20250214} target="_blank">
           <Button
-            leftIcon={<FaPeopleGroup />}
-            colorScheme="primary"
+            colorPalette="primary"
             color="white"
           >
+            <FaPeopleGroup />
             Zum Crowdfunding
           </Button>
         </Link>
@@ -326,7 +326,7 @@ export function Post20250214(props: CardProps) {
   )
 }
 
-export function Wohnhaus(props: CardProps) {
+export function Wohnhaus(props: HTMLChakraProps<"div">) {
   const images: GalleryImage[] = [
     { data: kottenAussenSpanplatte, alt: "Außenwand des Kottens" },
     {
@@ -382,7 +382,7 @@ export function Wohnhaus(props: CardProps) {
         des Wohnhauses auszutauschen. Jetzt sind wir gerade dabei, die neuen
         Gefache in Eigenleistung auszumauern.
       </Text>
-      <Text fontWeight="bold" align="center" my={5}>
+      <Text fontWeight="bold" textAlign="center" my={5}>
         Doch jetzt ist die Kasse leer!
       </Text>
 
@@ -410,7 +410,7 @@ export function Wohnhaus(props: CardProps) {
         gap={{ base: 12, xl: 48 }}
         flexDirection={{ base: "column", md: "row" }}
       >
-        <VStack spacing={5}>
+        <VStack gap={5}>
           <ChakraImage
             src={paypalQrCode}
             alt="QR Code zur PayPal Kampagne"
@@ -418,7 +418,8 @@ export function Wohnhaus(props: CardProps) {
             height={200}
           />
           <Link href={paypalDonationLink} target="_blank">
-            <Button leftIcon={<FaPaypal />} colorScheme="primary" color="white">
+            <Button colorPalette="primary" color="white">
+              <FaPaypal />
               Jetzt unterstützen
             </Button>
           </Link>

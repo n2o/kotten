@@ -8,9 +8,10 @@ import { Logo } from "@/components/logo"
 import { OktoberBauphase } from "@/components/oktober-bauphase"
 import { Articles } from "@/components/rga"
 import { Hero } from "@/components/start/hero"
-import { CardProps, Container, HStack, Text, VStack } from "@chakra-ui/react"
+import { Container, HStack, Text, VStack } from "@chakra-ui/react"
+import { HTMLChakraProps } from "@chakra-ui/react"
 
-function Greeting(props: CardProps) {
+function Greeting(props: HTMLChakraProps<"div">) {
   return (
     <ContentCard heading="Willkommen" hierarchy="h1" fontSize="3xl" {...props}>
       <HStack>
@@ -34,7 +35,7 @@ export function Start() {
     <>
       <Hero mb={1} />
       <Container>
-        <VStack spacing={8}>
+        <VStack gap={8}>
           <Greeting bgColor="white" mt={{ base: 0, md: -32 }} />
           <Post20250701 />
           <Post20250214 />

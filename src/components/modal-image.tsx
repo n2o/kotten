@@ -3,15 +3,10 @@ import ChakraImage from "@/components/chakra-image"
 import {
   AspectRatio,
   Box,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalHeader,
-  ModalOverlay,
-  useDisclosure,
+  Dialog,
 } from "@chakra-ui/react"
 import { StaticImageData } from "next/image"
+import { useState } from "react"
 
 export type ModalImageProps = {
   image: StaticImageData
@@ -19,7 +14,7 @@ export type ModalImageProps = {
 }
 
 export function ModalImage({ image, alt }: ModalImageProps) {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <>
@@ -28,23 +23,41 @@ export function ModalImage({ image, alt }: ModalImageProps) {
         cursor="pointer"
         boxShadow="lg"
         p="6"
-        onClick={onOpen}
+        onClick={() => setIsOpen(true)}
+        position="relative"
+        overflow="hidden"
       >
-        <ChakraImage fill="true" src={image.src} alt={alt} />
+        <ChakraImage
+          fill
+          src={image}
+          alt={alt}
+          sizes="(max-width: 768px) 50vw, 25vw"
+          style={{ objectFit: "cover" }}
+        />
       </Box>
 
-      <Modal isOpen={isOpen} onClose={onClose} size="4xl">
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>{alt}</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <AspectRatio ratio={image.width / image.height}>
-              <ChakraImage src={image.src} alt={alt} fill="true" />
-            </AspectRatio>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
+      <Dialog.Root open={isOpen} onOpenChange={(e) => setIsOpen(e.open)} size="xl">
+        <Dialog.Backdrop />
+        <Dialog.Positioner>
+          <Dialog.Content>
+            <Dialog.Header>
+              <Dialog.Title>{alt}</Dialog.Title>
+            </Dialog.Header>
+            <Dialog.Body>
+              <AspectRatio ratio={image.width / image.height}>
+                <ChakraImage
+                  src={image}
+                  alt={alt}
+                  fill
+                  sizes="90vw"
+                  style={{ objectFit: "contain" }}
+                />
+              </AspectRatio>
+            </Dialog.Body>
+            <Dialog.CloseTrigger />
+          </Dialog.Content>
+        </Dialog.Positioner>
+      </Dialog.Root>
     </>
   )
 }

@@ -3,9 +3,6 @@ import rga from "@/images/logos/rga.webp"
 import {
   AspectRatio,
   Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
   Center,
   Flex,
   SimpleGrid,
@@ -48,7 +45,7 @@ const posts = [
 
 export function Articles() {
   return (
-    <SimpleGrid spacing={10} columns={{ base: 1, md: 2 }}>
+    <SimpleGrid gap={10} columns={{ base: 1, md: 2 }}>
       {posts.map((post, idx) => (
         <Link
           key={idx}
@@ -56,14 +53,14 @@ export function Articles() {
           style={{ textDecoration: "none" }}
           target="_blank"
         >
-          <Card
+          <Card.Root
             fontSize="sm"
             _hover={{
               shadow: "lg",
               transition: "all 0.2s",
             }}
           >
-            <CardHeader pb={0}>
+            <Card.Header pb={0}>
               <Flex align="center">
                 <Text fontWeight="medium" color="fg.emphasized">
                   {post.title}
@@ -77,16 +74,16 @@ export function Articles() {
                   />
                 </Center>
               </Flex>
-            </CardHeader>
-            <CardBody py={0}>
-              <Text color="fg.muted" noOfLines={2}>
+            </Card.Header>
+            <Card.Body py={0}>
+              <Text color="fg.muted" lineClamp={2}>
                 {post.teaser}
               </Text>
-            </CardBody>
-            <CardFooter py={0}>
+            </Card.Body>
+            <Card.Footer py={0}>
               <Text color="fg.subtle">{post.publishedAt}</Text>
-            </CardFooter>
-          </Card>
+            </Card.Footer>
+          </Card.Root>
         </Link>
       ))}
     </SimpleGrid>

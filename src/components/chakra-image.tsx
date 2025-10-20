@@ -10,7 +10,7 @@ export type ChakraImageProps = {
   fill?: string
 }
 
-export default chakra(Image, {
-  shouldForwardProp: (prop) =>
-    ["width", "height", "src", "alt", "fill", "onClick"].includes(prop),
-})
+// In v3, chakra() takes only the component argument
+const ChakraImage = chakra(Image)
+
+export default ChakraImage

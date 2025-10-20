@@ -3,9 +3,8 @@ import { HeroSmallImage } from "@/components/start/hero"
 import {
   Container,
   Heading,
-  ListItem,
+  List,
   Text,
-  UnorderedList,
 } from "@chakra-ui/react"
 import { Metadata } from "next"
 import Link from "next/link"
@@ -339,36 +338,36 @@ export default function Page() {
             jederzeit an uns wenden. Das Recht auf Einschr&auml;nkung der
             Verarbeitung besteht in folgenden F&auml;llen:
           </Text>
-          <UnorderedList>
-            <ListItem>
+          <List.Root as="ul">
+            <List.Item>
               Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten
               personenbezogenen Daten bestreiten, ben&ouml;tigen wir in der
               Regel Zeit, um dies zu &uuml;berpr&uuml;fen. F&uuml;r die Dauer
               der Pr&uuml;fung haben Sie das Recht, die Einschr&auml;nkung der
               Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
-            </ListItem>
-            <ListItem>
+            </List.Item>
+            <List.Item>
               Wenn die Verarbeitung Ihrer personenbezogenen Daten
               unrechtm&auml;&szlig;ig geschah/geschieht, k&ouml;nnen Sie statt
               der L&ouml;schung die Einschr&auml;nkung der Datenverarbeitung
               verlangen.
-            </ListItem>
-            <ListItem>
+            </List.Item>
+            <List.Item>
               Wenn wir Ihre personenbezogenen Daten nicht mehr ben&ouml;tigen,
               Sie sie jedoch zur Aus&uuml;bung, Verteidigung oder Geltendmachung
               von Rechtsanspr&uuml;chen ben&ouml;tigen, haben Sie das Recht,
               statt der L&ouml;schung die Einschr&auml;nkung der Verarbeitung
               Ihrer personenbezogenen Daten zu verlangen.
-            </ListItem>
-            <ListItem>
+            </List.Item>
+            <List.Item>
               Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt
               haben, muss eine Abw&auml;gung zwischen Ihren und unseren
               Interessen vorgenommen werden. Solange noch nicht feststeht,
               wessen Interessen &uuml;berwiegen, haben Sie das Recht, die
               Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten
               zu verlangen.
-            </ListItem>
-          </UnorderedList>
+            </List.Item>
+          </List.Root>
           <Text>
             Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten
             eingeschr&auml;nkt haben, d&uuml;rfen diese Daten &ndash; von ihrer

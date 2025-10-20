@@ -19,12 +19,12 @@ function HeroImage() {
     >
       <Box position="relative" w="full" h="full">
         <ChakraImage
-          src={kotten.src}
+          src={kotten}
           alt="Bild des Kottens"
-          fill={"true"}
-          objectFit="cover"
-          objectPosition="top bottom"
-          position="absolute"
+          fill
+          sizes="100vw"
+          style={{ objectFit: "cover", objectPosition: "top" }}
+          priority
         />
         <Box position="absolute" w="full" h="full" bg="blackAlpha.600" />
       </Box>
@@ -87,11 +87,11 @@ export function Hero(props: BoxProps) {
               bgColor="white"
               size="2xl"
               mt={5}
-              leftIcon={<FaPaypal />}
               onClick={() => {
                 router.push(paypalDonationLink)
               }}
             >
+              <FaPaypal />
               Jetzt unterstützen
             </Button>
           </Box>

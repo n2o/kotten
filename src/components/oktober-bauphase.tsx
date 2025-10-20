@@ -14,7 +14,8 @@ import image13 from "@/images/2024-10-26/bauphase13.webp"
 import image15 from "@/images/2024-10-26/bauphase15.webp"
 import image16 from "@/images/2024-10-26/bauphase16.webp"
 import image18 from "@/images/2024-10-26/bauphase18.webp"
-import { CardProps, Text } from "@chakra-ui/react"
+import { Text } from "@chakra-ui/react"
+import { HTMLChakraProps } from "@chakra-ui/react"
 
 const images: GalleryImage[] = [
   { data: image18, alt: "Wand zum Tor hin" },
@@ -33,7 +34,7 @@ const images: GalleryImage[] = [
   { data: image01, alt: "Küchenfenster" },
 ]
 
-export function OktoberBauphase(props: CardProps) {
+export function OktoberBauphase(props: HTMLChakraProps<"div">) {
   return (
     <>
       <ContentCard heading="Arbeitssamstag im Oktober 2024" mt={4} {...props}>

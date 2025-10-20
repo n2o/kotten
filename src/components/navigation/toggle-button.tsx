@@ -9,12 +9,13 @@ export function ToggleButton(props: ToggleButtonProps) {
   const { isOpen, ...iconButtonProps } = props
   return (
     <IconButton
-      variant="unstyled"
+      variant="ghost"
       display="inline-flex"
       size="xs"
-      icon={<ToggleIcon active={isOpen} />}
       {...iconButtonProps}
-    />
+    >
+      <ToggleIcon active={isOpen} />
+    </IconButton>
   )
 }
 
@@ -46,7 +47,7 @@ function ToggleIcon(props: { active: boolean }) {
 }
 
 const Bar = chakra("span", {
-  baseStyle: {
+  base: {
     display: "block",
     pos: "absolute",
     w: "1.25rem",
