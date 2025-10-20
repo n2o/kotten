@@ -45,8 +45,11 @@ const customConfig = defineConfig({
     a: {
       textDecoration: "underline",
     },
-    p: {
-      paddingBottom: "0.5rem",
+    "body p": {
+      marginBottom: "0.5rem",
+    },
+    "*::selection": {
+      bg: "brand.100",
     },
   },
 })
