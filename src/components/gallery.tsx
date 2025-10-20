@@ -20,9 +20,11 @@ export function Gallery({ images, ratio }: GalleryProps) {
           image.data.height > image.data.width ? 3 / 4 : 4 / 3
         return (
           <Box key={idx}>
-            <AspectRatio ratio={ratio || dynamicRatio}>
-              <ModalImage image={image.data} alt={image.alt} />
-            </AspectRatio>
+            {image.data && (
+              <AspectRatio ratio={ratio || dynamicRatio}>
+                <ModalImage image={image.data} alt={image.alt} />
+              </AspectRatio>
+            )}
             <Text mt={1} fontStyle="italic" textAlign="center">
               {image.alt}
             </Text>
