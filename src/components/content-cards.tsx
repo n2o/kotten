@@ -27,11 +27,11 @@ import {
   Button,
   Flex,
   Heading,
+  HTMLChakraProps,
   Separator,
   Text,
   VStack,
 } from "@chakra-ui/react"
-import { HTMLChakraProps } from "@chakra-ui/react"
 import Link from "next/link"
 import { FaPaypal, FaPeopleGroup } from "react-icons/fa6"
 
@@ -211,7 +211,7 @@ export function Post20250701(props: HTMLChakraProps<"div">) {
         verputzen und im Häuschen wurden die Wände gestrichen und alles geputzt.
       </Text>
 
-      <Heading as="h3" size="xs">
+      <Heading as="h3" mt={4}>
         Außen verputzen
       </Heading>
       <Text>
@@ -220,7 +220,7 @@ export function Post20250701(props: HTMLChakraProps<"div">) {
       </Text>
       <Gallery images={aussenImages} />
 
-      <Heading as="h3" size="xs">
+      <Heading as="h3" mt={4}>
         Innenraum
       </Heading>
       <Text>
@@ -229,7 +229,7 @@ export function Post20250701(props: HTMLChakraProps<"div">) {
       </Text>
       <Gallery images={innenImages} />
 
-      <Heading as="h3" size="xs">
+      <Heading as="h3" mt={4}>
         Weitere Arbeiten
       </Heading>
       <Text>
@@ -311,10 +311,7 @@ export function Post20250214(props: HTMLChakraProps<"div">) {
 
       <Box my={3}>
         <Link href={volksbankCrowdfundingLink20250214} target="_blank">
-          <Button
-            colorPalette="primary"
-            color="white"
-          >
+          <Button colorPalette="primary" color="white">
             <FaPeopleGroup />
             Zum Crowdfunding
           </Button>

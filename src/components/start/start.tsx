@@ -8,12 +8,22 @@ import { Logo } from "@/components/logo"
 import { OktoberBauphase } from "@/components/oktober-bauphase"
 import { Articles } from "@/components/rga"
 import { Hero } from "@/components/start/hero"
-import { Container, HStack, Text, VStack } from "@chakra-ui/react"
-import { HTMLChakraProps } from "@chakra-ui/react"
+import {
+  Container,
+  HStack,
+  HTMLChakraProps,
+  Text,
+  VStack,
+} from "@chakra-ui/react"
 
 function Greeting(props: HTMLChakraProps<"div">) {
   return (
-    <ContentCard heading="Willkommen" hierarchy="h1" fontSize="3xl" {...props}>
+    <ContentCard
+      heading="Willkommen beim Diederichskotten"
+      hierarchy="h1"
+      fontSize="3xl"
+      {...props}
+    >
       <HStack>
         <Text>
           Der Diederichskotten ist ein denkmalgeschütztes Gebäude im Hammertal,
@@ -23,7 +33,7 @@ function Greeting(props: HTMLChakraProps<"div">) {
           den Gruppen des Deutschen Pfadfinderbundes in Remscheid eine Heimat
           bietet.
         </Text>
-        <Logo height="150px" width="150px" />
+        <Logo height="150px" width="150px" ms={4} mb={8} />
       </HStack>
       <Articles />
     </ContentCard>

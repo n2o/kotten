@@ -1,9 +1,4 @@
-import {
-  Card,
-  Heading,
-  Text,
-} from "@chakra-ui/react"
-import { HTMLChakraProps } from "@chakra-ui/react"
+import { Card, Heading, HTMLChakraProps, Text } from "@chakra-ui/react"
 
 export function ContentCard({
   heading,
@@ -18,7 +13,7 @@ export function ContentCard({
   hierarchy?: "h1" | "h2" | "h3"
 }) {
   return (
-    <Card.Root {...props} bgColor="white">
+    <Card.Root {...props} bg="white">
       <Card.Header pb={0}>
         <Heading as={hierarchy} fontSize={fontSize} lineHeight="2rem">
           {heading}

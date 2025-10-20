@@ -54,13 +54,14 @@ export function Articles() {
           target="_blank"
         >
           <Card.Root
+            variant="elevated"
             fontSize="sm"
             _hover={{
               shadow: "lg",
-              transition: "all 0.2s",
+              transition: "all 0.5s",
             }}
           >
-            <Card.Header pb={0}>
+            <Card.Header>
               <Flex align="center">
                 <Text fontWeight="medium" color="fg.emphasized">
                   {post.title}
@@ -80,7 +81,7 @@ export function Articles() {
                 {post.teaser}
               </Text>
             </Card.Body>
-            <Card.Footer py={0}>
+            <Card.Footer>
               <Text color="fg.subtle">{post.publishedAt}</Text>
             </Card.Footer>
           </Card.Root>

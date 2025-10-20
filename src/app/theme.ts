@@ -27,7 +27,10 @@ const customConfig = defineConfig({
     },
   },
   globalCss: {
-    "html, body": {
+    html: {
+      lineHeight: "tall",
+    },
+    body: {
       lineHeight: "tall",
     },
     h1: {
@@ -43,7 +46,7 @@ const customConfig = defineConfig({
       textDecoration: "underline",
     },
     p: {
-      margin: "0 0 0.5rem 0",
+      paddingBottom: "0.5rem",
     },
   },
 })

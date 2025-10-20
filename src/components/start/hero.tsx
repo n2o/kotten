@@ -1,33 +1,24 @@
 "use client"
-import ChakraImage from "@/components/chakra-image"
 import kotten from "@/images/kotten2.webp"
 import { paypalDonationLink } from "@/lib"
-import { Box, BoxProps, Button, Flex, Heading, Text } from "@chakra-ui/react"
+import { Box, BoxProps, Button, Heading, Text } from "@chakra-ui/react"
+import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { FaPaypal } from "react-icons/fa6"
 
 function HeroImage() {
   return (
-    <Flex
-      position="absolute"
-      insetX="0"
-      insetY="0"
-      w="full"
-      h="full"
-      overflow="hidden"
-      align="center"
-    >
-      <Box position="relative" w="full" h="full">
-        <ChakraImage
-          src={kotten}
-          alt="Bild des Kottens"
-          sizes="100vw"
-          style={{ objectFit: "cover", objectPosition: "top" }}
-          priority
-        />
-        <Box position="absolute" w="full" h="full" bg="blackAlpha.600" />
-      </Box>
-    </Flex>
+    <Box position="absolute" inset="0" w="full" h="full" overflow="hidden">
+      <Image
+        src={kotten}
+        alt="Bild des Kottens"
+        fill
+        sizes="100vw"
+        style={{ objectFit: "cover", objectPosition: "top" }}
+        priority
+      />
+      <Box position="absolute" inset="0" bg="blackAlpha.600" />
+    </Box>
   )
 }
 
@@ -58,7 +49,7 @@ export function Hero(props: BoxProps) {
   const router = useRouter()
 
   return (
-    <Box bg="gray.800" as="section" minH="140px" position="relative">
+    <Box bg="blackAlpha.800" as="section" minH="140px" position="relative">
       <HeroImage />
       <Box
         pt={{ base: 24, md: 56 }}
@@ -74,16 +65,16 @@ export function Hero(props: BoxProps) {
           color="white"
         >
           <Box maxW="xl">
-            <Heading as="h1" size="3xl" fontWeight="light">
+            <Heading as="h1" textStyle="5xl" fontWeight="light">
               Diederichskotten
             </Heading>
-            <Text fontSize="2xl" mt="4" maxW="xl">
+            <Text textStyle="2xl" mt="4" maxW="xl">
               Ein Stück Bergische Geschichte und bündische Heimat im Hammertal.
               Unterstütze uns bei den Sanierungen und erhalte den Kotten für die
               Zukunft.
             </Text>
             <Button
-              bgColor="white"
+              colorPalette="whiteAlpha"
               size="2xl"
               mt={5}
               onClick={() => {
