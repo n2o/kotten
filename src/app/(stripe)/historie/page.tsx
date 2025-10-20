@@ -29,7 +29,7 @@ export default function Page() {
       <Container>
         <VStack mt={8} mb={12} gap={6}>
           <Text fontSize="lg" textAlign="center" maxW="3xl">
-            Vom Schleifkotten zur Pfadfinderstätte - Eine Reise durch fast 400
+            Vom Schleifkotten zur Pfadfinderstätte - Eine Reise durch rund 400
             Jahre Geschichte des Diederichskottens.
           </Text>
 
@@ -124,13 +124,15 @@ export default function Page() {
                 </Timeline.Indicator>
               </Timeline.Connector>
               <Timeline.Content>
-                <Timeline.Title>Vielfältige Nutzung als Werkstatt</Timeline.Title>
+                <Timeline.Title>
+                  Vielfältige Nutzung als Werkstatt
+                </Timeline.Title>
                 <Timeline.Description>
                   <Text mt={2}>
                     Im Laufe der Jahrhunderte wurde der Kotten für
                     verschiedenste handwerkliche Zwecke genutzt: Produktion von
-                    Feilen, Herstellung von Walkstoffen, Schleifen von Stahl
-                    und Eisenwaren sowie Drechselei.
+                    Feilen, Herstellung von Walkstoffen, Schleifen von Stahl und
+                    Eisenwaren sowie Drechselei.
                   </Text>
                 </Timeline.Description>
               </Timeline.Content>
@@ -344,9 +346,9 @@ export default function Page() {
                   <Text mt={2}>
                     Die Bausubstanz des Wohnhauses ist kritisch: Decken
                     eingestürzt, Wände abgebröckelt, Balken marode. Mit
-                    Unterstützung des Landes NRW (23.500 €), der Stadt
-                    Remscheid (4.000 €) und der Stadtsparkasse Remscheid (5.000
-                    €) wird die Zimmerei Zultner beauftragt, die maroden Balken
+                    Unterstützung des Landes NRW (23.500 €), der Stadt Remscheid
+                    (4.000 €) und der Stadtsparkasse Remscheid (5.000 €) wird
+                    die Zimmerei Zultner beauftragt, die maroden Balken
                     auszutauschen. Die Gefache werden in Eigenleistung
                     ausgemauert. Der Gesamtschaden beläuft sich auf ca. 100.000
                     €.
