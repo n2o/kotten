@@ -1,5 +1,5 @@
 "use client"
-import { AspectRatio, Box, Dialog } from "@chakra-ui/react"
+import { AspectRatio, Box, Dialog, Portal } from "@chakra-ui/react"
 import Image, { StaticImageData } from "next/image"
 import { useState } from "react"
 
@@ -36,26 +36,28 @@ export function ModalImage({ image, alt }: ModalImageProps) {
         onOpenChange={(e) => setIsOpen(e.open)}
         size="xl"
       >
-        <Dialog.Backdrop />
-        <Dialog.Positioner>
-          <Dialog.Content>
-            <Dialog.Header>
-              <Dialog.Title>{alt}</Dialog.Title>
-            </Dialog.Header>
-            <Dialog.Body>
-              <AspectRatio ratio={image.width / image.height}>
-                <Image
-                  src={image}
-                  alt={alt}
-                  fill
-                  sizes="90vw"
-                  style={{ objectFit: "contain" }}
-                />
-              </AspectRatio>
-            </Dialog.Body>
-            <Dialog.CloseTrigger />
-          </Dialog.Content>
-        </Dialog.Positioner>
+        <Portal>
+          <Dialog.Backdrop />
+          <Dialog.Positioner>
+            <Dialog.Content>
+              <Dialog.Header>
+                <Dialog.Title>{alt}</Dialog.Title>
+              </Dialog.Header>
+              <Dialog.Body>
+                <AspectRatio ratio={image.width / image.height}>
+                  <Image
+                    src={image}
+                    alt={alt}
+                    fill
+                    sizes="90vw"
+                    style={{ objectFit: "contain" }}
+                  />
+                </AspectRatio>
+              </Dialog.Body>
+              <Dialog.CloseTrigger />
+            </Dialog.Content>
+          </Dialog.Positioner>
+        </Portal>
       </Dialog.Root>
     </>
   )
