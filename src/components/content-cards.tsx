@@ -233,8 +233,8 @@ export function Post20250701(props: HTMLChakraProps<"div">) {
         Weitere Arbeiten
       </Heading>
       <Text>
-        Neben den Arbeiten an dem Gefache, müssen auch noch das Grundstück
-        aufgeräumt werden sowie der Schutt weggebracht werden.
+        Neben den Arbeiten an den Gefachen, müssen auch noch das Grundstück
+        aufgeräumt werden und der Schutt weggebracht werden.
       </Text>
       <Gallery images={andereImages} />
 
