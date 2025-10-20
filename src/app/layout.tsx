@@ -1,5 +1,5 @@
-import { Provider } from "@/components/ui/provider"
 import { Navbar } from "@/components/navigation/navbar"
+import { Provider } from "@/components/ui/provider"
 import openGraphKotten from "@/images/opengraph.jpg"
 import { Box } from "@chakra-ui/react"
 import { Analytics } from "@vercel/analytics/react"

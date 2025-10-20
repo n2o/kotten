@@ -1,5 +1,12 @@
 const { withSentryConfig } = require("@sentry/nextjs")
 
+module.exports = {
+  reactStrictMode: true,
+  experimental: {
+    optimizePackageImports: ["@chakra-ui/react"],
+  },
+}
+
 module.exports = withSentryConfig(module.exports, {
   // For all available options, see:
   // https://github.com/getsentry/sentry-webpack-plugin#options
@@ -27,8 +34,9 @@ module.exports = withSentryConfig(module.exports, {
   // side errors will fail.
   tunnelRoute: "/monitoring",
 
-  // Hides source maps from generated client bundles
-  hideSourceMaps: true,
+  sourcemaps: {
+    disable: false,
+  },
 
   // Automatically tree-shake Sentry logger statements to reduce bundle size
   disableLogger: true,

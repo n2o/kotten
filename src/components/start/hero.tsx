@@ -61,7 +61,7 @@ export function Hero(props: BoxProps) {
           maxW={{ base: "xl", md: "7xl" }}
           maxH="50vh"
           mx="auto"
-          px={{ base: "4", md: "8" }}
+          px={{ base: 2, md: 0 }}
           color="white"
         >
           <Box maxW="xl">
