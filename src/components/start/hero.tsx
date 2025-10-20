@@ -32,11 +32,7 @@ export function HeroSmallImage({ title, ...props }: HeroSmallImageProps) {
       <HeroImage />
       <Box py="12" position="relative" {...props}>
         <Box mx="auto" textAlign="center" color="white">
-          <Heading
-            as="h1"
-            fontWeight="thiner"
-            fontSize={{ base: "4xl", md: "6xl" }}
-          >
+          <Heading as="h1" fontWeight="thiner" fontSize="4xl">
             {title}
           </Heading>
         </Box>
@@ -61,7 +57,7 @@ export function Hero(props: BoxProps) {
           maxW={{ base: "xl", md: "7xl" }}
           maxH="50vh"
           mx="auto"
-          px={{ base: 2, md: 0 }}
+          px={{ base: 2, md: 8 }}
           color="white"
         >
           <Box maxW="xl">
