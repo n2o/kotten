@@ -23,7 +23,7 @@ export function Gallery({ images, ratio }: GalleryProps) {
             <AspectRatio ratio={ratio || dynamicRatio}>
               <ModalImage image={image.data} alt={image.alt} />
             </AspectRatio>
-            <Text fontStyle="italic" textAlign="center">
+            <Text mt={1} fontStyle="italic" textAlign="center">
               {image.alt}
             </Text>
           </Box>
