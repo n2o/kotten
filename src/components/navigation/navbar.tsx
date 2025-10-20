@@ -34,6 +34,9 @@ export function Navbar() {
                     asChild
                     key={link.href}
                     fontSize="md"
+                    textDecoration={
+                      pathname === link.href ? "underline" : "none"
+                    }
                     fontWeight={pathname === link.href ? "semibold" : "normal"}
                     color={pathname === link.href ? "fg.default" : "fg.muted"}
                     _hover={{
