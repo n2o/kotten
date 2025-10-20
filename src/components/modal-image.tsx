@@ -1,10 +1,6 @@
 "use client"
 import ChakraImage from "@/components/chakra-image"
-import {
-  AspectRatio,
-  Box,
-  Dialog,
-} from "@chakra-ui/react"
+import { AspectRatio, Box, Dialog } from "@chakra-ui/react"
 import { StaticImageData } from "next/image"
 import { useState } from "react"
 
@@ -28,7 +24,6 @@ export function ModalImage({ image, alt }: ModalImageProps) {
         overflow="hidden"
       >
         <ChakraImage
-          fill
           src={image}
           alt={alt}
           sizes="(max-width: 768px) 50vw, 25vw"
@@ -36,7 +31,11 @@ export function ModalImage({ image, alt }: ModalImageProps) {
         />
       </Box>
 
-      <Dialog.Root open={isOpen} onOpenChange={(e) => setIsOpen(e.open)} size="xl">
+      <Dialog.Root
+        open={isOpen}
+        onOpenChange={(e) => setIsOpen(e.open)}
+        size="xl"
+      >
         <Dialog.Backdrop />
         <Dialog.Positioner>
           <Dialog.Content>
@@ -48,7 +47,6 @@ export function ModalImage({ image, alt }: ModalImageProps) {
                 <ChakraImage
                   src={image}
                   alt={alt}
-                  fill
                   sizes="90vw"
                   style={{ objectFit: "contain" }}
                 />

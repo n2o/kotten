@@ -21,7 +21,6 @@ function HeroImage() {
         <ChakraImage
           src={kotten}
           alt="Bild des Kottens"
-          fill
           sizes="100vw"
           style={{ objectFit: "cover", objectPosition: "top" }}
           priority
