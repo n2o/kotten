@@ -2,6 +2,7 @@ import { ContentCard } from "@/components/content-card"
 import {
   Post20250214,
   Post20250701,
+  Post20251117,
   Wohnhaus,
 } from "@/components/content-cards"
 import { Logo } from "@/components/logo"
@@ -47,6 +48,7 @@ export function Start() {
       <Container>
         <VStack gap={8}>
           <Greeting bgColor="white" mt={{ base: 0, md: -32 }} />
+          <Post20251117 />
           <Post20250701 />
           <Post20250214 />
           <OktoberBauphase />

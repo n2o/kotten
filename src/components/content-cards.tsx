@@ -18,6 +18,7 @@ import innen01 from "@/images/2025/2025-07-01_baufortschritt/innen01.webp"
 import innen02 from "@/images/2025/2025-07-01_baufortschritt/innen02.webp"
 import innen03 from "@/images/2025/2025-07-01_baufortschritt/innen03.webp"
 import innen04 from "@/images/2025/2025-07-01_baufortschritt/innen04.webp"
+import kottengeruest from "@/images/2025/2025-11_kottengeruest.webp"
 
 import heimatNrw from "@/images/heimat-nrw.svg"
 import paypalQrCode from "@/images/paypal-code.svg"
@@ -144,6 +145,51 @@ export function Grundstueck(props: HTMLChakraProps<"div">) {
         Auf der linken Seite des Hauptgebäudes findet man eine große Wiese, die
         vor allem für Pfadfinderlager und Gruppenstunden genutzt wird
       </Text>
+    </ContentCard>
+  )
+}
+
+export function Post20251117(props: HTMLChakraProps<"div">) {
+  const kotten: GalleryImage = {
+    data: kottengeruest,
+    alt: "Der Kotten ist eingerüstet",
+  }
+
+  return (
+    <ContentCard
+      heading="Unterstützung durch Lions Club Remscheid"
+      date="17.11.2025"
+      {...props}
+    >
+      <Flex
+        gap={6}
+        flexDirection={{ base: "column", md: "row" }}
+        alignItems="start"
+      >
+        <Box flex="2">
+          <Text>
+            Aktuell wurde ein Gerüst um den Kotten gebaut, damit die Firma
+            Zultner die Arbeiten am Giebel durchführen kann. Dort werden morsche
+            Balken ausgetauscht und die Fassade wird weiter saniert.
+          </Text>
+          <Text mt={4}>
+            Die nachfolgenden Arbeiten und das benötigte Material werden durch
+            eine großzügige Spende des Büchermarktes des Lions Club Remscheid
+            finanziert. Der Büchermarkt findet vom 26. bis 29. November im Allee
+            Center statt. Wir danken dem Lions Club Remscheid herzlich für diese
+            wichtige Unterstützung bei der Sanierung unseres denkmalgeschützten
+            Kottens.
+          </Text>
+        </Box>
+        <Box flex="1" minW={{ base: "100%", md: "300px" }}>
+          <ChakraImage
+            src={kotten.data}
+            alt={kotten.alt}
+            w="100%"
+            rounded="lg"
+          />
+        </Box>
+      </Flex>
     </ContentCard>
   )
 }
