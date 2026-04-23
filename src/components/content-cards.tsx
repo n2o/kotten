@@ -158,7 +158,7 @@ export function Post20260418(props: HTMLChakraProps<"div">) {
   const aussenImages: GalleryImage[] = [
     {
       data: fruehjahr01,
-      alt: "Beginn des Arbeitssamstags: Werkzeug und Holz sind am Kotten bereitgestellt.",
+      alt: "Beginn des Arbeitssamstags: Zunächst werden die Stützbalken abgebaut.",
     },
     {
       data: fruehjahr02,
