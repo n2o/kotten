@@ -19,6 +19,11 @@ import innen02 from "@/images/2025/2025-07-01_baufortschritt/innen02.webp"
 import innen03 from "@/images/2025/2025-07-01_baufortschritt/innen03.webp"
 import innen04 from "@/images/2025/2025-07-01_baufortschritt/innen04.webp"
 import kottengeruest from "@/images/2025/2025-11_kottengeruest.webp"
+import fruehjahr01 from "@/images/2026/2026-04-18_fruehjahrsauftakt/01.webp"
+import fruehjahr02 from "@/images/2026/2026-04-18_fruehjahrsauftakt/02.webp"
+import fruehjahr03 from "@/images/2026/2026-04-18_fruehjahrsauftakt/03.webp"
+import fruehjahr04 from "@/images/2026/2026-04-18_fruehjahrsauftakt/04.webp"
+import fruehjahr05 from "@/images/2026/2026-04-18_fruehjahrsauftakt/05.webp"
 
 import heimatNrw from "@/images/heimat-nrw.svg"
 import paypalQrCode from "@/images/paypal-code.svg"
@@ -144,6 +149,73 @@ export function Grundstueck(props: HTMLChakraProps<"div">) {
       <Text>
         Auf der linken Seite des Hauptgebäudes findet man eine große Wiese, die
         vor allem für Pfadfinderlager und Gruppenstunden genutzt wird
+      </Text>
+    </ContentCard>
+  )
+}
+
+export function Post20260418(props: HTMLChakraProps<"div">) {
+  const aussenImages: GalleryImage[] = [
+    {
+      data: fruehjahr01,
+      alt: "Beginn des Arbeitssamstags: Werkzeug und Holz sind am Kotten bereitgestellt.",
+    },
+    {
+      data: fruehjahr02,
+      alt: "Fachwerkwand mit offenen Gefachen während des Ausmauerns.",
+    },
+    {
+      data: fruehjahr05,
+      alt: "Helfende beim Ausmauern der Gefache an der Fassade.",
+    },
+  ]
+
+  const innenImages: GalleryImage[] = [
+    {
+      data: fruehjahr03,
+      alt: "In der oberen Etage wird der alte Putz von den Wänden entfernt.",
+    },
+    {
+      data: fruehjahr04,
+      alt: "Erste Schicht neuer Lehmputz wird im Innenraum aufgetragen.",
+    },
+  ]
+
+  return (
+    <ContentCard
+      heading="Frühjahrsauftakt am Diederichskotten"
+      date="18.04.2026"
+      {...props}
+    >
+      <Text>
+        Nach einer langen Winterpause konnte am 18. April endlich wieder mit
+        unseren Arbeitssamstagen am Diederichskotten begonnen werden. Mit viel
+        Engagement der Helferinnen und Helfer wurde zunächst die noch
+        vorhandene Stützkonstruktion aus dem Balkentausch zurückgebaut.
+        Anschließend konnten die Arbeiten am Ausmauern der bislang offenen
+        Gefache erfolgreich fortgesetzt werden.
+      </Text>
+      <Gallery images={aussenImages} />
+
+      <Heading as="h3" mt={6}>
+        Lehmputz im Innenraum
+      </Heading>
+      <Text>
+        Auch im Inneren des Gebäudes ging es sichtbar voran: In der oberen
+        Etage wurde der alte Putz entfernt und bereits eine erste Schicht
+        neuer Lehmputz aufgetragen.
+      </Text>
+      <Gallery images={innenImages} />
+
+      <Separator my={6} mx="auto" w="50%" />
+
+      <Text>
+        Die Winterpause blieb jedoch keineswegs ungenutzt. Der Verein hat
+        intensiv an der Vorbereitung eines Förderantrags gearbeitet, um die
+        Finanzierung des nächsten Abschnitts der Sanierung zu sichern, und
+        parallel alle notwendigen Angebote sowie Gutachten für die kommenden
+        Bauabschnitte eingeholt. Damit sind wichtige Voraussetzungen
+        geschaffen, um die nächsten Schritte planmäßig angehen zu können.
       </Text>
     </ContentCard>
   )
