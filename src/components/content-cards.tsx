@@ -177,7 +177,7 @@ export function Post20260418(props: HTMLChakraProps<"div">) {
     },
     {
       data: fruehjahr04,
-      alt: "Erste Schicht neuer Lehmputz wird im Innenraum aufgetragen.",
+      alt: "Neue Lehmsteine werden ins neue Gefache eingesetzt.",
     },
   ]
 
@@ -190,10 +190,10 @@ export function Post20260418(props: HTMLChakraProps<"div">) {
       <Text>
         Nach einer langen Winterpause konnte am 18. April endlich wieder mit
         unseren Arbeitssamstagen am Diederichskotten begonnen werden. Mit viel
-        Engagement der Helferinnen und Helfer wurde zunächst die noch
-        vorhandene Stützkonstruktion aus dem Balkentausch zurückgebaut.
-        Anschließend konnten die Arbeiten am Ausmauern der bislang offenen
-        Gefache erfolgreich fortgesetzt werden.
+        Engagement der Helferinnen und Helfer wurde zunächst die noch vorhandene
+        Stützkonstruktion aus dem Balkentausch zurückgebaut. Anschließend
+        konnten die Arbeiten am Ausmauern der bislang offenen Gefache
+        erfolgreich fortgesetzt werden.
       </Text>
       <Gallery images={aussenImages} />
 
@@ -201,9 +201,9 @@ export function Post20260418(props: HTMLChakraProps<"div">) {
         Lehmputz im Innenraum
       </Heading>
       <Text>
-        Auch im Inneren des Gebäudes ging es sichtbar voran: In der oberen
-        Etage wurde der alte Putz entfernt und bereits eine erste Schicht
-        neuer Lehmputz aufgetragen.
+        Auch im Inneren des Gebäudes ging es sichtbar voran: In der oberen Etage
+        wurde der alte Putz entfernt und bereits eine erste Schicht neuer
+        Lehmputz aufgetragen.
       </Text>
       <Gallery images={innenImages} />
 
@@ -214,8 +214,8 @@ export function Post20260418(props: HTMLChakraProps<"div">) {
         intensiv an der Vorbereitung eines Förderantrags gearbeitet, um die
         Finanzierung des nächsten Abschnitts der Sanierung zu sichern, und
         parallel alle notwendigen Angebote sowie Gutachten für die kommenden
-        Bauabschnitte eingeholt. Damit sind wichtige Voraussetzungen
-        geschaffen, um die nächsten Schritte planmäßig angehen zu können.
+        Bauabschnitte eingeholt. Damit sind wichtige Voraussetzungen geschaffen,
+        um die nächsten Schritte planmäßig angehen zu können.
       </Text>
     </ContentCard>
   )
