@@ -20,7 +20,7 @@ export function PostArticle({
       className="fachwerk"
     >
       <PostHeader post={post} latest={latest} titleId={`${post.id}-titel`} />
-      <div className="lesetext max-w-none px-5 py-6 md:px-8 [&>p]:max-w-[68ch]">
+      <div className="lesetext max-w-none px-4 py-5 md:px-8 md:py-6 [&>p]:max-w-[68ch]">
         {post.content}
       </div>
     </article>
@@ -30,7 +30,7 @@ export function PostArticle({
 /** Senkrechter Ständer; Riegel führen zu jedem Eintrag */
 export function Staender({ children }: { children: ReactNode }) {
   return (
-    <ol className="relative ml-4 border-l-[length:var(--balken)] border-schiefer pb-10 md:ml-8">
+    <ol className="relative pb-10 md:ml-8 md:border-l-[length:var(--balken)] md:border-schiefer">
       {children}
     </ol>
   )
@@ -44,11 +44,11 @@ export function StaenderItem({
   children: ReactNode
 }) {
   return (
-    <li className="relative pt-10 pl-6 md:pl-12">
+    <li className="relative pt-8 md:pt-10 md:pl-12">
       <span
         aria-hidden
         className={cn(
-          "riegel absolute top-[4.25rem] left-0 h-[var(--balken)] w-6 md:w-12",
+          "riegel absolute top-[4.25rem] left-0 hidden h-[var(--balken)] w-12 md:block",
           latest ? "bg-lade" : "bg-schiefer",
         )}
       />
@@ -69,7 +69,7 @@ function PostHeader({
   href?: string
 }) {
   return (
-    <header className={cn("px-5 py-4 md:px-8", latest && "bg-lade text-white")}>
+    <header className={cn("px-4 py-4 md:px-8", latest && "bg-lade text-white")}>
       <time
         dateTime={post.date}
         className={cn("font-semibold", latest ? "text-white/85" : "text-stein")}

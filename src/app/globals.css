@@ -38,12 +38,12 @@
   --radius: 2px;
 
   /* Breite der Balken im Fachwerk-Raster */
-  --balken: 6px;
+  --balken: 3px;
 }
 
 @media (min-width: 768px) {
   :root {
-    --balken: 10px;
+    --balken: 6px;
   }
 }
 
