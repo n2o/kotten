@@ -1,6 +1,5 @@
-import { ContentCard } from "@/components/content-card"
-import { HeroSmallImage } from "@/components/start/hero"
-import { Container, Heading, Link, Text } from "@chakra-ui/react"
+import { ExternalLink } from "@/components/external-link"
+import { PageHeader } from "@/components/page-header"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -10,40 +9,41 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <HeroSmallImage title="Impressum" />
-      <Container>
-        <ContentCard heading="Impressum" mt={5}>
-          <Text>
+      <PageHeader title="Impressum" />
+      <div className="mx-auto max-w-3xl px-4 md:px-6 py-10">
+        <div className="lesetext">
+          <p>
             Förderverein der Pfadfinder im Hammertal e.V.
             <br />
             Wilhelmstraße 64
             <br />
             42855 Remscheid
             <br />
-            E-Mail: info@diederichskotten.de
-          </Text>
-          <Text>
+            E-Mail:{" "}
+            <a href="mailto:info@diederichskotten.de">info@diederichskotten.de</a>
+          </p>
+          <p>
             <strong>Vertreten durch:</strong>
             <br />
             Hanna Fetsch
-          </Text>
+          </p>
 
-          <Heading fontSize="lg">
+          <h2>
             Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle
-          </Heading>
-          <Text>
+          </h2>
+          <p>
             Wir sind nicht bereit oder verpflichtet, an
             Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
             teilzunehmen.
-          </Text>
-          <Text>
+          </p>
+          <p>
             Quelle:{" "}
-            <Link href="https://www.e-recht24.de">
+            <ExternalLink href="https://www.e-recht24.de">
               https://www.e-recht24.de
-            </Link>
-          </Text>
-        </ContentCard>
-      </Container>
+            </ExternalLink>
+          </p>
+        </div>
+      </div>
     </>
   )
 }

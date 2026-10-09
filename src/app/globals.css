@@ -1,0 +1,201 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/*
+ * Bergischer Dreiklang: Schiefer (Balken, Flächen), Kalk (Gefache, Lesegrund),
+ * Ladengrün (Aktionen, das Aktuelle). Light-only: gelesen wird tagsüber,
+ * oft unterwegs am Telefon.
+ */
+:root {
+  --schiefer: #22272b;
+  --schiefer-hell: #3a4248;
+  --kalk: #f6f6f3;
+  --kalk-tief: #e9e9e4;
+  --lade: #1f5a41;
+  --lade-tief: #163f2e;
+  --lade-hauch: #dfeae3;
+  --stein: #565f66;
+
+  --background: var(--kalk);
+  --foreground: var(--schiefer);
+  --card: var(--kalk);
+  --card-foreground: var(--schiefer);
+  --popover: var(--kalk);
+  --popover-foreground: var(--schiefer);
+  --primary: var(--lade);
+  --primary-foreground: #ffffff;
+  --secondary: var(--kalk-tief);
+  --secondary-foreground: var(--schiefer);
+  --muted: var(--kalk-tief);
+  --muted-foreground: var(--stein);
+  --accent: var(--lade-hauch);
+  --accent-foreground: var(--lade-tief);
+  --destructive: #a1271d;
+  --border: #c9cbc6;
+  --input: #c9cbc6;
+  --ring: var(--lade);
+  --radius: 2px;
+
+  /* Breite der Balken im Fachwerk-Raster */
+  --balken: 6px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --balken: 10px;
+  }
+}
+
+@theme inline {
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+
+  --color-schiefer: var(--schiefer);
+  --color-schiefer-hell: var(--schiefer-hell);
+  --color-kalk: var(--kalk);
+  --color-kalk-tief: var(--kalk-tief);
+  --color-lade: var(--lade);
+  --color-lade-tief: var(--lade-tief);
+  --color-lade-hauch: var(--lade-hauch);
+  --color-stein: var(--stein);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: var(--radius);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius);
+  --radius-xl: var(--radius);
+
+  --spacing-balken: var(--balken);
+
+  --ease-riegel: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Überschriften-Stimme: schmale, kräftige Archivo */
+@utility display {
+  font-family: var(--font-heading);
+  font-stretch: 80%;
+  font-weight: 750;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    /* Platz für die klebende Jahresleiste auf /baufortschritt */
+    scroll-padding-top: 4.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply display;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: var(--lade-hauch);
+    color: var(--lade-tief);
+  }
+  :focus-visible {
+    outline: 3px solid var(--lade);
+    outline-offset: 3px;
+  }
+  a {
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  /* Fachwerk: Schiefer-Balken als Fugen, Kalk-Gefache als Felder. */
+  .fachwerk {
+    display: grid;
+    gap: var(--balken);
+    background: var(--schiefer);
+    border: var(--balken) solid var(--schiefer);
+  }
+  .fachwerk > * {
+    min-width: 0;
+    background: var(--kalk);
+  }
+
+  /* Lesetext im Gefach: ruhige Spalte. */
+  .lesetext {
+    max-width: 68ch;
+  }
+  .lesetext > * + * {
+    margin-top: 1em;
+  }
+  .lesetext h3,
+  .lesetext h4 {
+    margin-top: 2em;
+    font-size: 1.375rem;
+  }
+  .lesetext a {
+    color: var(--lade);
+    text-decoration-line: underline;
+  }
+  .lesetext a:hover {
+    color: var(--lade-tief);
+    text-decoration-thickness: 2px;
+  }
+}
+
+/* Riegel fährt beim Einblenden einmal ein (Baufortschritt). */
+@keyframes riegel {
+  from {
+    transform: scaleX(0);
+  }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .riegel {
+      transform-origin: left center;
+      /* ohne Rückwärts-Füllung: vor dem Einblenden sichtbar (Druck, Vollbild) */
+      animation: riegel 700ms var(--ease-riegel) forwards;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+
+/* Fokusring auf dunklen Flächen hell, damit er ≥3:1 Kontrast hat */
+.bg-schiefer :focus-visible,
+.bg-lade :focus-visible {
+  outline-color: var(--kalk);
+}

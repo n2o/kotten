@@ -1,58 +1,24 @@
-"use client"
 import { Logo } from "@/components/logo"
-import { links } from "@/components/navigation/links"
-import { MobileDrawer } from "@/components/navigation/mobile-drawer"
-import { Box, Container, HStack, Link } from "@chakra-ui/react"
-import NextLink from "next/link"
-import { usePathname } from "next/navigation"
+import { DesktopNav, MobileMenu } from "@/components/navigation/nav-client"
+import Link from "next/link"
 
 export function Navbar() {
-  const pathname = usePathname()
-
   return (
-    <Box as="section">
-      <Box
-        borderBottomWidth="1px"
-        bg="bg.surface"
-        position="relative"
-        zIndex="tooltip"
-      >
-        <Container py="3">
-          <HStack justify="space-between" gap="8">
-            <HStack gap="10">
-              <HStack gap="3">
-                <MobileDrawer />
-                <Link asChild>
-                  <NextLink href="/">
-                    <Logo height="48px" width="48px" />
-                  </NextLink>
-                </Link>
-              </HStack>
-              <HStack gap="6" display={{ base: "none", md: "flex" }}>
-                {links.map((link) => (
-                  <Link
-                    asChild
-                    key={link.href}
-                    fontSize="md"
-                    textDecoration={
-                      pathname === link.href ? "underline" : "none"
-                    }
-                    fontWeight={pathname === link.href ? "semibold" : "normal"}
-                    color={pathname === link.href ? "fg.default" : "fg.muted"}
-                    _hover={{
-                      color: "fg.default",
-                      textDecoration: "none",
-                    }}
-                    transition="all 0.2s"
-                  >
-                    <NextLink href={link.href}>{link.label}</NextLink>
-                  </Link>
-                ))}
-              </HStack>
-            </HStack>
-          </HStack>
-        </Container>
-      </Box>
-    </Box>
+    <div className="bg-schiefer text-kalk">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3 md:px-6">
+        <Link
+          href="/"
+          className="flex items-center gap-3 rounded-sm"
+          aria-label="Diederichskotten, zur Startseite"
+        >
+          <span className="grid size-12 place-items-center bg-kalk p-1">
+            <Logo width={40} height={40} alt="" />
+          </span>
+          <span className="display text-xl">Diederichskotten</span>
+        </Link>
+        <DesktopNav />
+        <MobileMenu />
+      </div>
+    </div>
   )
 }

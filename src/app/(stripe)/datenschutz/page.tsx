@@ -1,13 +1,6 @@
-import { ContentCard } from "@/components/content-card"
-import { HeroSmallImage } from "@/components/start/hero"
-import {
-  Container,
-  Heading,
-  List,
-  Text,
-} from "@chakra-ui/react"
+import { ExternalLink } from "@/components/external-link"
+import { PageHeader } from "@/components/page-header"
 import { Metadata } from "next"
-import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Datenschutz",
@@ -16,14 +9,13 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <HeroSmallImage title="Datenschutz" />
-      <Container>
-        <ContentCard heading="Datenschutzerklärung" mt={5}>
-          <Heading fontSize="2xl">1. Datenschutz auf einen Blick</Heading>
-          <Heading as="h3" fontSize="lg">
-            Allgemeine Hinweise
-          </Heading>
-          <Text>
+      <PageHeader title="Datenschutz" />
+      <div className="mx-auto max-w-3xl px-4 md:px-6 py-10">
+        <div className="lesetext">
+          <h2>Datenschutzerklärung</h2>
+          <h3>1. Datenschutz auf einen Blick</h3>
+          <h4>Allgemeine Hinweise</h4>
+          <p>
             Die folgenden Hinweise geben einen einfachen &Uuml;berblick
             dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn
             Sie diese Website besuchen. Personenbezogene Daten sind alle Daten,
@@ -31,47 +23,39 @@ export default function Page() {
             Ausf&uuml;hrliche Informationen zum Thema Datenschutz entnehmen Sie
             unserer unter diesem Text aufgef&uuml;hrten
             Datenschutzerkl&auml;rung.
-          </Text>
-          <Heading as="h3" fontSize="lg">
-            Datenerfassung auf dieser Website
-          </Heading>
-          <Heading as="h4" fontSize="md">
+          </p>
+          <h4>Datenerfassung auf dieser Website</h4>
+          <h5>
             Wer ist verantwortlich f&uuml;r die Datenerfassung auf dieser
             Website?
-          </Heading>
-          <Text>
+          </h5>
+          <p>
             Die Datenverarbeitung auf dieser Website erfolgt durch den
             Websitebetreiber. Dessen Kontaktdaten k&ouml;nnen Sie dem Abschnitt
             &bdquo;Hinweis zur Verantwortlichen Stelle&ldquo; in dieser
             Datenschutzerkl&auml;rung entnehmen.
-          </Text>
-          <Heading as="h4" fontSize="md">
-            Wie erfassen wir Ihre Daten?
-          </Heading>
-          <Text>
+          </p>
+          <h5>Wie erfassen wir Ihre Daten?</h5>
+          <p>
             Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese
             mitteilen. Hierbei kann es sich z.&nbsp;B. um Daten handeln, die Sie
             in ein Kontaktformular eingeben.
-          </Text>
-          <Text>
+          </p>
+          <p>
             Andere Daten werden automatisch oder nach Ihrer Einwilligung beim
             Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor
             allem technische Daten (z.&nbsp;B. Internetbrowser, Betriebssystem
             oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt
             automatisch, sobald Sie diese Website betreten.
-          </Text>
-          <Heading as="h4" fontSize="md">
-            Wof&uuml;r nutzen wir Ihre Daten?
-          </Heading>
-          <Text>
+          </p>
+          <h5>Wof&uuml;r nutzen wir Ihre Daten?</h5>
+          <p>
             Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung
             der Website zu gew&auml;hrleisten. Andere Daten k&ouml;nnen zur
             Analyse Ihres Nutzerverhaltens verwendet werden.
-          </Text>
-          <Heading as="h4" fontSize="md">
-            Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?
-          </Heading>
-          <Text>
+          </p>
+          <h5>Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?</h5>
+          <p>
             Sie haben jederzeit das Recht, unentgeltlich Auskunft &uuml;ber
             Herkunft, Empf&auml;nger und Zweck Ihrer gespeicherten
             personenbezogenen Daten zu erhalten. Sie haben au&szlig;erdem ein
@@ -83,29 +67,23 @@ export default function Page() {
             Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen
             ein Beschwerderecht bei der zust&auml;ndigen Aufsichtsbeh&ouml;rde
             zu.
-          </Text>
-          <Text>
+          </p>
+          <p>
             Hierzu sowie zu weiteren Fragen zum Thema Datenschutz k&ouml;nnen
             Sie sich jederzeit an uns wenden.
-          </Text>
-          <Heading as="h2" fontSize="xl">
-            2. Hosting
-          </Heading>
-          <Text>
-            Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
-          </Text>
-          <Heading as="h3" fontSize="lg">
-            Externes Hosting
-          </Heading>
-          <Text>
+          </p>
+          <h3>2. Hosting</h3>
+          <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
+          <h4>Externes Hosting</h4>
+          <p>
             Diese Website wird extern gehostet. Die personenbezogenen Daten, die
             auf dieser Website erfasst werden, werden auf den Servern des
             Hosters / der Hoster gespeichert. Hierbei kann es sich v.&nbsp;a. um
             IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten,
             Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige
             Daten, die &uuml;ber eine Website generiert werden, handeln.
-          </Text>
-          <Text>
+          </p>
+          <p>
             Das externe Hosting erfolgt zum Zwecke der Vertragserf&uuml;llung
             gegen&uuml;ber unseren potenziellen und bestehenden Kunden (Art. 6
             Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und
@@ -117,84 +95,77 @@ export default function Page() {
             von Cookies oder den Zugriff auf Informationen im Endger&auml;t des
             Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne des TDDDG
             umfasst. Die Einwilligung ist jederzeit widerrufbar.
-          </Text>
-          <Text>
+          </p>
+          <p>
             Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit
             verarbeiten, wie dies zur Erf&uuml;llung seiner Leistungspflichten
             erforderlich ist und unsere Weisungen in Bezug auf diese Daten
             befolgen.
-          </Text>
-          <Text>Wir setzen folgende(n) Hoster ein:</Text>
-          <Text>
+          </p>
+          <p>Wir setzen folgende(n) Hoster ein:</p>
+          <p>
             Vercel Inc.
             <br />
             340 S Lemon Ave #4133
             <br />
             Walnut, CA 91789
-          </Text>
-          <Heading as="h4" fontSize="md">
-            Auftragsverarbeitung
-          </Heading>
-          <Text>
+          </p>
+          <h5>Auftragsverarbeitung</h5>
+          <p>
             Wir haben einen Vertrag &uuml;ber Auftragsverarbeitung (AVV) zur
             Nutzung des oben genannten Dienstes geschlossen. Hierbei handelt es
             sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der
             gew&auml;hrleistet, dass dieser die personenbezogenen Daten unserer
             Websitebesucher nur nach unseren Weisungen und unter Einhaltung der
             DSGVO verarbeitet.
-          </Text>
-          <Heading as="h2" fontSize="xl">
-            3. Allgemeine Hinweise und Pflicht&shy;informationen
-          </Heading>
-          <Heading as="h3" fontSize="lg">
-            Datenschutz
-          </Heading>
-          <Text>
+          </p>
+          <h3>3. Allgemeine Hinweise und Pflicht&shy;informationen</h3>
+          <h4>Datenschutz</h4>
+          <p>
             Die Betreiber dieser Seiten nehmen den Schutz Ihrer
             pers&ouml;nlichen Daten sehr ernst. Wir behandeln Ihre
             personenbezogenen Daten vertraulich und entsprechend den
             gesetzlichen Datenschutzvorschriften sowie dieser
             Datenschutzerkl&auml;rung.
-          </Text>
-          <Text>
+          </p>
+          <p>
             Wenn Sie diese Website benutzen, werden verschiedene
             personenbezogene Daten erhoben. Personenbezogene Daten sind Daten,
             mit denen Sie pers&ouml;nlich identifiziert werden k&ouml;nnen. Die
             vorliegende Datenschutzerkl&auml;rung erl&auml;utert, welche Daten
             wir erheben und wof&uuml;r wir sie nutzen. Sie erl&auml;utert auch,
             wie und zu welchem Zweck das geschieht.
-          </Text>
-          <Text>
+          </p>
+          <p>
             Wir weisen darauf hin, dass die Daten&uuml;bertragung im Internet
             (z.&nbsp;B. bei der Kommunikation per E-Mail) Sicherheitsl&uuml;cken
             aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem
             Zugriff durch Dritte ist nicht m&ouml;glich.
-          </Text>
-          <Heading as="h3" fontSize="lg">
-            Hinweis zur verantwortlichen Stelle
-          </Heading>
-          <Text>
+          </p>
+          <h4>Hinweis zur verantwortlichen Stelle</h4>
+          <p>
             Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser
             Website ist:
-          </Text>
-          <Text>
+          </p>
+          <p>
             F&ouml;rderverein der Pfadfinder im Hammertal e.V.
             <br />
             Wilhelmstra&szlig;e 64
             <br />
             42855 Remscheid
-          </Text>
-          <Text>E-Mail: info@diederichskotten.de</Text>
-          <Text>
+          </p>
+          <p>
+            E-Mail:{" "}
+            <a href="mailto:info@diederichskotten.de">info@diederichskotten.de</a>
+          </p>
+          <p>
             Verantwortliche Stelle ist die nat&uuml;rliche oder juristische
             Person, die allein oder gemeinsam mit anderen &uuml;ber die Zwecke
             und Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B.
             Namen, E-Mail-Adressen o. &Auml;.) entscheidet.
-          </Text>
-          <Heading as="h3" fontSize="lg">
-            Speicherdauer
-          </Heading>
-          <Text>
+          </p>
+          <h4>Speicherdauer</h4>
+          <p>
             Soweit innerhalb dieser Datenschutzerkl&auml;rung keine speziellere
             Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten
             bei uns, bis der Zweck f&uuml;r die Datenverarbeitung entf&auml;llt.
@@ -205,12 +176,12 @@ export default function Page() {
             personenbezogenen Daten haben (z.&nbsp;B. steuer- oder
             handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall
             erfolgt die L&ouml;schung nach Fortfall dieser Gr&uuml;nde.
-          </Text>
-          <Heading as="h3" fontSize="lg">
+          </p>
+          <h4>
             Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung
             auf dieser Website
-          </Heading>
-          <Text>
+          </h4>
+          <p>
             Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten
             wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1
             lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere
@@ -233,11 +204,9 @@ export default function Page() {
             erfolgen. &Uuml;ber die jeweils im Einzelfall einschl&auml;gigen
             Rechtsgrundlagen wird in den folgenden Abs&auml;tzen dieser
             Datenschutzerkl&auml;rung informiert.
-          </Text>
-          <Heading as="h3" fontSize="lg">
-            Empfänger von personenbezogenen Daten
-          </Heading>
-          <Text>
+          </p>
+          <h4>Empfänger von personenbezogenen Daten</h4>
+          <p>
             Im Rahmen unserer Gesch&auml;ftst&auml;tigkeit arbeiten wir mit
             verschiedenen externen Stellen zusammen. Dabei ist teilweise auch
             eine &Uuml;bermittlung von personenbezogenen Daten an diese externen
@@ -252,22 +221,20 @@ export default function Page() {
             Kunden nur auf Grundlage eines g&uuml;ltigen Vertrags &uuml;ber
             Auftragsverarbeitung weiter. Im Falle einer gemeinsamen Verarbeitung
             wird ein Vertrag &uuml;ber gemeinsame Verarbeitung geschlossen.
-          </Text>
-          <Heading as="h3" fontSize="lg">
-            Widerruf Ihrer Einwilligung zur Datenverarbeitung
-          </Heading>
-          <Text>
+          </p>
+          <h4>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h4>
+          <p>
             Viele Datenverarbeitungsvorg&auml;nge sind nur mit Ihrer
             ausdr&uuml;cklichen Einwilligung m&ouml;glich. Sie k&ouml;nnen eine
             bereits erteilte Einwilligung jederzeit widerrufen. Die
             Rechtm&auml;&szlig;igkeit der bis zum Widerruf erfolgten
             Datenverarbeitung bleibt vom Widerruf unber&uuml;hrt.
-          </Text>
-          <Heading as="h3" fontSize="lg">
+          </p>
+          <h4>
             Widerspruchsrecht gegen die Datenerhebung in besonderen F&auml;llen
             sowie gegen Direktwerbung (Art. 21 DSGVO)
-          </Heading>
-          <Text>
+          </h4>
+          <p>
             WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E
             ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS
             GR&Uuml;NDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN
@@ -282,8 +249,8 @@ export default function Page() {
             UND FREIHEITEN &Uuml;BERWIEGEN ODER DIE VERARBEITUNG DIENT DER
             GELTENDMACHUNG, AUS&Uuml;BUNG ODER VERTEIDIGUNG VON
             RECHTSANSPR&Uuml;CHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).
-          </Text>
-          <Text>
+          </p>
+          <p>
             WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU
             BETREIBEN, SO HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE
             VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE
@@ -292,12 +259,12 @@ export default function Page() {
             WENN SIE WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN
             ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER DIREKTWERBUNG VERWENDET
             (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).
-          </Text>
-          <Heading as="h3" fontSize="lg">
+          </p>
+          <h4>
             Beschwerde&shy;recht bei der zust&auml;ndigen
             Aufsichts&shy;beh&ouml;rde
-          </Heading>
-          <Text>
+          </h4>
+          <p>
             Im Falle von Verst&ouml;&szlig;en gegen die DSGVO steht den
             Betroffenen ein Beschwerderecht bei einer Aufsichtsbeh&ouml;rde,
             insbesondere in dem Mitgliedstaat ihres gew&ouml;hnlichen
@@ -305,22 +272,20 @@ export default function Page() {
             mutma&szlig;lichen Versto&szlig;es zu. Das Beschwerderecht besteht
             unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher
             Rechtsbehelfe.
-          </Text>
-          <Heading as="h3" fontSize="lg">
+          </p>
+          <h4>
             Recht auf Daten&shy;&uuml;bertrag&shy;barkeit
-          </Heading>
-          <Text>
+          </h4>
+          <p>
             Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung
             oder in Erf&uuml;llung eines Vertrags automatisiert verarbeiten, an
             sich oder an einen Dritten in einem g&auml;ngigen, maschinenlesbaren
             Format aush&auml;ndigen zu lassen. Sofern Sie die direkte
             &Uuml;bertragung der Daten an einen anderen Verantwortlichen
             verlangen, erfolgt dies nur, soweit es technisch machbar ist.
-          </Text>
-          <Heading as="h3" fontSize="lg">
-            Auskunft, Berichtigung und L&ouml;schung
-          </Heading>
-          <Text>
+          </p>
+          <h4>Auskunft, Berichtigung und L&ouml;schung</h4>
+          <p>
             Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen
             jederzeit das Recht auf unentgeltliche Auskunft &uuml;ber Ihre
             gespeicherten personenbezogenen Daten, deren Herkunft und
@@ -328,47 +293,45 @@ export default function Page() {
             Recht auf Berichtigung oder L&ouml;schung dieser Daten. Hierzu sowie
             zu weiteren Fragen zum Thema personenbezogene Daten k&ouml;nnen Sie
             sich jederzeit an uns wenden.
-          </Text>
-          <Heading as="h3" fontSize="lg">
-            Recht auf Einschr&auml;nkung der Verarbeitung
-          </Heading>
-          <Text>
+          </p>
+          <h4>Recht auf Einschr&auml;nkung der Verarbeitung</h4>
+          <p>
             Sie haben das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer
             personenbezogenen Daten zu verlangen. Hierzu k&ouml;nnen Sie sich
             jederzeit an uns wenden. Das Recht auf Einschr&auml;nkung der
             Verarbeitung besteht in folgenden F&auml;llen:
-          </Text>
-          <List.Root as="ul">
-            <List.Item>
+          </p>
+          <ul className="list-disc pl-6">
+            <li>
               Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten
               personenbezogenen Daten bestreiten, ben&ouml;tigen wir in der
               Regel Zeit, um dies zu &uuml;berpr&uuml;fen. F&uuml;r die Dauer
               der Pr&uuml;fung haben Sie das Recht, die Einschr&auml;nkung der
               Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
-            </List.Item>
-            <List.Item>
+            </li>
+            <li>
               Wenn die Verarbeitung Ihrer personenbezogenen Daten
               unrechtm&auml;&szlig;ig geschah/geschieht, k&ouml;nnen Sie statt
               der L&ouml;schung die Einschr&auml;nkung der Datenverarbeitung
               verlangen.
-            </List.Item>
-            <List.Item>
+            </li>
+            <li>
               Wenn wir Ihre personenbezogenen Daten nicht mehr ben&ouml;tigen,
               Sie sie jedoch zur Aus&uuml;bung, Verteidigung oder Geltendmachung
               von Rechtsanspr&uuml;chen ben&ouml;tigen, haben Sie das Recht,
               statt der L&ouml;schung die Einschr&auml;nkung der Verarbeitung
               Ihrer personenbezogenen Daten zu verlangen.
-            </List.Item>
-            <List.Item>
+            </li>
+            <li>
               Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt
               haben, muss eine Abw&auml;gung zwischen Ihren und unseren
               Interessen vorgenommen werden. Solange noch nicht feststeht,
               wessen Interessen &uuml;berwiegen, haben Sie das Recht, die
               Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten
               zu verlangen.
-            </List.Item>
-          </List.Root>
-          <Text>
+            </li>
+          </ul>
+          <p>
             Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten
             eingeschr&auml;nkt haben, d&uuml;rfen diese Daten &ndash; von ihrer
             Speicherung abgesehen &ndash; nur mit Ihrer Einwilligung oder zur
@@ -377,11 +340,9 @@ export default function Page() {
             nat&uuml;rlichen oder juristischen Person oder aus Gr&uuml;nden
             eines wichtigen &ouml;ffentlichen Interesses der Europ&auml;ischen
             Union oder eines Mitgliedstaats verarbeitet werden.
-          </Text>
-          <Heading as="h3" fontSize="lg">
-            SSL- bzw. TLS-Verschl&uuml;sselung
-          </Heading>
-          <Text>
+          </p>
+          <h4>SSL- bzw. TLS-Verschl&uuml;sselung</h4>
+          <p>
             Diese Seite nutzt aus Sicherheitsgr&uuml;nden und zum Schutz der
             &Uuml;bertragung vertraulicher Inhalte, wie zum Beispiel
             Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber
@@ -390,20 +351,20 @@ export default function Page() {
             Adresszeile des Browsers von &bdquo;http://&ldquo; auf
             &bdquo;https://&ldquo; wechselt und an dem Schloss-Symbol in Ihrer
             Browserzeile.
-          </Text>
-          <Text>
+          </p>
+          <p>
             Wenn die SSL- bzw. TLS-Verschl&uuml;sselung aktiviert ist,
             k&ouml;nnen die Daten, die Sie an uns &uuml;bermitteln, nicht von
             Dritten mitgelesen werden.
-          </Text>
-          <Text>
+          </p>
+          <p>
             Quelle:{" "}
-            <Link href="https://www.e-recht24.de">
+            <ExternalLink href="https://www.e-recht24.de">
               https://www.e-recht24.de
-            </Link>
-          </Text>
-        </ContentCard>
-      </Container>
+            </ExternalLink>
+          </p>
+        </div>
+      </div>
     </>
   )
 }

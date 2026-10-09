@@ -37,3 +37,8 @@ next-env.d.ts
 
 # Sentry Config File
 .env.sentry-build-plugin
+tmp/
+
+# Impeccable: Review-Screenshots sind lokal
+.impeccable/review/
+.impeccable/questions/

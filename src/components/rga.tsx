@@ -1,37 +1,17 @@
-import ChakraImage from "@/components/chakra-image"
+import { ExternalLink } from "@/components/external-link"
+import { formatDate } from "@/lib/utils"
 import rga from "@/images/logos/rga.webp"
-import {
-  AspectRatio,
-  Card,
-  Center,
-  Flex,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react"
+import { ExternalLinkIcon } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
 
-export function RGALogo({ width = 50 }) {
-  return (
-    <AspectRatio maxW={width} ratio={16 / 9}>
-      <ChakraImage
-        src={rga}
-        alt="RGA Bericht über den Diederichskotten"
-        maxW="100%"
-        mt={4}
-      />
-    </AspectRatio>
-  )
-}
-
-const posts = [
+const articles = [
   {
     title:
       "Sanierung des Diederichskotten: „Wer kann von sich sagen, dass er mal selbst ein Haus wiederaufgebaut hat?“",
     url: "https://www.rga.de/lokales/remscheid/remscheid-pfadfinder-sanieren-den-denkmalgeschuetzten-diederichskotten-TB6OGUENYNG2TEVTRLPZDEX5SU.html",
     teaser:
-      "Dem uralten Fachwerkgebäude mit spannender Historie droht der Verfall. Seine Besitzer sorgen mit Spenden, Fördermitteln und viel Eigenleistung für dessen Erhalt. In einem verwunschenen Winkel mitten im Wald sorgt ein Herzensprojekt für eine lange Baustelle.",
-    publishedAt: "31.10.2024",
+      "Dem uralten Fachwerkgebäude mit spannender Historie droht der Verfall. Seine Besitzer sorgen mit Spenden, Fördermitteln und viel Eigenleistung für dessen Erhalt.",
+    date: "2024-10-31",
   },
   {
     title:
@@ -39,54 +19,37 @@ const posts = [
     url: "https://www.rga.de/lokales/remscheid/maurer-aufgepasst-wer-moechte-beim-ausbau-des-diederichskotten-helfen-AK4HTNAIG5ERLMKZDS55VL5RKQ.html",
     teaser:
       "In den uralten Schleifkotten kehrt nach jahrelangem Sanierungsstau wieder Leben ein. Viele helfende Hände sorgen dafür, dass die Vorarbeit des Zimmermanns nun vollendet wird.",
-    publishedAt: "22.10.2024",
+    date: "2024-10-22",
   },
 ]
 
 export function Articles() {
   return (
-    <SimpleGrid gap={10} columns={{ base: 1, md: 2 }}>
-      {posts.map((post, idx) => (
-        <Link
-          key={idx}
-          href={post.url}
-          style={{ textDecoration: "none" }}
-          target="_blank"
-        >
-          <Card.Root
-            variant="elevated"
-            fontSize="sm"
-            _hover={{
-              shadow: "lg",
-              transition: "all 0.5s",
-            }}
+    <ul className="fachwerk max-w-5xl">
+      {articles.map((article) => (
+        <li key={article.url} className="flex flex-col gap-2 p-5 md:p-6">
+          <div className="flex items-center gap-3 text-sm text-stein">
+            <Image
+              src={rga}
+              alt="Remscheider General-Anzeiger"
+              width={40}
+              height={22}
+            />
+            <time dateTime={article.date}>{formatDate(article.date)}</time>
+          </div>
+          <ExternalLink
+            href={article.url}
+            className="font-semibold text-schiefer underline decoration-stein/40 hover:text-lade hover:decoration-lade"
           >
-            <Card.Header>
-              <Flex align="center">
-                <Text fontWeight="medium" color="fg.emphasized">
-                  {post.title}
-                </Text>
-                <Center ml={3} w={15}>
-                  <Image
-                    src={rga}
-                    alt="RGA Bericht über den Diederichskotten"
-                    width={40}
-                    height={22}
-                  />
-                </Center>
-              </Flex>
-            </Card.Header>
-            <Card.Body py={0}>
-              <Text color="fg.muted" lineClamp={2}>
-                {post.teaser}
-              </Text>
-            </Card.Body>
-            <Card.Footer>
-              <Text color="fg.subtle">{post.publishedAt}</Text>
-            </Card.Footer>
-          </Card.Root>
-        </Link>
+            {article.title}
+            <ExternalLinkIcon
+              className="ml-1 inline size-4 align-[-2px]"
+              aria-hidden
+            />
+          </ExternalLink>
+          <p className="max-w-[68ch] text-stein">{article.teaser}</p>
+        </li>
       ))}
-    </SimpleGrid>
+    </ul>
   )
 }

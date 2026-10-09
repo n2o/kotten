@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-09T11:00:00+02:00",
+  "title": "Design System: Diederichskotten",
+  "extensions": {
+    "colorMeta": {
+      "schiefer": {
+        "role": "neutral",
+        "displayName": "Schiefer",
+        "canonical": "oklch(26.9% 0.010 242)",
+        "tonalRamp": [
+          "#090c0e",
+          "#202529",
+          "#3b4145",
+          "#595e63",
+          "#787e83",
+          "#999fa4",
+          "#bec5ca",
+          "#ebeff2"
+        ]
+      },
+      "schiefer-hell": {
+        "role": "neutral",
+        "displayName": "Schiefer hell",
+        "canonical": "oklch(37.4% 0.015 240)",
+        "tonalRamp": [
+          "#080c0f",
+          "#1e252b",
+          "#394147",
+          "#565f65",
+          "#767f85",
+          "#97a0a7",
+          "#bcc6cd",
+          "#e9eff4"
+        ]
+      },
+      "kalk": {
+        "role": "neutral",
+        "displayName": "Kalk",
+        "canonical": "oklch(97.2% 0.004 106)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#242422",
+          "#40403d",
+          "#5e5e5b",
+          "#7d7d7b",
+          "#9e9e9c",
+          "#c4c4c1",
+          "#eeeeed"
+        ]
+      },
+      "kalk-tief": {
+        "role": "neutral",
+        "displayName": "Kalk tief",
+        "canonical": "oklch(93.3% 0.007 107)",
+        "tonalRamp": [
+          "#0b0b09",
+          "#242421",
+          "#40403c",
+          "#5e5e5a",
+          "#7d7d79",
+          "#9f9f9a",
+          "#c4c4c0",
+          "#efefec"
+        ]
+      },
+      "lade": {
+        "role": "primary",
+        "displayName": "Ladengrün",
+        "canonical": "oklch(42.2% 0.074 162)",
+        "tonalRamp": [
+          "#001106",
+          "#002e19",
+          "#0c4c34",
+          "#316b51",
+          "#528b70",
+          "#73ad91",
+          "#98d4b6",
+          "#d5f8e6"
+        ]
+      },
+      "lade-tief": {
+        "role": "primary",
+        "displayName": "Ladengrün tief",
+        "canonical": "oklch(33.3% 0.055 163)",
+        "tonalRamp": [
+          "#000f07",
+          "#012c1c",
+          "#214937",
+          "#3f6855",
+          "#5e8874",
+          "#7faa95",
+          "#a4d0ba",
+          "#dbf6e8"
+        ]
+      },
+      "lade-hauch": {
+        "role": "primary",
+        "displayName": "Ladengrün-Hauch",
+        "canonical": "oklch(92.7% 0.015 158)",
+        "tonalRamp": [
+          "#080c0a",
+          "#1e2621",
+          "#39423d",
+          "#57605a",
+          "#76807a",
+          "#97a19b",
+          "#bcc7c0",
+          "#eaf0ec"
+        ]
+      },
+      "stein": {
+        "role": "neutral",
+        "displayName": "Stein",
+        "canonical": "oklch(48.0% 0.016 241)",
+        "tonalRamp": [
+          "#080c0f",
+          "#1d252b",
+          "#394148",
+          "#565f66",
+          "#757f86",
+          "#96a0a8",
+          "#bbc6ce",
+          "#e9eff4"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Linie",
+        "canonical": "oklch(83.9% 0.007 124)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#232521",
+          "#3f403c",
+          "#5d5e5a",
+          "#7c7e79",
+          "#9d9f9a",
+          "#c3c5c0",
+          "#eeefec"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Nur das H1 im Startseiten-Gefach; Archivo 75 % Breite."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Abschnitts-H2 und Jahresmarken; 1.875rem, ab 768px 2.25rem."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Titel der Arbeitssamstage; 1.5rem, ab 768px 1.875rem."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Fließtext, Lesespalte bis 68ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Schaltflächen, Navigation, Datumszeilen."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-riegel",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Einfahren der Riegel und Foto-Zoom bei Hover."
+      },
+      {
+        "name": "riegel",
+        "value": "scaleX(0) -> 1, 700ms ease-riegel, animation-timeline: view(), range entry 0% to entry 60%",
+        "purpose": "Riegel fährt beim Einblenden einmal von links ein; nur bei prefers-reduced-motion: no-preference."
+      },
+      {
+        "name": "foto-zoom",
+        "value": "transform scale(1.03), 500ms ease-riegel",
+        "purpose": "Hover auf Galerie-Fotos."
+      },
+      {
+        "name": "farbwechsel",
+        "value": "color/background 150ms",
+        "purpose": "Hover-Zustände der Schaltflächen."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px",
+        "note": "Balkenbreite 6px -> 10px, Desktop-Navigation"
+      },
+      {
+        "name": "lg",
+        "value": "1024px",
+        "note": "12-Spalten-Fachwerk auf der Startseite, Galerie bis vier pro Reihe"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primär-Schaltfläche",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Grüne Tür: Spenden und die wichtigste Aktion einer Fläche.",
+      "html": "<button class=\"ds-btn-primary\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z\"/></svg>Jetzt spenden</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 8px 24px; font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-size: 1.125rem; font-weight: 600; color: #fff; background: var(--lade, #1f5a41); border: 2px solid transparent; border-radius: 2px; cursor: pointer; transition: background-color 150ms, color 150ms; } .ds-btn-primary:hover { background: var(--lade-tief, #163f2e); } .ds-btn-primary:focus-visible { outline: 3px solid var(--lade, #1f5a41); outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline-Schaltfläche",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Sekundäre Aktion auf Kalk, füllt sich bei Hover mit Schiefer.",
+      "html": "<button class=\"ds-btn-outline\">Zum Baufortschritt</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 20px; font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-size: 1rem; font-weight: 600; color: var(--schiefer, #22272b); background: transparent; border: 2px solid var(--schiefer, #22272b); border-radius: 2px; cursor: pointer; transition: background-color 150ms, color 150ms; } .ds-btn-outline:hover { background: var(--schiefer, #22272b); color: var(--kalk, #f6f6f3); } .ds-btn-outline:focus-visible { outline: 3px solid var(--lade, #1f5a41); outline-offset: 3px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Schieferband mit Logo-Kachel, Vereinsname in Display-Stimme, aktuelle Seite mit Ladengrün-Strich.",
+      "html": "<div class=\"ds-nav\"><a class=\"ds-nav-brand\" href=\"#\"><span class=\"ds-nav-logo\"></span>Diederichskotten</a><ul class=\"ds-nav-links\"><li><a href=\"#\" aria-current=\"page\">Start</a></li><li><a href=\"#\">Baufortschritt</a></li><li><a href=\"#\">Über uns</a></li><li><a href=\"#\">Historie</a></li></ul></div>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 12px 24px; background: var(--schiefer, #22272b); color: var(--kalk, #f6f6f3); font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; } .ds-nav-brand { display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; font-size: 1.25rem; font-weight: 750; font-stretch: 80%; } .ds-nav-logo { width: 48px; height: 48px; background: var(--kalk, #f6f6f3); } .ds-nav-links { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; } .ds-nav-links a { display: block; padding: 8px 12px; border-bottom: 4px solid transparent; color: rgb(246 246 243 / 0.85); font-weight: 600; text-decoration: none; transition: color 150ms; } .ds-nav-links a:hover { color: var(--kalk, #f6f6f3); } .ds-nav-links a[aria-current=page] { border-bottom-color: var(--lade, #1f5a41); color: var(--kalk, #f6f6f3); } .ds-nav a:focus-visible { outline: 3px solid var(--lade, #1f5a41); outline-offset: 3px; }"
+    },
+    {
+      "name": "Fachwerk mit Gefachen",
+      "kind": "card",
+      "refersTo": "gefach",
+      "description": "Schiefer-Balkenwerk; Kinder sind Kalk-Gefache, die Fuge ist die Balkenbreite. Ersetzt Karten.",
+      "html": "<div class=\"ds-fachwerk\"><div class=\"ds-gefach\"><span class=\"ds-zahl-label\">Erste urkundliche Erwähnung</span><span class=\"ds-zahl\">1629</span></div><div class=\"ds-gefach\"><span class=\"ds-zahl-label\">Verein zum Erhalt gegründet</span><span class=\"ds-zahl\">1990</span></div><div class=\"ds-gefach\"><span class=\"ds-zahl-label\">Letzter Arbeitssamstag</span><a class=\"ds-zahl ds-zahl-link\" href=\"#\">19. September 2026</a></div></div>",
+      "css": ".ds-fachwerk { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--balken, 10px); background: var(--schiefer, #22272b); border: var(--balken, 10px) solid var(--schiefer, #22272b); font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; } .ds-gefach { display: flex; flex-direction: column; min-width: 0; padding: 24px; background: var(--kalk, #f6f6f3); color: var(--schiefer, #22272b); } .ds-zahl-label { color: var(--stein, #565f66); } .ds-zahl { font-size: 2.25rem; font-weight: 750; font-stretch: 80%; line-height: 1.12; font-variant-numeric: tabular-nums; } .ds-zahl-link { color: var(--lade, #1f5a41); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; } .ds-zahl-link:hover { color: var(--lade-tief, #163f2e); } .ds-zahl-link:focus-visible { outline: 3px solid var(--lade, #1f5a41); outline-offset: 3px; }"
+    },
+    {
+      "name": "Ständer mit Riegeln",
+      "kind": "custom",
+      "description": "Signatur: senkrechter Schiefer-Balken, Riegel zu jedem Eintrag; der neueste Eintrag in Ladengrün.",
+      "html": "<ol class=\"ds-staender\"><li class=\"ds-staender-item\"><span class=\"ds-riegel ds-riegel-latest\"></span><div class=\"ds-eintrag\"><header class=\"ds-eintrag-kopf ds-eintrag-kopf-latest\"><time>19. September 2026</time><h3>Arbeitssamstag im September</h3></header><p class=\"ds-eintrag-text\">Gefache mit Lehmsteinen ausgemauert.</p></div></li><li class=\"ds-staender-item\"><span class=\"ds-riegel\"></span><div class=\"ds-eintrag\"><header class=\"ds-eintrag-kopf\"><time>15. August 2026</time><h3>Arbeitssamstag im August</h3></header><p class=\"ds-eintrag-text\">Balken freigelegt.</p></div></li></ol>",
+      "css": ".ds-staender { position: relative; margin: 0 0 0 32px; padding: 0 0 40px; list-style: none; border-left: var(--balken, 10px) solid var(--schiefer, #22272b); font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; color: var(--schiefer, #22272b); } .ds-staender-item { position: relative; padding: 40px 0 0 48px; } .ds-riegel { position: absolute; top: 4.25rem; left: 0; width: 48px; height: var(--balken, 10px); background: var(--schiefer, #22272b); transform-origin: left center; } .ds-riegel-latest { background: var(--lade, #1f5a41); } @media (prefers-reduced-motion: no-preference) { .ds-riegel { animation: ds-riegel 700ms cubic-bezier(0.16, 1, 0.3, 1); } } @keyframes ds-riegel { from { transform: scaleX(0); } } .ds-eintrag { display: grid; gap: var(--balken, 10px); background: var(--schiefer, #22272b); border: var(--balken, 10px) solid var(--schiefer, #22272b); } .ds-eintrag-kopf, .ds-eintrag-text { margin: 0; padding: 16px 32px; background: var(--kalk, #f6f6f3); } .ds-eintrag-kopf time { font-weight: 600; color: var(--stein, #565f66); } .ds-eintrag-kopf h3 { margin: 4px 0 0; font-size: 1.875rem; font-weight: 750; font-stretch: 80%; line-height: 1.12; letter-spacing: -0.01em; } .ds-eintrag-kopf-latest { background: var(--lade, #1f5a41); color: #fff; } .ds-eintrag-kopf-latest time { color: rgb(255 255 255 / 0.85); }"
+    },
+    {
+      "name": "Seitenkopf",
+      "kind": "custom",
+      "refersTo": "page-header",
+      "description": "Schiefer-Fläche mit Seitentitel und Einleitung unter der Navigation.",
+      "html": "<div class=\"ds-seitenkopf\"><h1>Baufortschritt</h1><p>Samstag für Samstag sanieren Pfadfinder, Vereinsmitglieder und Freiwillige das Wohnhaus des Kottens.</p></div>",
+      "css": ".ds-seitenkopf { padding: 64px 24px; background: var(--schiefer, #22272b); color: var(--kalk, #f6f6f3); border-top: 1px solid var(--schiefer-hell, #3a4248); font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; } .ds-seitenkopf h1 { margin: 0; font-size: 3.75rem; font-weight: 750; font-stretch: 80%; line-height: 1.12; letter-spacing: -0.01em; } .ds-seitenkopf p { margin: 16px 0 0; max-width: 60ch; font-size: 1.25rem; color: rgb(246 246 243 / 0.85); }"
+    },
+    {
+      "name": "Textlink",
+      "kind": "custom",
+      "description": "Link im Lesetext und „Weiterlesen“: Ladengrün, unterstrichen.",
+      "html": "<p class=\"ds-lesetext\">Mehr dazu im <a href=\"#\">Bericht vom Arbeitssamstag</a>.</p>",
+      "css": ".ds-lesetext { max-width: 68ch; font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.65; color: var(--schiefer, #22272b); } .ds-lesetext a { color: var(--lade, #1f5a41); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; } .ds-lesetext a:hover { color: var(--lade-tief, #163f2e); text-decoration-thickness: 2px; } .ds-lesetext a:focus-visible { outline: 3px solid var(--lade, #1f5a41); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Das Bergische Fachwerkhaus",
+    "overview": "Die Seite ist gebaut wie das Haus, das sie rettet. Schieferschwarze Balken bilden das Layoutraster, kalkweiße Gefache tragen Text und Fotos, und das grüne Holz von Läden und Türen markiert, was man tun kann: spenden, weiterlesen, den neuesten Arbeitssamstag aufrufen. Der Grund ist Kalk, die Rahmen (Navigation, Seitenkopf, Footer) sind Schiefer, und Inhalte, die zusammengehören, stehen als Gefache in einem gemeinsamen Balkenwerk statt als einzelne schwebende Karten.\n\nDie Haltung ist bodenständig und handfest: kantige Ecken, keine Schatten, keine Verläufe, eine einzige Schriftfamilie in zwei Stimmen. Tiefe entsteht durch die Fuge zwischen Balken und Gefach, nicht durch Licht. Fotos der echten Baustelle sind der Hauptinhalt; die Gestaltung rahmt sie, wie Balken ein Gefach rahmen.\n\nDie Signatur ist der Ständer: ein senkrechter Schieferbalken, von dem für jeden Eintrag (Arbeitssamstag, historisches Ereignis) ein Riegel abzweigt. Der Riegel fährt beim Einblenden einmal von links ein. Der neueste Eintrag trägt das Ladengrün.",
+    "keyCharacteristics": [
+      "Fachwerk-Raster: Schiefer-Fugen in Balkenbreite (6px, ab 768px 10px) zwischen Kalk-Feldern.",
+      "Dreiklang Schiefer / Kalk / Ladengrün, nur hell (kein Dark Mode).",
+      "Archivo schmal und kräftig für Überschriften, normal für Lesetext.",
+      "Ecken 0 bis 2px, keine Schatten auf Inhaltsflächen.",
+      "Ständer mit Riegeln als wiederkehrende Chronik-Form."
+    ],
+    "rules": [
+      {
+        "name": "The Läden-Regel",
+        "body": "Ladengrün bedeutet „hier kann man etwas tun“ oder „das ist das Neueste“. Es erscheint nie als Dekorfläche, nie als Abschnittshintergrund, nie auf mehr als einem Eintrag pro Chronik.",
+        "section": "colors"
+      },
+      {
+        "name": "The Nur-Tageslicht-Regel",
+        "body": "Das System ist nur hell. Schiefer-Flächen sind Rahmen, kein dunkles Thema.",
+        "section": "colors"
+      },
+      {
+        "name": "The Zwei-Stimmen-Regel",
+        "body": "Alles, was Überschrift ist (h1 bis h4 und die `display`-Utility), läuft schmal und kräftig mit `text-wrap: balance`; alles andere bleibt Archivo normaler Breite. Keine zweite Schriftfamilie.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ruhige-Spalte-Regel",
+        "body": "Lesetext steht als Spalte von höchstens 68ch im Gefach, Absätze mit 1em Abstand, `text-wrap: pretty`.",
+        "section": "typography"
+      },
+      {
+        "name": "The Fugen-Regel",
+        "body": "Zusammengehörige Inhalte teilen sich ein Balkenwerk. Abstand zwischen Feldern einer Gruppe ist immer die Balkenbreite in Schiefer, nie Weißraum.",
+        "section": "layout"
+      },
+      {
+        "name": "The Balken-statt-Schatten-Regel",
+        "body": "Kein `box-shadow` auf Inhaltsflächen. Wo etwas abgehoben werden soll, bekommt es einen Schiefer-Rahmen in Balkenbreite.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Kanten-Regel",
+        "body": "Kein Radius über 2px. Keine Pillen, keine runden Avatare, keine abgerundeten Karten.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do gruppiere zusammengehörige Inhalte als Kalk-Gefache in einem Schiefer-Balkenwerk mit Fuge in Balkenbreite (6px, ab 768px 10px).",
+      "Do setze Ladengrün nur auf Aktionen und auf genau einen „neuesten“ Eintrag.",
+      "Do setze Überschriften in Archivo schmal (80 %) und 750; Lesetext in Archivo normal, 1.0625rem, Zeilenhöhe 1.65, höchstens 68ch.",
+      "Do halte Schaltflächen mindestens 44px hoch und nutze den globalen Fokusring (3px Ladengrün, 3px Abstand).",
+      "Do führe Chroniken als Ständer mit Riegeln; Einblend-Bewegung nur als einmaliges Einfahren und nur ohne reduzierte Bewegung.",
+      "Do nutze `tabular-nums` für Jahreszahlen, Daten und Zähler."
+    ],
+    "donts": [
+      "Don't lege Schatten auf Inhaltsflächen; Abhebung entsteht durch Balken.",
+      "Don't runde Ecken über 2px.",
+      "Don't setze Text als Overlay auf ein Hero-Foto; Foto und Titel stehen in getrennten Gefachen.",
+      "Don't reihe gleiche Neuigkeiten-Karten auf grauem Grund; Einträge hängen am Ständer.",
+      "Don't führe einen Dark Mode oder eine zweite Schriftfamilie ein."
+    ]
+  }
+}
