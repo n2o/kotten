@@ -132,7 +132,7 @@ export const posts: Post[] = (
       content: (
         <>
           <p>
-            Am Arbeitssamstag im September waren viele Hände gleichzeitig am
+            Beim Arbeitseinsatz im September waren viele Hände gleichzeitig am
             Gerüst. Offene Gefache wurden mit Lehmsteinen ausgemauert, und an
             der Fassade wurden die Gefache weiß gestrichen.
           </p>

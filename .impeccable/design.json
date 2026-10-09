@@ -151,7 +151,7 @@
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Titel der Arbeitssamstage; 1.5rem, ab 768px 1.875rem."
+        "purpose": "Titel der Arbeitseinsätze; 1.5rem, ab 768px 1.875rem."
       },
       "body": {
         "displayName": "Body",
@@ -231,14 +231,14 @@
       "kind": "card",
       "refersTo": "gefach",
       "description": "Schiefer-Balkenwerk; Kinder sind Kalk-Gefache, die Fuge ist die Balkenbreite. Ersetzt Karten.",
-      "html": "<div class=\"ds-fachwerk\"><div class=\"ds-gefach\"><span class=\"ds-zahl-label\">Erste urkundliche Erwähnung</span><span class=\"ds-zahl\">1629</span></div><div class=\"ds-gefach\"><span class=\"ds-zahl-label\">Verein zum Erhalt gegründet</span><span class=\"ds-zahl\">1990</span></div><div class=\"ds-gefach\"><span class=\"ds-zahl-label\">Letzter Arbeitssamstag</span><a class=\"ds-zahl ds-zahl-link\" href=\"#\">19. September 2026</a></div></div>",
+      "html": "<div class=\"ds-fachwerk\"><div class=\"ds-gefach\"><span class=\"ds-zahl-label\">Erste urkundliche Erwähnung</span><span class=\"ds-zahl\">1629</span></div><div class=\"ds-gefach\"><span class=\"ds-zahl-label\">Verein zum Erhalt gegründet</span><span class=\"ds-zahl\">1990</span></div><div class=\"ds-gefach\"><span class=\"ds-zahl-label\">Letzter Arbeitseinsatz</span><a class=\"ds-zahl ds-zahl-link\" href=\"#\">19. September 2026</a></div></div>",
       "css": ".ds-fachwerk { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--balken, 10px); background: var(--schiefer, #22272b); border: var(--balken, 10px) solid var(--schiefer, #22272b); font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; } .ds-gefach { display: flex; flex-direction: column; min-width: 0; padding: 24px; background: var(--kalk, #f6f6f3); color: var(--schiefer, #22272b); } .ds-zahl-label { color: var(--stein, #565f66); } .ds-zahl { font-size: 2.25rem; font-weight: 750; font-stretch: 80%; line-height: 1.12; font-variant-numeric: tabular-nums; } .ds-zahl-link { color: var(--lade, #1f5a41); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; } .ds-zahl-link:hover { color: var(--lade-tief, #163f2e); } .ds-zahl-link:focus-visible { outline: 3px solid var(--lade, #1f5a41); outline-offset: 3px; }"
     },
     {
       "name": "Ständer mit Riegeln",
       "kind": "custom",
       "description": "Signatur: senkrechter Schiefer-Balken, Riegel zu jedem Eintrag; der neueste Eintrag in Ladengrün.",
-      "html": "<ol class=\"ds-staender\"><li class=\"ds-staender-item\"><span class=\"ds-riegel ds-riegel-latest\"></span><div class=\"ds-eintrag\"><header class=\"ds-eintrag-kopf ds-eintrag-kopf-latest\"><time>19. September 2026</time><h3>Arbeitssamstag im September</h3></header><p class=\"ds-eintrag-text\">Gefache mit Lehmsteinen ausgemauert.</p></div></li><li class=\"ds-staender-item\"><span class=\"ds-riegel\"></span><div class=\"ds-eintrag\"><header class=\"ds-eintrag-kopf\"><time>15. August 2026</time><h3>Arbeitssamstag im August</h3></header><p class=\"ds-eintrag-text\">Balken freigelegt.</p></div></li></ol>",
+      "html": "<ol class=\"ds-staender\"><li class=\"ds-staender-item\"><span class=\"ds-riegel ds-riegel-latest\"></span><div class=\"ds-eintrag\"><header class=\"ds-eintrag-kopf ds-eintrag-kopf-latest\"><time>19. September 2026</time><h3>Arbeitseinsatz im September</h3></header><p class=\"ds-eintrag-text\">Gefache mit Lehmsteinen ausgemauert.</p></div></li><li class=\"ds-staender-item\"><span class=\"ds-riegel\"></span><div class=\"ds-eintrag\"><header class=\"ds-eintrag-kopf\"><time>15. August 2026</time><h3>Arbeitseinsatz im August</h3></header><p class=\"ds-eintrag-text\">Balken freigelegt.</p></div></li></ol>",
       "css": ".ds-staender { position: relative; margin: 0 0 0 32px; padding: 0 0 40px; list-style: none; border-left: var(--balken, 10px) solid var(--schiefer, #22272b); font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; color: var(--schiefer, #22272b); } .ds-staender-item { position: relative; padding: 40px 0 0 48px; } .ds-riegel { position: absolute; top: 4.25rem; left: 0; width: 48px; height: var(--balken, 10px); background: var(--schiefer, #22272b); transform-origin: left center; } .ds-riegel-latest { background: var(--lade, #1f5a41); } @media (prefers-reduced-motion: no-preference) { .ds-riegel { animation: ds-riegel 700ms cubic-bezier(0.16, 1, 0.3, 1); } } @keyframes ds-riegel { from { transform: scaleX(0); } } .ds-eintrag { display: grid; gap: var(--balken, 10px); background: var(--schiefer, #22272b); border: var(--balken, 10px) solid var(--schiefer, #22272b); } .ds-eintrag-kopf, .ds-eintrag-text { margin: 0; padding: 16px 32px; background: var(--kalk, #f6f6f3); } .ds-eintrag-kopf time { font-weight: 600; color: var(--stein, #565f66); } .ds-eintrag-kopf h3 { margin: 4px 0 0; font-size: 1.875rem; font-weight: 750; font-stretch: 80%; line-height: 1.12; letter-spacing: -0.01em; } .ds-eintrag-kopf-latest { background: var(--lade, #1f5a41); color: #fff; } .ds-eintrag-kopf-latest time { color: rgb(255 255 255 / 0.85); }"
     },
     {
@@ -246,20 +246,20 @@
       "kind": "custom",
       "refersTo": "page-header",
       "description": "Schiefer-Fläche mit Seitentitel und Einleitung unter der Navigation.",
-      "html": "<div class=\"ds-seitenkopf\"><h1>Baufortschritt</h1><p>Samstag für Samstag sanieren Pfadfinder, Vereinsmitglieder und Freiwillige das Wohnhaus des Kottens.</p></div>",
+      "html": "<div class=\"ds-seitenkopf\"><h1>Baufortschritt</h1><p>Bei Arbeitseinsätzen am Wochenende sanieren Pfadfinder, Vereinsmitglieder und Freiwillige das Wohnhaus des Kottens.</p></div>",
       "css": ".ds-seitenkopf { padding: 64px 24px; background: var(--schiefer, #22272b); color: var(--kalk, #f6f6f3); border-top: 1px solid var(--schiefer-hell, #3a4248); font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; } .ds-seitenkopf h1 { margin: 0; font-size: 3.75rem; font-weight: 750; font-stretch: 80%; line-height: 1.12; letter-spacing: -0.01em; } .ds-seitenkopf p { margin: 16px 0 0; max-width: 60ch; font-size: 1.25rem; color: rgb(246 246 243 / 0.85); }"
     },
     {
       "name": "Textlink",
       "kind": "custom",
       "description": "Link im Lesetext und „Weiterlesen“: Ladengrün, unterstrichen.",
-      "html": "<p class=\"ds-lesetext\">Mehr dazu im <a href=\"#\">Bericht vom Arbeitssamstag</a>.</p>",
+      "html": "<p class=\"ds-lesetext\">Mehr dazu im <a href=\"#\">Bericht vom Arbeitseinsatz</a>.</p>",
       "css": ".ds-lesetext { max-width: 68ch; font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.65; color: var(--schiefer, #22272b); } .ds-lesetext a { color: var(--lade, #1f5a41); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; } .ds-lesetext a:hover { color: var(--lade-tief, #163f2e); text-decoration-thickness: 2px; } .ds-lesetext a:focus-visible { outline: 3px solid var(--lade, #1f5a41); outline-offset: 3px; }"
     }
   ],
   "narrative": {
     "northStar": "Das Bergische Fachwerkhaus",
-    "overview": "Die Seite ist gebaut wie das Haus, das sie rettet. Schieferschwarze Balken bilden das Layoutraster, kalkweiße Gefache tragen Text und Fotos, und das grüne Holz von Läden und Türen markiert, was man tun kann: spenden, weiterlesen, den neuesten Arbeitssamstag aufrufen. Der Grund ist Kalk, die Rahmen (Navigation, Seitenkopf, Footer) sind Schiefer, und Inhalte, die zusammengehören, stehen als Gefache in einem gemeinsamen Balkenwerk statt als einzelne schwebende Karten.\n\nDie Haltung ist bodenständig und handfest: kantige Ecken, keine Schatten, keine Verläufe, eine einzige Schriftfamilie in zwei Stimmen. Tiefe entsteht durch die Fuge zwischen Balken und Gefach, nicht durch Licht. Fotos der echten Baustelle sind der Hauptinhalt; die Gestaltung rahmt sie, wie Balken ein Gefach rahmen.\n\nDie Signatur ist der Ständer: ein senkrechter Schieferbalken, von dem für jeden Eintrag (Arbeitssamstag, historisches Ereignis) ein Riegel abzweigt. Der Riegel fährt beim Einblenden einmal von links ein. Der neueste Eintrag trägt das Ladengrün.",
+    "overview": "Die Seite ist gebaut wie das Haus, das sie rettet. Schieferschwarze Balken bilden das Layoutraster, kalkweiße Gefache tragen Text und Fotos, und das grüne Holz von Läden und Türen markiert, was man tun kann: spenden, weiterlesen, den neuesten Arbeitseinsatz aufrufen. Der Grund ist Kalk, die Rahmen (Navigation, Seitenkopf, Footer) sind Schiefer, und Inhalte, die zusammengehören, stehen als Gefache in einem gemeinsamen Balkenwerk statt als einzelne schwebende Karten.\n\nDie Haltung ist bodenständig und handfest: kantige Ecken, keine Schatten, keine Verläufe, eine einzige Schriftfamilie in zwei Stimmen. Tiefe entsteht durch die Fuge zwischen Balken und Gefach, nicht durch Licht. Fotos der echten Baustelle sind der Hauptinhalt; die Gestaltung rahmt sie, wie Balken ein Gefach rahmen.\n\nDie Signatur ist der Ständer: ein senkrechter Schieferbalken, von dem für jeden Eintrag (Arbeitseinsatz, historisches Ereignis) ein Riegel abzweigt. Der Riegel fährt beim Einblenden einmal von links ein. Der neueste Eintrag trägt das Ladengrün.",
     "keyCharacteristics": [
       "Fachwerk-Raster: Schiefer-Fugen in Balkenbreite (6px, ab 768px 10px) zwischen Kalk-Feldern.",
       "Dreiklang Schiefer / Kalk / Ladengrün, nur hell (kein Dark Mode).",

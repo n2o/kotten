@@ -6,7 +6,7 @@ import { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Baufortschritt",
   description:
-    "Chronik der Sanierung des Diederichskottens: alle Arbeitssamstage mit Fotos, neueste zuerst.",
+    "Chronik der Sanierung des Diederichskottens: alle Arbeitseinsätze mit Fotos, neueste zuerst.",
 }
 
 const years = [...new Set(posts.map((post) => post.date.slice(0, 4)))]
@@ -16,8 +16,9 @@ export default function Page() {
     <>
       <PageHeader title="Baufortschritt">
         <p>
-          Immer wieder samstags sanieren Pfadfinder, Vereinsmitglieder und
-          Freiwillige das Wohnhaus des Kottens. Hier halten wir fest, was
+          Bei Arbeitseinsätzen am Wochenende sanieren Pfadfinder,
+          Vereinsmitglieder und Freiwillige immer wieder das Wohnhaus des
+          Kottens. Hier halten wir fest, was
           geschafft wurde, neueste Einträge zuerst.
         </p>
       </PageHeader>

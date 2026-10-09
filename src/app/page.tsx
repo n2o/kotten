@@ -64,7 +64,7 @@ export default function Page() {
           <dd className="display text-4xl tabular-nums">1990</dd>
         </dl>
         <dl className="p-5 md:p-6 lg:col-span-4">
-          <dt className="text-stein">Letzter Arbeitssamstag</dt>
+          <dt className="text-stein">Letzter Arbeitseinsatz</dt>
           <dd className="display text-4xl">
             <Link
               href={`/baufortschritt#${latest.id}`}
@@ -104,8 +104,9 @@ export default function Page() {
                 Baufortschritt
               </h2>
               <p className="mt-3 text-lg">
-                Immer wieder samstags wird am Wohnhaus gearbeitet: Balken
-                freilegen, Gefache mit Lehmsteinen ausmauern, verputzen.
+                Bei Arbeitseinsätzen am Wochenende wird immer wieder am
+                Wohnhaus gearbeitet: Balken freilegen, Gefache mit Lehmsteinen
+                ausmauern, verputzen.
               </p>
             </div>
             <Button asChild variant="outline">

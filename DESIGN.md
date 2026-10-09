@@ -108,11 +108,11 @@ components:
 
 **Creative North Star: "Das Bergische Fachwerkhaus"**
 
-Die Seite ist gebaut wie das Haus, das sie rettet. Schieferschwarze Balken bilden das Layoutraster, kalkweiße Gefache tragen Text und Fotos, und das grüne Holz von Läden und Türen markiert, was man tun kann: spenden, weiterlesen, den neuesten Arbeitssamstag aufrufen. Der Grund ist Kalk, die Rahmen (Navigation, Seitenkopf, Footer) sind Schiefer, und Inhalte, die zusammengehören, stehen als Gefache in einem gemeinsamen Balkenwerk statt als einzelne schwebende Karten.
+Die Seite ist gebaut wie das Haus, das sie rettet. Schieferschwarze Balken bilden das Layoutraster, kalkweiße Gefache tragen Text und Fotos, und das grüne Holz von Läden und Türen markiert, was man tun kann: spenden, weiterlesen, den neuesten Arbeitseinsatz aufrufen. Der Grund ist Kalk, die Rahmen (Navigation, Seitenkopf, Footer) sind Schiefer, und Inhalte, die zusammengehören, stehen als Gefache in einem gemeinsamen Balkenwerk statt als einzelne schwebende Karten.
 
 Die Haltung ist bodenständig und handfest: kantige Ecken, keine Schatten, keine Verläufe, eine einzige Schriftfamilie in zwei Stimmen. Tiefe entsteht durch die Fuge zwischen Balken und Gefach, nicht durch Licht. Fotos der echten Baustelle sind der Hauptinhalt; die Gestaltung rahmt sie, wie Balken ein Gefach rahmen.
 
-Die Signatur ist der Ständer: ein senkrechter Schieferbalken, von dem für jeden Eintrag (Arbeitssamstag, historisches Ereignis) ein Riegel abzweigt. Der Riegel fährt beim Einblenden einmal von links ein. Der neueste Eintrag trägt das Ladengrün.
+Die Signatur ist der Ständer: ein senkrechter Schieferbalken, von dem für jeden Eintrag (Arbeitseinsatz, historisches Ereignis) ein Riegel abzweigt. Der Riegel fährt beim Einblenden einmal von links ein. Der neueste Eintrag trägt das Ladengrün.
 
 **Key Characteristics:**
 - Fachwerk-Raster: Schiefer-Fugen in Balkenbreite (6px, ab 768px 10px) zwischen Kalk-Feldern.
@@ -126,7 +126,7 @@ Die Signatur ist der Ständer: ein senkrechter Schieferbalken, von dem für jede
 Ein Dreiklang aus dem Material des Hauses: Schieferbalken, Kalkputz, grün gestrichenes Holz.
 
 ### Primary
-- **Ladengrün** (`lade`): Die Farbe der Türen und Läden. Ausschließlich für Aktionen (primäre Schaltfläche, Textlinks, aktiver Navigationsstrich, Fokusring) und für das Aktuelle (Kopf und Riegel des neuesten Arbeitssamstags, Datum des letzten Arbeitssamstags).
+- **Ladengrün** (`lade`): Die Farbe der Türen und Läden. Ausschließlich für Aktionen (primäre Schaltfläche, Textlinks, aktiver Navigationsstrich, Fokusring) und für das Aktuelle (Kopf und Riegel des neuesten Arbeitseinsatzes, Datum des letzten Arbeitseinsatzes).
 - **Ladengrün tief** (`lade-tief`): Hover-Zustand jeder grünen Aktion; Textfarbe auf Ladengrün-Hauch.
 - **Ladengrün-Hauch** (`lade-hauch`): Nur Textauswahl (`::selection`) und shadcn-`accent`. Keine Flächenfarbe für Inhalte.
 
@@ -154,7 +154,7 @@ Ein Dreiklang aus dem Material des Hauses: Schieferbalken, Kalkputz, grün gestr
 - **Display** (750, `clamp(2.75rem, 4.8vw, 5.5rem)`, 1.12, Breite 75 %): Nur das H1 „Diederichskotten“ im Startseiten-Gefach.
 - **Seitentitel** (750, 2.25rem bis 3.75rem ab 768px, 1.12): H1 im Schiefer-Seitenkopf der Unterseiten.
 - **Headline** (750, 1.875rem, ab 768px 2.25rem, 1.12): Abschnitts-H2, Jahresmarken.
-- **Title** (750, 1.5rem, ab 768px 1.875rem, 1.12): Titel der Arbeitssamstage; `.lesetext` h3/h4 auf 1.375rem.
+- **Title** (750, 1.5rem, ab 768px 1.875rem, 1.12): Titel der Arbeitseinsätze; `.lesetext` h3/h4 auf 1.375rem.
 - **Zahl** (750, 2.25rem, `tabular-nums`): Kennzahlen 1629 / 1990 / Datum, Jahreszahlen der Historie.
 - **Body** (400, 1.0625rem, 1.65): Fließtext; Lesespalte maximal 68ch. Einleitungen und Absätze unter H2 in 1.125rem.
 - **Label** (600, 1rem): Schaltflächen, Navigation, Datumszeilen, „Weiterlesen“.
@@ -220,9 +220,9 @@ Tür und Laden: schwer, eindeutig, eckig.
 Schiefer-Fläche unter der Navigation, getrennt durch eine 1px Kante in Schiefer hell. H1 in Kalk (2.25rem bis 3.75rem), Einleitung bis 60ch in Kalk 85 %, 1.125 bis 1.25rem.
 
 ### Ständer und Riegel (Signatur)
-Senkrechter Schiefer-Balken in Balkenbreite, links neben einer geordneten Liste. Pro Eintrag ein waagerechter Riegel in Balkenbreite, 24px (ab 768px 48px) lang, auf Höhe des Eintragskopfs. Der neueste Arbeitssamstag hat Riegel und Kopf in Ladengrün, Datum in Weiß 85 %. Bewegung: Der Riegel skaliert beim Einblenden einmal von links (`scaleX(0)` nach 1, 700ms, `ease-riegel`), gesteuert über `animation-timeline: view()`; nur bei `prefers-reduced-motion: no-preference` und ohne Rückwärts-Füllung, damit er im Druck sichtbar bleibt.
+Senkrechter Schiefer-Balken in Balkenbreite, links neben einer geordneten Liste. Pro Eintrag ein waagerechter Riegel in Balkenbreite, 24px (ab 768px 48px) lang, auf Höhe des Eintragskopfs. Der neueste Arbeitseinsatz hat Riegel und Kopf in Ladengrün, Datum in Weiß 85 %. Bewegung: Der Riegel skaliert beim Einblenden einmal von links (`scaleX(0)` nach 1, 700ms, `ease-riegel`), gesteuert über `animation-timeline: view()`; nur bei `prefers-reduced-motion: no-preference` und ohne Rückwärts-Füllung, damit er im Druck sichtbar bleibt.
 
-### Arbeitssamstag-Eintrag
+### Arbeitseinsatz-Eintrag
 Ein Fachwerk aus Kopf-Gefach (Datum in Stein, Titel in Title-Stimme), Foto-Gefachen (4:3 als Vorschau) und Lesetext-Gefach. Die Vorschau endet mit „Weiterlesen“ und Pfeil in Ladengrün.
 
 ### Galerie und Lightbox

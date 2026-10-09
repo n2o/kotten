@@ -9,7 +9,7 @@ web
 ## Users
 
 - **Spender und Förderer** aus Remscheid und dem Bergischen Land (Privatleute, Firmen, Clubs wie Lions, Banken, Stiftungen). Sie wollen sehen, dass ihr Geld sichtbar im Gebäude ankommt, und brauchen einen einfachen Weg zu spenden.
-- **Pfadfinder und Vereinsmitglieder** (DPB Remscheid, Eltern, Mitglieder beider Vereine). Sie verfolgen, was an den Arbeitssamstagen geschafft wurde.
+- **Pfadfinder und Vereinsmitglieder** (DPB Remscheid, Eltern, Mitglieder beider Vereine). Sie verfolgen, was bei den Arbeitseinsätzen geschafft wurde.
 - **Presse, Stadt Remscheid, Denkmalbehörde, Fördermittelgeber (Land NRW / Heimatförderung)**. Sie brauchen nachvollziehbare Belege für Fortschritt und Mittelverwendung.
 
 ## Product Purpose
@@ -18,18 +18,18 @@ Website des Diederichskottens, eines denkmalgeschützten Schleifkottens im Hamme
 
 ## Positioning
 
-Ein echtes Fachwerk-Denkmal, das nicht von einer Firma, sondern von Pfadfindern und Ehrenamtlichen mit eigenen Händen saniert wird: Lehmsteine, Lehmputz, Strohmatten, Samstag für Samstag. Die Arbeit selbst ist der Beweis.
+Ein echtes Fachwerk-Denkmal, das nicht von einer Firma, sondern von Pfadfindern und Ehrenamtlichen mit eigenen Händen saniert wird: Lehmsteine, Lehmputz, Strohmatten, Wochenende für Wochenende. Die Arbeit selbst ist der Beweis.
 
 ## Operating Context
 
-- Regelmäßige **Arbeitssamstage**; danach gibt es Fotos und einen kurzen Bericht. Das ist der häufigste neue Inhalt.
+- Regelmäßige **Arbeitseinsätze am Wochenende**; danach gibt es Fotos und einen kurzen Bericht. Das ist der häufigste neue Inhalt.
 - Fachfirma: Zimmerei Zultner (Hückeswagen) für Balkentausch; Eigenleistung für Gefache und Putz.
 - Inhalte werden von Hand im Code gepflegt (keine CMS-Anbindung).
 
 ## Capabilities and Constraints
 
 - Next.js App Router, React 19, deployed auf Vercel, Sentry, Vercel Analytics.
-- Routen: Start, Baufortschritt (Chronik aller Arbeitssamstage), Über uns, Historie, Impressum, Datenschutz.
+- Routen: Start, Baufortschritt (Chronik aller Arbeitseinsätze), Über uns, Historie, Impressum, Datenschutz.
 - Spendenwege: PayPal-Spendenlink mit QR-Code; vergangene Volksbank-Crowdfunding-Kampagne.
 - Fotos von Personen müssen vor Veröffentlichung unkenntlich gemacht werden (Gesichter verpixeln/weichzeichnen). Bilder als WebP.
 - Sprache: Deutsch.
@@ -50,7 +50,7 @@ Ein echtes Fachwerk-Denkmal, das nicht von einer Firma, sondern von Pfadfindern 
 
 ## Product Principles
 
-1. Fortschritt zeigen statt behaupten: Fotos und Datum jedes Arbeitssamstags.
+1. Fortschritt zeigen statt behaupten: Fotos und Datum jedes Arbeitseinsatzes.
 2. Ehrlich über Bedarf: Kosten und Förderungen konkret benennen.
 3. Spenden immer nur einen Schritt entfernt, aber nicht aufdringlich.
 4. Das Denkmal und die Menschen respektieren: Privatsphäre der Helfenden, sorgfältige Geschichte.
