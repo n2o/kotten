@@ -3,7 +3,9 @@
     "allow": [
       "Bash(bun install)",
       "Bash(bun run build)",
-      "Bash(bun run dev)"
+      "Bash(bun run dev)",
+      "Bash(bun update:*)",
+      "Bash(bun outdated *)"
     ],
     "deny": [],
     "ask": []
