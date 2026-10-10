@@ -5,14 +5,12 @@ import { Articles } from "@/components/rga"
 import { Spenden } from "@/components/spenden"
 import { Button } from "@/components/ui/button"
 import { posts } from "@/content/baufortschritt"
-import { formatDate } from "@/lib/utils"
 import kotten from "@/images/kotten1.webp"
 import { paypalDonationLink } from "@/lib/links"
 import { ArrowRightIcon, HeartHandshakeIcon } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
-const latest = posts[0]
 
 export default function Page() {
   return (
@@ -55,24 +53,13 @@ export default function Page() {
             </Button>
           </div>
         </div>
-        <dl className="p-5 md:p-6 lg:col-span-4">
+        <dl className="p-5 md:p-6 lg:col-span-6">
           <dt className="text-stein">Erste urkundliche Erwähnung</dt>
           <dd className="display text-4xl tabular-nums">1629</dd>
         </dl>
-        <dl className="p-5 md:p-6 lg:col-span-4">
+        <dl className="p-5 md:p-6 lg:col-span-6">
           <dt className="text-stein">Verein zum Erhalt gegründet</dt>
           <dd className="display text-4xl tabular-nums">1990</dd>
-        </dl>
-        <dl className="p-5 md:p-6 lg:col-span-4">
-          <dt className="text-stein">Letzter Arbeitseinsatz</dt>
-          <dd className="display text-4xl">
-            <Link
-              href={`/baufortschritt#${latest.id}`}
-              className="text-lade underline decoration-2 underline-offset-4 hover:text-lade-tief"
-            >
-              {formatDate(latest.date)}
-            </Link>
-          </dd>
         </dl>
       </section>
 
