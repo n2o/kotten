@@ -48,6 +48,14 @@ import sep01 from "@/images/2026/2026-09-19_arbeitssamstag/01.webp"
 import sep02 from "@/images/2026/2026-09-19_arbeitssamstag/02.webp"
 import sep03 from "@/images/2026/2026-09-19_arbeitssamstag/03.webp"
 import sep23 from "@/images/2026/2026-09-23_arbeitseinsatz/01.webp"
+import okt2601 from "@/images/2026/2026-10-17_einwintern/01.webp"
+import okt2602 from "@/images/2026/2026-10-17_einwintern/02.webp"
+import okt2603 from "@/images/2026/2026-10-17_einwintern/03.webp"
+import okt2604 from "@/images/2026/2026-10-17_einwintern/04.webp"
+import okt2605 from "@/images/2026/2026-10-17_einwintern/05.webp"
+import okt2606 from "@/images/2026/2026-10-17_einwintern/06.webp"
+import okt2607 from "@/images/2026/2026-10-17_einwintern/07.webp"
+import okt2608 from "@/images/2026/2026-10-17_einwintern/08.webp"
 import { volksbankCrowdfundingLink20250214 } from "@/lib/links"
 import { ReactNode } from "react"
 
@@ -62,6 +70,52 @@ export type Post = {
   cover: GalleryImage[]
   content: ReactNode
 }
+
+const okt26Aussen: GalleryImage[] = [
+  {
+    data: okt2601,
+    alt: "Blick über das grüne Tor auf den Kotten im Herbstlaub, das Wohnhaus mit Fachwerkgiebel ist noch eingerüstet.",
+    caption: "Der Kotten im Herbst",
+  },
+  {
+    data: okt2602,
+    alt: "Eine Person steht auf einer Leiter an der Dachkante, zwei weitere helfen von unten.",
+    caption: "Regenrinne sauber machen",
+  },
+  {
+    data: okt2603,
+    alt: "Auf dem Hof stehen ausgewaschene Mörteleimer im Gras, im Hintergrund unterhalten sich Helfende vor dem kleinen Schuppen.",
+    caption: "Eimer und Werkzeug gesäubert",
+  },
+  {
+    data: okt2604,
+    alt: "Unter zwei großen Fichten arbeiten zwei Personen mit einer Leiter am Häuschen, davor ein Grill.",
+    caption: "Mit der Leiter am Häuschen",
+  },
+  {
+    data: okt2605,
+    alt: "Eine Schubkarre mit Laub vor ordentlich aufgereihten Gitterboxen, daneben ein Holzstapel und eine Leiter am grünen Tor.",
+    caption: "Laub gefegt, Gitterboxen sortiert",
+  },
+]
+
+const okt26Innen: GalleryImage[] = [
+  {
+    data: okt2606,
+    alt: "Aufgeräumter Raum im Wohnhaus mit Lehmwänden, gefegtem Dielenboden, Arbeitstisch auf Böcken und einem Stativ im Vordergrund.",
+    caption: "Gefegt und geordnet",
+  },
+  {
+    data: okt2607,
+    alt: "Hauptraum mit Fachwerk, Ofen und Werkbank, das Material ist an der Seite gestapelt, Sonnenlicht fällt auf den Boden.",
+    caption: "Material an seinem Platz",
+  },
+  {
+    data: okt2608,
+    alt: "Die geputzte Küche mit Edelstahlzeilen, Herd und frisch gewischtem Fliesenboden.",
+    caption: "Die Küche glänzt",
+  },
+]
 
 const sep: GalleryImage[] = [
   {
@@ -122,6 +176,41 @@ const aug: GalleryImage[] = [
 /** Neueste zuerst, egal in welcher Reihenfolge Einträge ergänzt werden */
 export const posts: Post[] = (
   [
+    {
+      id: "2026-10-17-einwintern",
+      date: "2026-10-17",
+      title: "Aufräumen vor der Winterpause",
+      teaser:
+        "Zu kalt zum Verputzen: Wir haben Regenrinne und Gerüst sauber gemacht und drinnen wie draußen aufgeräumt.",
+      cover: [okt26Aussen[1], okt26Innen[1], okt26Innen[2]],
+      content: (
+        <>
+          <p>
+            Lehmputz braucht Wärme zum Trocknen, und die wird es in den
+            kommenden Monaten nicht mehr geben. Deshalb haben wir beim letzten
+            Arbeitseinsatz des Jahres nicht weiter verputzt, sondern den Kotten
+            für den Winter vorbereitet.
+          </p>
+          <p>
+            Draußen haben wir die Regenrinne und das Gerüst sauber gemacht.
+            Eimer und Werkzeug wurden ausgewaschen, das Laub zusammengefegt und
+            die Gitterboxen ordentlich aufgereiht.
+          </p>
+          <Gallery images={okt26Aussen} />
+          <h4>Drinnen alles an seinem Platz</h4>
+          <p>
+            Auch im Wohnhaus wurde gründlich aufgeräumt: Material und Werkzeug
+            sind zusammengepackt, die Böden gefegt und die Küche geputzt. So
+            können wir im Frühjahr direkt wieder loslegen.
+          </p>
+          <Gallery images={okt26Innen} />
+          <p>
+            Danke an alle, die in diesem Jahr mit angepackt haben! Sobald die
+            Temperaturen es zulassen, geht es mit dem Verputzen weiter.
+          </p>
+        </>
+      ),
+    },
     {
       id: "2026-09-19-arbeitssamstag",
       date: "2026-09-19",
